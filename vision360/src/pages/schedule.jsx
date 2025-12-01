@@ -1,7 +1,7 @@
 function About() {
   return (
     <section>
-      <h1>schedule</h1>
+      <h1>emploi du temps</h1>
       <p>emploi du temps</p>
     </section>
   );
