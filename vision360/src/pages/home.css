@@ -1,0 +1,217 @@
+.home-layout {
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.92fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "rooms occupancy filters"
+        "promo prof filters";
+    gap: 18px;
+}
+
+.home-card {
+    background: radial-gradient(1200px 400px at 10% 0%, rgba(140, 120, 170, 0.10), transparent 55%),
+        linear-gradient(180deg, var(--panel), var(--panel2));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.home-cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.home-cardTitle {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color: rgba(255, 255, 255, 0.92);
+    margin: 0;
+}
+
+.home-cardSub {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.home-cardBody {
+    padding: 14px 16px;
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.grid-rooms {
+    grid-area: rooms;
+}
+
+.grid-occupancy {
+    grid-area: occupancy;
+}
+
+.grid-promo {
+    grid-area: promo;
+}
+
+.grid-prof {
+    grid-area: prof;
+}
+
+.grid-filters {
+    grid-area: filters;
+}
+
+.kpiRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.kpi {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.kpiLabel {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.kpiValue {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+}
+
+.kpiSmall {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--muted2);
+}
+
+.scrollArea {
+    min-height: 0;
+    flex: 1;
+    overflow: auto;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.table th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-align: left;
+    background: rgba(10, 12, 15, 0.9);
+    backdrop-filter: blur(6px);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.table td {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.cell-muted {
+    color: var(--muted2);
+}
+
+.cell-absent {
+    color: rgba(255, 255, 255, 0.55);
+    font-style: italic;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.35);
+    outline: none;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.input:focus {
+    border-color: rgba(140, 120, 170, 0.55);
+    box-shadow: 0 0 0 4px rgba(140, 120, 170, 0.18);
+}
+
+.button {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.28);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.button:hover {
+    background: rgba(0, 0, 0, 0.36);
+}
+
+.hr {
+    height: 1px;
+    background: var(--border);
+    width: 100%;
+}
+
+.smallNote {
+    font-size: 12px;
+    color: var(--muted2);
+    line-height: 1.45;
+}
+
+.dateField {
+    position: relative;
+}
+
+.input-dateText {
+    color: rgba(255, 255, 255, 0.92);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.92);
+    caret-color: transparent;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+    opacity: 1;
+}
+
+
+.input-dateNative {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
