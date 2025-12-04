@@ -69,10 +69,11 @@ a:hover {
 
 .main-content {
   flex: 1;
-  display: flex;             /* devient un container flex */
+  display: flex;             /* container flex */
   flex-direction: column;    /* contenu empilé verticalement */
   padding: var(--page-pad);
-  overflow: hidden;
+  overflow-x: hidden;        /* pas de scroll horizontal */
+  overflow-y: auto;          /* autorise le scroll vertical */
   min-height: 0;
 }
 

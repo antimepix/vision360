@@ -101,9 +101,9 @@
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 90vh;
-  max-height: 700px;
+  height: min(75vh, 650px);
 }
+
 
 
 .campus-image {
@@ -387,32 +387,100 @@
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
+/* === Tablettes / petits écrans (<= 1200px) === */
+@media (max-width: 1200px) {
   .campus-container {
-    padding: 1rem;
-  }
-
-  .campus-header h1 {
-    font-size: 1.8rem;
-  }
-
-  .room-info-panel {
-    bottom: 1rem;
-    right: 1rem;
-    left: 1rem;
-    width: auto;
-  }
-
-  .stats-panel {
-    gap: 1rem;
-  }
-
-  .stat-card {
-    min-width: 140px;
     padding: 1.5rem;
   }
 
+  .campus-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .campus-map {
+    height: min(70vh, 550px);
+  }
+
+  .legend {
+    gap: 1rem;
+  }
+}
+
+
+/* === Mobiles / très petites largeurs (<= 768px) === */
+@media (max-width: 768px) {
+  .campus-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .campus-header h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Boutons d'étage : ils passent bien sur 2 lignes s'il faut */
+  .campus-floorTabsWrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .campus-floorTabs {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .campus-floorBtn {
+    flex: 1 1 48%;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Légende plus compacte et verticale */
+  .legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  /* Carte moins haute sur mobile */
+  .campus-map {
+    height: 60vh;
+    max-height: none;
+  }
+
+  /* Panneau d'infos type "bottom sheet" */
+  .room-info-panel {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    width: auto;
+    max-height: 45vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .room-info-body {
+    max-height: 30vh;
+    overflow-y: auto;
+  }
+
+  /* Stats en colonne sous la carte */
+  .stats-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    width: 100%;
+    min-width: 0;
+    padding: 1.25rem;
+  }
+
   .stat-number {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
 }

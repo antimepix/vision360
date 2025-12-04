@@ -1,14 +1,88 @@
-.home-layout {
-  height: 100%;
-  min-height: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 0.92fr;
-  grid-template-rows: minmax(0, 0.7fr) minmax(0, 1.3fr);
-  grid-template-areas:
-    "rooms occupancy filters"
-    "promo prof filters";
-  gap: 18px;
+/* ===========================
+   Responsive Home
+   =========================== */
+
+/* Écrans moyens (tablettes / petits laptops) */
+@media (max-width: 1200px) {
+  .home-layout {
+    /* 2 colonnes plutôt que 3 */
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "filters filters"
+      "rooms occupancy"
+      "promo prof";
+    height: auto;       /* laisse la hauteur s’ajuster */
+    min-height: unset;
+  }
+
+  .home-card {
+    min-height: auto;
+  }
 }
+
+/* Mobiles / très petites largeurs */
+@media (max-width: 768px) {
+  .home-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "filters"
+      "rooms"
+      "occupancy"
+      "promo"
+      "prof";
+    gap: 14px;
+    height: auto;
+    min-height: unset;
+  }
+
+  /* Cartes en mode "bloc" confortable */
+  .home-card {
+    min-height: auto;
+    padding: 14px 14px;
+  }
+
+  /* La barre de filtres / recherche s’empile bien */
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .dateField {
+    width: 100%;
+  }
+
+  .input,
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* KPIs : 1 colonne au lieu de 2 */
+  .kpiRow {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tableaux plus compacts et scrollables horizontalement si besoin */
+  .scrollArea {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+
+  .table {
+    min-width: 480px;     /* évite que tout se tasse trop, au pire ça scroll en X */
+  }
+
+  .table th,
+  .table td {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+}
+
 
 .home-card {
     background: radial-gradient(1200px 400px at 10% 0%, rgba(140, 120, 170, 0.10), transparent 55%),
