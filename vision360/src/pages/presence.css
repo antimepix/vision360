@@ -1,0 +1,80 @@
+/* CONTENEUR GLOBAL */
+.presence-container {
+  padding: 24px;
+}
+
+/* FILTRE DATE — aligné à droite */
+.presence-filter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.presence-filter input {
+  padding: 8px 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* GRILLE 3 COLONNES */
+.presence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* STYLE DES CARTES */
+.presence-card {
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.presence-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.presence-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.presence-card li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* TEXTE GRIS POUR ABSENCE DE DONNÉES */
+.presence-empty {
+  color: #777;
+  font-size: 14px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 900px) {
+  .presence-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Filtre custom J/M/A */
+.presence-filter-custom select {
+  padding: 8px 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  margin-left: 8px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.presence-filter-custom select:first-child {
+  margin-left: 0;
+}

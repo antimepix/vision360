@@ -1,0 +1,14 @@
+{
+  "rooms": [
+    { "id": "salle209", "name": "Salle Bureau", "x": 780, "y": 60 },
+    { "id": "salle210", "name": "Bureau de Christelle", "x": 880, "y": 60 },
+    { "id": "salle208", "name": "Bureau de Laetitia", "x": 850, "y": 210 },
+    { "id": "salle201", "name": "Salle chercheur", "x": 1050, "y": 60 },
+    { "id": "salle202", "name": "Salle Réunion", "x": 1030, "y": 210 },
+    { "id": "salle207", "name": "Bureau Damien", "x": 850, "y":320 },
+    { "id": "salle203", "name": "Salle de Cours", "x": 1030, "y": 310 },
+    { "id": "salle204", "name": "Salle de Cours", "x": 1030, "y": 430 },
+    { "id": "salle205", "name": "Salle de Cours", "x": 1030, "y": 550 },
+    { "id": "salle206", "name": "Salle de Cours", "x": 850, "y": 550 }
+  ]
+}

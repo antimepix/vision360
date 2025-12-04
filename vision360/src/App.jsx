@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import Schedule from "./pages/schedule";
 import Campus from "./pages/campus";
-import Enseignant from "./pages/enseignant";
+import Presence from "./pages/presence";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/campus" element={<Campus />} />
-          <Route path="/enseignant" element={<Enseignant />} />
+          <Route path="/presence" element={<Presence />} />
         </Routes>
       </main>
     </div>

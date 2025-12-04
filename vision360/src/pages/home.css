@@ -1,13 +1,13 @@
 .home-layout {
-    height: 100%;
-    min-height: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 0.92fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "rooms occupancy filters"
-        "promo prof filters";
-    gap: 18px;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.92fr;
+  grid-template-rows: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  grid-template-areas:
+    "rooms occupancy filters"
+    "promo prof filters";
+  gap: 18px;
 }
 
 .home-card {
@@ -201,6 +201,7 @@
     color: rgba(255, 255, 255, 0.92);
     -webkit-text-fill-color: rgba(255, 255, 255, 0.92);
     caret-color: transparent;
+    pointer-events: none;
 }
 
 .input::placeholder {

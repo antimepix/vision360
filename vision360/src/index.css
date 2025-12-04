@@ -1,71 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-#root {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  background: var(--bg) !important;
-  color: var(--text) !important;
-}
-
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 22px;
-  padding: 1rem 2rem;
-  background: rgba(10, 12, 15, 0.85);
-  border-bottom: 1px solid var(--border);
-  color: var(--text);
-}
-
-
-.logo {
-  font-weight: 700;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.nav-links a {
-  margin-left: 0;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.nav-links a:hover {
-  color: #fff;
-}
-
-.nav-links a.active {
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  color: #fff;
-}
-
-.main-content {
-  flex: 1;
-  padding: var(--page-pad);
-  overflow: hidden;
-  min-height: 0;
-}
+/* ---------- Thème & variables ---------- */
 
 :root {
   --bg: #0b0d10;
@@ -83,6 +16,25 @@ body {
   --page-pad: 22px;
 }
 
+/* ---------- Reset / global ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+/* certains layouts générés par des libs */
 .app-shell,
 .layout,
 .page,
@@ -106,6 +58,117 @@ a {
 a:hover {
   color: #fff;
 }
+
+/* ---------- Layout principal ---------- */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;             /* devient un container flex */
+  flex-direction: column;    /* contenu empilé verticalement */
+  padding: var(--page-pad);
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  display: flex;
+  align-items: stretch;              /* les éléments prennent toute la hauteur */
+  justify-content: flex-start;
+  gap: 22px;
+  padding: 0 2rem;
+  height: var(--navbar-h);
+  background: rgba(10, 12, 15, 0.85);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.logo {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+/* conteneur des liens */
+.nav-links {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+/* liens + bouton dropdown partagent le même style */
+.nav-links a,
+.nav-linkButton {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 100%;
+  margin-left: 0;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.nav-links a:hover,
+.nav-linkButton:hover {
+  color: #fff;
+}
+
+/* bouton "emploi du temps" */
+.nav-linkButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* seulement les liens de 1er niveau dans la nav, pas ceux du dropdown */
+.nav-links > a.active,
+.nav-links > .nav-linkButton.active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--brand);
+}
+
+/* ---------- Dropdown emploi du temps ---------- */
+
+.nav-dropdown {
+  position: relative;
+}
+
+/* menu déroulant */
+.nav-dropdownMenu {
+  position: absolute;
+  top: 100%;           /* collé sous la barre */
+  left: 0;
+  min-width: 160px;
+  padding: 4px 0;
+  background: #11151b;
+  border-radius: 0;    /* pas d’angles arrondis */
+  border: 1px solid var(--border);
+  border-top: none;    /* fusion avec la navbar */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+  z-index: 20;
+}
+
+.nav-dropdownMenu a {
+  display: block;
+  padding: 8px 14px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+}
+
+.nav-dropdownMenu a:hover {
+  background: rgba(122, 92, 143, 0.35);
+}
+
+/* ---------- Tables (home & schedule) ---------- */
 
 .table td {
   color: rgba(255, 255, 255, 0.88);

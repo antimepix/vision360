@@ -1,0 +1,249 @@
+/* -------- Page globale -------- */
+
+.schedule-page {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* -------- Carte filtres -------- */
+
+.schedule-filtersCard {
+  background: radial-gradient(
+      1200px 400px at 10% 0%,
+      rgba(140, 120, 170, 0.1),
+      transparent 55%
+    ),
+    linear-gradient(180deg, var(--panel), var(--panel2));
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 14px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.schedule-filtersTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.schedule-modeToggle,
+.schedule-weekControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filters-label {
+  font-size: 12px;
+  color: var(--muted2);
+  margin-right: 4px;
+}
+
+/* chips */
+
+.chip {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 12px;
+}
+
+.chip-active {
+  background: rgba(122, 92, 143, 0.65);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* champ semaine */
+
+.schedule-weekDateInput {
+  max-width: 140px;
+}
+
+/* wrapper date texte + input natif invisible */
+.dateField {
+  position: relative;
+  width: 140px;
+  flex: 0 0 auto;
+}
+
+/* input visible jj/mm/aaaa */
+.input-dateText.schedule-weekDateInput {
+  width: 100%;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.92);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.92);
+  caret-color: transparent;
+  pointer-events: none;
+}
+
+/* vrai input type="date" caché */
+.input-dateNative {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.week-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* bas de la carte filtres */
+
+.schedule-filtersBottom {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.schedule-mainFilter {
+  min-width: 240px;
+  flex: 2;
+}
+
+.multiSelect {
+  min-height: 60px;
+}
+
+.schedule-dayFilter {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dayChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.schedule-warning {
+  margin-top: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(250, 204, 21, 0.6);
+  background: rgba(250, 204, 21, 0.12);
+  color: #facc6b;
+  font-size: 12px;
+}
+
+/* -------- Grille emploi du temps -------- */
+
+.schedule-grid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  overflow: hidden;
+}
+
+.schedule-grid--single {
+  grid-template-columns: 1fr; /* une seule colonne, pleine largeur */
+}
+
+
+.schedule-dayColumn {
+  background: linear-gradient(180deg, #10131a, #181c25);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.schedule-dayHeader {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.schedule-dayName {
+  font-weight: 600;
+}
+
+.schedule-dayDate {
+  color: var(--muted2);
+}
+
+.schedule-dayBody {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  padding: 8px;
+  overflow: hidden;
+}
+
+/* rail temps 08h–19h */
+
+.schedule-timeRail {
+  position: absolute;
+  inset: 6px 4px 6px 4px;
+  border-radius: 14px;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 4px 6px;
+}
+
+/* blocs de cours */
+
+.schedule-event {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  border-radius: 12px;
+  padding: 4px 6px;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.event-time {
+  font-weight: 600;
+}
+
+.event-main {
+  font-size: 11px;
+}
+
+.event-meta {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* état "jour vide" */
+
+.schedule-emptyDay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 8px;
+}
