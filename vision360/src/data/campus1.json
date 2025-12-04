@@ -10,14 +10,6 @@
     { "id": "salle201", "name": "Salle des Profs", "x": 360, "y": 500 },
     { "id": "salle202", "name": "Salle de Cours", "x": 450, "y": 500 },
     { "id": "salle203", "name": "Salle de Cours", "x": 540, "y": 490 },
-    { "id": "salle204", "name": "Local Technique Info", "x": 540, "y": 420 },
-    { "id": "salle205", "name": "Salle de Réunion", "x": 450, "y": 80 },
-    { "id": "salle206", "name": "Bureau Direction", "x": 540, "y": 80 },
-    { "id": "salle001", "name": "Bureaux Administratifs", "x": 640, "y": 80 },
-    { "id": "salle002", "name": "Salle de Réunion", "x": 640, "y": 140 },
-    { "id": "salle003", "name": "Salle de Cours", "x": 640, "y": 200 },
-    { "id": "salle004", "name": "Salle de Cours", "x": 640, "y": 280 },
-    { "id": "salle005", "name": "Salle de Cours", "x": 640, "y": 360 },
-    { "id": "salle12", "name": "Salle de Cours", "x": 540, "y": 320 }
+    { "id": "salle204", "name": "Local Technique Info", "x": 540, "y": 420 }
   ]
 }
