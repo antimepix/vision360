@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Campus.css";
+import "./campus.css";
 import campusData from "../data/campus2.json";   // ton fichier avec les salles
 import events from "../data/data.json";         // ton fichier avec les cours
 
