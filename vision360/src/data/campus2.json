@@ -9,6 +9,7 @@
     { "id": "salle203", "name": "Salle de Cours", "x": 1030, "y": 310 },
     { "id": "salle204", "name": "Salle de Cours", "x": 1030, "y": 430 },
     { "id": "salle205", "name": "Salle de Cours", "x": 1030, "y": 550 },
-    { "id": "salle206", "name": "Salle de Cours", "x": 850, "y": 550 }
+    { "id": "salle206", "name": "Salle de Cours", "x": 850, "y": 550 },
+    { "id": "salle témoin", "name": "Test", "x": 50, "y": 50 }
   ]
 }
