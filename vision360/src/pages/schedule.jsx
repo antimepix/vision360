@@ -167,17 +167,38 @@ export default function Schedule() {
   const [selectedProfs, setSelectedProfs] = useState([]);
   const [selectedDay, setSelectedDay] = useState(null); // null = tous, 0-4 = lundi-vendredi
 
+  // Dé-doublonnage à la source (le JSON peut contenir des événements strictement identiques).
+  // C'est crucial pour éviter des keys React dupliquées et des "fantômes" qui restent affichés
+  // ou dont l'ombre s'empile au fil des changements de filtre.
   const uniqueEvents = useMemo(() => {
     const seen = new Set();
-    return events.filter((e) => {
-      const groups = (e.groups ?? []).map(g => g.code).sort().join("|");
-      const key = `${e.id}::${e.start}::${e.end}::${groups}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
-  }, []);
+    const out = [];
+    for (const e of events ?? []) {
+      const groupCodes = (e?.groups ?? [])
+        .map((g) => String(g?.code ?? g?.label ?? "").trim())
+        .filter(Boolean)
+        .sort()
+        .join("|");
+      const lecturerNames = (e?.lecturers ?? [])
+        .map(personName)
+        .filter(Boolean)
+        .sort()
+        .join("|");
+      const key = [
+        String(e?.id ?? ""),
+        String(e?.start ?? ""),
+        String(e?.end ?? ""),
+        String(e?.title ?? ""),
+        groupCodes,
+        lecturerNames,
+      ].join("::");
 
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push(e);
+    }
+    return out;
+  }, []);
 
   const weekStart = useMemo(
     () => startOfWeekMonday(anchorDate),
@@ -186,23 +207,23 @@ export default function Schedule() {
 
   const allPromos = useMemo(() => {
     const list = [];
-    for (const e of events) {
+    for (const e of uniqueEvents) {
       for (const g of e?.groups ?? []) {
         list.push(promoShort(g?.code, g?.label));
       }
     }
     return uniqueSorted(list).filter((p) => p !== "?");
-  }, []);
+  }, [uniqueEvents]);
 
   const allProfs = useMemo(() => {
     const list = [];
-    for (const e of events) {
+    for (const e of uniqueEvents) {
       for (const l of e?.lecturers ?? []) {
         list.push(personName(l));
       }
     }
     return uniqueSorted(list);
-  }, []);
+  }, [uniqueEvents]);
 
   const promoColors = useMemo(() => {
     const map = new Map();
@@ -226,21 +247,37 @@ export default function Schedule() {
     const activePromos = selectedPromos.length ? selectedPromos : allPromos;
     const activeProfs = selectedProfs.length ? selectedProfs : allProfs;
 
-    return events
+    return uniqueEvents
       .map((e) => {
         const dateStr = String(e.start ?? "").slice(0, 10);
         const offset = diffDays(dateStr, monday); // 0 = lundi
+
+        const promos = (e?.groups ?? []).map((g) => promoShort(g?.code, g?.label));
+        const profs = (e?.lecturers ?? []).map(personName);
+        const room = roomShort(
+          e?.resources?.[0]?.label ?? e?.resources?.[0]?.code ?? ""
+        );
+
+        // Key stable + réellement unique (même si `id` est dupliqué dans le JSON)
+        const renderKey = [
+          String(e?.id ?? "noid"),
+          String(e?.start ?? ""),
+          String(e?.end ?? ""),
+          promos.join("|"),
+          profs.join("|"),
+          room,
+        ].join("::");
+
         return {
           ...e,
           _date: dateStr,
           _dayIndex: offset,
-          _promos: (e?.groups ?? []).map((g) => promoShort(g?.code, g?.label)),
-          _profs: (e?.lecturers ?? []).map(personName),
-          _room: roomShort(
-            e?.resources?.[0]?.label ?? e?.resources?.[0]?.code ?? ""
-          ),
+          _promos: promos,
+          _profs: profs,
+          _room: room,
           _startMin: minutesOf(e.start),
           _endMin: minutesOf(e.end),
+          _renderKey: renderKey,
         };
       })
       .filter((e) => e._dayIndex >= 0 && e._dayIndex < 5) // dans la semaine lun-ven
@@ -262,6 +299,7 @@ export default function Schedule() {
     selectedProfs,
     allPromos,
     allProfs,
+    uniqueEvents,
   ]);
 
   // groupé par jour
@@ -493,7 +531,10 @@ export default function Schedule() {
 
                   return (
                     <div
-                      key={`${ev.id ?? idxEv}-${index}`}
+                      key={
+                        ev._renderKey ??
+                        `${ev.id ?? "noid"}-${ev.start ?? ""}-${ev.end ?? ""}-${idxEv}-${index}`
+                      }
                       className="schedule-event"
                       style={{
                         top: `${topPct}%`,
