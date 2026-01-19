@@ -167,6 +167,18 @@ export default function Schedule() {
   const [selectedProfs, setSelectedProfs] = useState([]);
   const [selectedDay, setSelectedDay] = useState(null); // null = tous, 0-4 = lundi-vendredi
 
+  const uniqueEvents = useMemo(() => {
+    const seen = new Set();
+    return events.filter((e) => {
+      const groups = (e.groups ?? []).map(g => g.code).sort().join("|");
+      const key = `${e.id}::${e.start}::${e.end}::${groups}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }, []);
+
+
   const weekStart = useMemo(
     () => startOfWeekMonday(anchorDate),
     [anchorDate]

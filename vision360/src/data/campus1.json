@@ -1,6 +1,6 @@
 {
   "rooms": [
-    { "id": "salle101", "name": "Salle de Cours ", "x": 75, "y": 700 },
+    { "id": "salle101", "name": "Salle de Cours ", "xPercent": 75, "y": 700 },
     { "id": "salle102", "name": "Salle de Cours", "x": 50, "y": 480 },
     { "id": "salle103", "name": "Salle de Cours", "x": 50, "y": 540 },
     { "id": "salle104", "name": "Salle de Cours", "x": 140, "y": 420 },

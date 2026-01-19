@@ -1,15 +1,14 @@
 {
   "rooms": [
-    { "id": "salle209", "name": "Salle Bureau", "x": 780, "y": 60 },
-    { "id": "salle210", "name": "Bureau de Christelle", "x": 880, "y": 60 },
-    { "id": "salle208", "name": "Bureau de Laetitia", "x": 850, "y": 210 },
-    { "id": "salle201", "name": "Salle chercheur", "x": 1050, "y": 60 },
-    { "id": "salle202", "name": "Salle Réunion", "x": 1030, "y": 210 },
-    { "id": "salle207", "name": "Bureau Damien", "x": 850, "y":320 },
-    { "id": "salle203", "name": "Salle de Cours", "x": 1030, "y": 310 },
-    { "id": "salle204", "name": "Salle de Cours", "x": 1030, "y": 430 },
-    { "id": "salle205", "name": "Salle de Cours", "x": 1030, "y": 550 },
-    { "id": "salle206", "name": "Salle de Cours", "x": 850, "y": 550 },
-    { "id": "salle témoin", "name": "Test", "x": 50, "y": 50 }
+    { "id": "salle209", "name": "Salle Bureau", "xPercent": 66, "yPercent": 6 },
+    { "id": "salle210", "name": "Bureau de Christelle", "xPercent": 72, "yPercent": 6 },
+    { "id": "salle208", "name": "Bureau de Laetitia", "xPercent": 70, "yPercent": 22 },
+    { "id": "salle201", "name": "Salle chercheur", "xPercent": 90, "yPercent": 6 },
+    { "id": "salle202", "name": "Salle Réunion", "xPercent": 90, "yPercent": 20 },
+    { "id": "salle207", "name": "Bureau Damien", "xPercent": 70, "yPercent":32 },
+    { "id": "salle203", "name": "Salle de Cours", "xPercent": 90, "yPercent": 29 },
+    { "id": "salle204", "name": "Salle de Cours", "xPercent": 90, "yPercent": 40 },
+    { "id": "salle205", "name": "Salle de Cours", "xPercent": 90, "yPercent": 53 },
+    { "id": "salle206", "name": "Salle de Cours", "xPercent": 72, "yPercent": 51 }
   ]
 }

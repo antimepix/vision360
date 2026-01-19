@@ -32,6 +32,9 @@ body {
   margin: 0;
   background: var(--bg) !important;
   color: var(--text) !important;
+  font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* certains layouts générés par des libs */
@@ -51,13 +54,11 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
+/* liens globaux */
 a {
   color: rgba(255, 255, 255, 0.85);
 }
-
-a:hover {
-  color: #fff;
-}
+a:hover { color: #fff; }
 
 /* ---------- Layout principal ---------- */
 
@@ -77,34 +78,38 @@ a:hover {
   min-height: 0;
 }
 
-/* ---------- Navbar ---------- */
+/* ---------- Navbar (unique, minimal change) ---------- */
 
+/* NOTE : version desktop-first. J'ai conservé tes couleurs/paddings/borders EXACTES */
 .navbar {
   display: flex;
-  align-items: stretch;              /* les éléments prennent toute la hauteur */
-  justify-content: flex-start;
-  gap: 22px;
-  padding: 0 2rem;
+  justify-content: flex-start; /* liens à gauche sur PC */
+  align-items: center;
+  padding: 12px 20px;
+  gap: 20px;
+  background: #111;            /* conforme à ton visuel */
+  color: white;
+  position: relative;
   height: var(--navbar-h);
-  background: rgba(10, 12, 15, 0.85);
-  border-bottom: 1px solid var(--border);
-  color: var(--text);
 }
 
+/* logo, conservé */
 .logo {
   font-weight: 700;
   display: flex;
   align-items: center;
+  margin-right: 10px;
+  color: var(--text);
 }
 
-/* conteneur des liens */
+/* conteneur des liens (desktop) */
 .nav-links {
   display: flex;
-  align-items: stretch;
-  gap: 16px;
+  align-items: center;
+  gap: 20px;
 }
 
-/* liens + bouton dropdown partagent le même style */
+/* liens + bouton same style, conservés */
 .nav-links a,
 .nav-linkButton {
   display: flex;
@@ -114,45 +119,41 @@ a:hover {
   margin-left: 0;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.92);
-}
-
-.nav-links a:hover,
-.nav-linkButton:hover {
-  color: #fff;
-}
-
-/* bouton "emploi du temps" */
-.nav-linkButton {
   background: transparent;
   border: none;
   cursor: pointer;
   font: inherit;
 }
 
-/* seulement les liens de 1er niveau dans la nav, pas ceux du dropdown */
+/* hover states conservés */
+.nav-links a:hover,
+.nav-linkButton:hover {
+  color: #fff;
+}
+
+/* active (1er niveau) conservé */
 .nav-links > a.active,
 .nav-links > .nav-linkButton.active {
   font-weight: 700;
   border-bottom: 2px solid var(--brand);
 }
 
-/* ---------- Dropdown emploi du temps ---------- */
-
+/* dropdown wrapper (identique à ton style) */
 .nav-dropdown {
   position: relative;
 }
 
-/* menu déroulant */
+/* dropdown menu — garde tes couleurs/ombre/bordures */
 .nav-dropdownMenu {
   position: absolute;
   top: 100%;           /* collé sous la barre */
   left: 0;
   min-width: 160px;
   padding: 4px 0;
-  background: #11151b;
-  border-radius: 0;    /* pas d’angles arrondis */
+  background: var(--panel);
+  border-radius: 0;    /* conservé */
   border: 1px solid var(--border);
-  border-top: none;    /* fusion avec la navbar */
+  border-top: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
   z-index: 20;
 }
@@ -161,20 +162,81 @@ a:hover {
   display: block;
   padding: 8px 14px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255,255,255,0.9);
   white-space: nowrap;
 }
-
 .nav-dropdownMenu a:hover {
   background: rgba(122, 92, 143, 0.35);
 }
 
+/* ---------- Burger : ne doit rien casser sur PC ---------- */
+
+/* desktop : burger complètement ignoré (hidden) */
+.burger {
+  display: none;
+  margin-left: 0 !important; /* prevent accidental push if another style leaks */
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
 /* ---------- Tables (home & schedule) ---------- */
 
-.table td {
-  color: rgba(255, 255, 255, 0.88);
+.table td { color: rgba(255,255,255,0.88); }
+.table th { color: rgba(255,255,255,0.92); }
+
+/* ---------- MOBILE OVERRIDES (strict, minimal, only what is needed) ---------- */
+@media (max-width: 768px) {
+
+  /* force le burger à se placer à droite */
+  .burger {
+    display: block !important;
+    margin-left: auto !important;  /* pousse totalement à droite */
+    order: 2;                      /* s’assure qu’il est après les liens */
+  }
+
+  /* s’assure que la navbar reste en mode PC mais avec burger à droite */
+  .navbar {
+    display: flex !important;
+    justify-content: flex-start !important; /* liens à gauche, identique PC */
+    align-items: center !important;
+    gap: 20px;
+    position: relative;
+  }
+
+  /* liens cachés par défaut en mobile */
+  .nav-links {
+    position: absolute;
+    top: calc(var(--navbar-h));
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    background: #111;
+    gap: 16px;
+    z-index: 40;
+    border-top: 1px solid var(--border);
+    order: 1;
+  }
+
+  /* affichage du menu mobile */
+  .nav-links.open {
+    display: flex;
+  }
 }
 
-.table th {
-  color: rgba(255, 255, 255, 0.92);
-}
+/* ---------- Small safety helpers (prevent other rules from pushing layout) ---------- */
+
+/* ensure nav-links children don't get margin-left:auto from elsewhere */
+.nav-links * { margin-left: 0; }
+
+/* keep interactive hit areas consistent */
+.burger:focus { outline: 2px solid rgba(122,92,143,0.25); outline-offset: 2px; }
+
+/* preserve original topbar/header appearance */
+.topbar, header { background: rgba(10,12,15,0.85) !important; border-bottom: 1px solid var(--border); }

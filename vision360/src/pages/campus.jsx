@@ -164,8 +164,8 @@ function Campus() {
               key={room.id}
               className="room-marker"
               style={{
-                left: `${room.x}px`,
-                top: `${room.y}px`,
+                left: `${room.xPercent}%`,
+                top: `${room.yPercent}%`,
                 backgroundColor: getRoomColor(room.status),
               }}
               onClick={() => handleRoomClick(room)}
