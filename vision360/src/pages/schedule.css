@@ -39,11 +39,21 @@
   flex-wrap: wrap;
 }
 
-.filters-label {
-  font-size: 12px;
-  color: var(--muted2);
-  margin-right: 4px;
+/* Texte des labels en blanc (ex: "Filtre journée", "Vue", etc.) */
+.schedule-page .filters-label {
+  color: rgba(255, 255, 255, 0.92);
 }
+
+/* Texte des boutons "chips" en blanc (jour + vue promo/prof) */
+.schedule-page .chip {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Optionnel : encore plus blanc quand actif */
+.schedule-page .chip-active {
+  color: #ffffff;
+}
+
 
 /* chips */
 
@@ -153,7 +163,6 @@
   /* une seule colonne, pleine largeur */
 }
 
-
 .schedule-dayColumn {
   background: linear-gradient(180deg, #10131a, #181c25);
   border-radius: var(--radius);
@@ -209,7 +218,8 @@
 .schedule-event {
   position: absolute;
   left: 6px;
-  right: 6px;
+  width: calc(100% - 12px);
+  box-sizing: border-box;
   border-radius: 12px;
   padding: 4px 6px;
   color: #fff;

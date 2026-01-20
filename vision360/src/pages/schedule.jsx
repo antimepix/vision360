@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import events from "../data/data.json";
 import "./schedule.css";
 
-
 const DAY_START_MIN = 8 * 60;
 const DAY_END_MIN = 19 * 60;
 const DAY_SPAN_MIN = DAY_END_MIN - DAY_START_MIN;
@@ -145,6 +144,78 @@ function darkenColor(hex, factor = 0.35) {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+// Calcule un layout "colonnes" pour les événements qui se chevauchent,
+// afin de les afficher côte à côte plutôt que superposés.
+function layoutOverlaps(dayEvents) {
+  if (!Array.isArray(dayEvents) || dayEvents.length <= 1) {
+    return (dayEvents ?? []).map((e) => ({ ...e, _col: 0, _cols: 1 }));
+  }
+
+  const sorted = dayEvents
+    .map((e) => {
+      const start = clamp(
+        e._startMin ?? DAY_START_MIN,
+        DAY_START_MIN,
+        DAY_END_MIN
+      );
+      const endRaw = clamp(
+        e._endMin ?? DAY_END_MIN,
+        DAY_START_MIN,
+        DAY_END_MIN
+      );
+      const end = Math.max(endRaw, start + 1);
+
+      return {
+        e,
+        start,
+        end,
+        key:
+          e?._renderKey ??
+          `${e?.id ?? "noid"}-${e?.start ?? ""}-${e?.end ?? ""}`,
+      };
+    })
+    .sort((a, b) => a.start - b.start || b.end - a.end);
+
+  const layoutByKey = new Map();
+  let active = []; // { end, col }
+  let group = []; // { key, col }
+  let groupMaxCol = 0;
+
+  const flushGroup = () => {
+    if (!group.length) return;
+    const cols = groupMaxCol + 1;
+    for (const g of group) {
+      layoutByKey.set(g.key, { col: g.col, cols });
+    }
+    group = [];
+    groupMaxCol = 0;
+  };
+
+  for (const item of sorted) {
+    // Retire ceux qui ne chevauchent plus
+    active = active.filter((a) => a.end > item.start);
+
+    // Si plus rien n'est actif, on termine le groupe précédent
+    if (active.length === 0) flushGroup();
+
+    const used = new Set(active.map((a) => a.col));
+    let col = 0;
+    while (used.has(col)) col += 1;
+
+    active.push({ end: item.end, col });
+    group.push({ key: item.key, col });
+    groupMaxCol = Math.max(groupMaxCol, col);
+  }
+  flushGroup();
+
+  return dayEvents.map((e) => {
+    const key =
+      e?._renderKey ?? `${e?.id ?? "noid"}-${e?.start ?? ""}-${e?.end ?? ""}`;
+    const l = layoutByKey.get(key) ?? { col: 0, cols: 1 };
+    return { ...e, _col: l.col, _cols: l.cols };
+  });
+}
+
 /* -------- page emploi du temps -------- */
 
 export default function Schedule() {
@@ -200,10 +271,7 @@ export default function Schedule() {
     return out;
   }, []);
 
-  const weekStart = useMemo(
-    () => startOfWeekMonday(anchorDate),
-    [anchorDate]
-  );
+  const weekStart = useMemo(() => startOfWeekMonday(anchorDate), [anchorDate]);
 
   const allPromos = useMemo(() => {
     const list = [];
@@ -252,7 +320,9 @@ export default function Schedule() {
         const dateStr = String(e.start ?? "").slice(0, 10);
         const offset = diffDays(dateStr, monday); // 0 = lundi
 
-        const promos = (e?.groups ?? []).map((g) => promoShort(g?.code, g?.label));
+        const promos = (e?.groups ?? []).map((g) =>
+          promoShort(g?.code, g?.label)
+        );
         const profs = (e?.lecturers ?? []).map(personName);
         const room = roomShort(
           e?.resources?.[0]?.label ?? e?.resources?.[0]?.code ?? ""
@@ -316,12 +386,15 @@ export default function Schedule() {
     return days;
   }, [filteredEvents]);
 
+  // Répartit les événements se chevauchant en colonnes (côte à côte)
+  const layoutByDay = useMemo(
+    () => eventsByDay.map((day) => layoutOverlaps(day)),
+    [eventsByDay]
+  );
+
   const warningText = useMemo(() => {
     const total = filteredEvents.length;
-    const maxPerDay = eventsByDay.reduce(
-      (m, d) => Math.max(m, d.length),
-      0
-    );
+    const maxPerDay = eventsByDay.reduce((m, d) => Math.max(m, d.length), 0);
     if (!total) return null;
     if (maxPerDay > 12 || total > 45) {
       return "Emploi du temps très chargé : pensez à filtrer par journée ou à réduire le nombre de promos/profs sélectionnés.";
@@ -341,9 +414,7 @@ export default function Schedule() {
   const colorMap = viewMode === "promo" ? promoColors : profColors;
 
   const handleMultiSelectChange = (event, setter) => {
-    const values = Array.from(event.target.selectedOptions).map(
-      (o) => o.value
-    );
+    const values = Array.from(event.target.selectedOptions).map((o) => o.value);
     setter(values);
   };
 
@@ -356,7 +427,6 @@ export default function Schedule() {
   };
 
   const isSingleDay = selectedDay !== null;
-
 
   return (
     <section className="schedule-page">
@@ -477,16 +547,18 @@ export default function Schedule() {
           </div>
         </div>
 
-        {warningText && (
-          <div className="schedule-warning">⚠️ {warningText}</div>
-        )}
+        {warningText && <div className="schedule-warning">⚠️ {warningText}</div>}
       </div>
 
       {/* Tableau emploi du temps */}
-      <div className={`schedule-grid ${isSingleDay ? "schedule-grid--single" : ""}`}>
+      <div
+        className={`schedule-grid ${
+          isSingleDay ? "schedule-grid--single" : ""
+        }`}
+      >
         {weekDays.map((day, index) => {
           if (selectedDay !== null && selectedDay !== index) return null;
-          const eventsForDay = eventsByDay[index];
+          const eventsForDay = layoutByDay[index] ?? [];
 
           return (
             <div key={day.ymd} className="schedule-dayColumn">
@@ -515,8 +587,7 @@ export default function Schedule() {
                     DAY_START_MIN,
                     DAY_END_MIN
                   );
-                  const topPct =
-                    ((start - DAY_START_MIN) / DAY_SPAN_MIN) * 100;
+                  const topPct = ((start - DAY_START_MIN) / DAY_SPAN_MIN) * 100;
                   const heightPct = Math.max(
                     8,
                     ((end - start) / DAY_SPAN_MIN) * 100
@@ -529,6 +600,11 @@ export default function Schedule() {
                   const baseColor = colorMap.get(labelKey) ?? "#4b5563";
                   const darkerColor = darkenColor(baseColor, 0.4);
 
+                  const cols = Math.max(1, ev._cols ?? 1);
+                  const col = clamp(ev._col ?? 0, 0, cols - 1);
+                  const widthPct = 100 / cols;
+                  const leftPct = col * widthPct;
+
                   return (
                     <div
                       key={
@@ -539,6 +615,8 @@ export default function Schedule() {
                       style={{
                         top: `${topPct}%`,
                         height: `${heightPct}%`,
+                        left: `calc(${leftPct}% + 6px)`,
+                        width: `calc(${widthPct}% - 12px)`,
                         backgroundImage: `linear-gradient(135deg, ${baseColor}, ${darkerColor})`,
                       }}
                     >
@@ -550,9 +628,7 @@ export default function Schedule() {
                           ? ev._promos.join(", ") || "Promotion ?"
                           : ev._profs.join(", ") || "Prof ?"}
                       </div>
-                      <div className="event-meta">
-                        {ev._room || "Salle ?"}
-                      </div>
+                      <div className="event-meta">{ev._room || "Salle ?"}</div>
                     </div>
                   );
                 })}
