@@ -236,7 +236,9 @@ export default function Schedule() {
   const [anchorDate, setAnchorDate] = useState(startOfWeekMonday(todayYMD()));
   const [selectedPromos, setSelectedPromos] = useState([]);
   const [selectedProfs, setSelectedProfs] = useState([]);
-  const [selectedDay, setSelectedDay] = useState(null); // null = tous, 0-4 = lundi-vendredi
+  const ALL_DAYS = [0, 1, 2, 3, 4];
+  const [selectedDays, setSelectedDays] = useState(ALL_DAYS); // multi-sélection
+
 
   // Dé-doublonnage à la source (le JSON peut contenir des événements strictement identiques).
   // C'est crucial pour éviter des keys React dupliquées et des "fantômes" qui restent affichés
@@ -426,7 +428,22 @@ export default function Schedule() {
     setAnchorDate((d) => shiftYMD(startOfWeekMonday(d), 7));
   };
 
-  const isSingleDay = selectedDay !== null;
+  const toggleDay = (dayIndex) => {
+    setSelectedDays((prev) => {
+      const has = prev.includes(dayIndex);
+      if (has) return prev.filter((d) => d !== dayIndex);
+      return [...prev, dayIndex].sort((a, b) => a - b);
+    });
+  };
+
+  const selectAllDays = () => {
+    setSelectedDays(ALL_DAYS);
+  };
+
+
+  const isSingleDay = selectedDays.length === 1;
+  const isAllDaysSelected = selectedDays.length === 5;
+
 
   return (
     <section className="schedule-page">
@@ -528,22 +545,27 @@ export default function Schedule() {
             <div className="dayChips">
               <button
                 type="button"
-                className={selectedDay === null ? "chip chip-active" : "chip"}
-                onClick={() => setSelectedDay(null)}
+                className={isAllDaysSelected ? "chip chip-active" : "chip"}
+                onClick={selectAllDays}
               >
                 Toute la semaine
               </button>
-              {weekDays.map((d, idx) => (
-                <button
-                  key={d.ymd}
-                  type="button"
-                  className={selectedDay === idx ? "chip chip-active" : "chip"}
-                  onClick={() => setSelectedDay(idx)}
-                >
-                  {WEEKDAY_LABELS[idx].slice(0, 3).toLowerCase()}
-                </button>
-              ))}
+
+              {weekDays.map((d, idx) => {
+                const active = selectedDays.includes(idx);
+                return (
+                  <button
+                    key={d.ymd}
+                    type="button"
+                    className={active ? "chip chip-active" : "chip"}
+                    onClick={() => toggleDay(idx)}
+                  >
+                    {WEEKDAY_LABELS[idx].slice(0, 3).toLowerCase()}
+                  </button>
+                );
+              })}
             </div>
+
           </div>
         </div>
 
@@ -551,98 +573,105 @@ export default function Schedule() {
       </div>
 
       {/* Tableau emploi du temps */}
-      <div
-        className={`schedule-grid ${
-          isSingleDay ? "schedule-grid--single" : ""
-        }`}
-      >
-        {weekDays.map((day, index) => {
-          if (selectedDay !== null && selectedDay !== index) return null;
-          const eventsForDay = layoutByDay[index] ?? [];
+      {/* Tableau emploi du temps */}
+      {selectedDays.length === 0 ? (
+        <div className="schedule-noDay smallNote">
+          Sélectionne au moins un jour (ou clique sur “Toute la semaine”).
+        </div>
+      ) : (
+        <div
+          className={`schedule-grid ${isSingleDay ? "schedule-grid--single" : ""}`}
+          style={{ "--schedule-cols": String(selectedDays.length) }}
+        >
+          {weekDays.map((day, index) => {
+            if (!selectedDays.includes(index)) return null;
 
-          return (
-            <div key={day.ymd} className="schedule-dayColumn">
-              <div className="schedule-dayHeader">
-                <div className="schedule-dayName">{day.label}</div>
-                <div className="schedule-dayDate">
-                  {day.ymd.split("-").reverse().join("/")}
-                </div>
-              </div>
-              <div className="schedule-dayBody">
-                <div className="schedule-timeRail">
-                  <span>08h</span>
-                  <span>12h</span>
-                  <span>16h</span>
-                  <span>19h</span>
-                </div>
+            const eventsForDay = layoutByDay[index] ?? [];
 
-                {eventsForDay.map((ev, idxEv) => {
-                  const start = clamp(
-                    ev._startMin ?? DAY_START_MIN,
-                    DAY_START_MIN,
-                    DAY_END_MIN
-                  );
-                  const end = clamp(
-                    ev._endMin ?? DAY_END_MIN,
-                    DAY_START_MIN,
-                    DAY_END_MIN
-                  );
-                  const topPct = ((start - DAY_START_MIN) / DAY_SPAN_MIN) * 100;
-                  const heightPct = Math.max(
-                    8,
-                    ((end - start) / DAY_SPAN_MIN) * 100
-                  );
-
-                  const labelKey =
-                    viewMode === "promo"
-                      ? ev._promos[0] ?? "?"
-                      : ev._profs[0] ?? "?";
-                  const baseColor = colorMap.get(labelKey) ?? "#4b5563";
-                  const darkerColor = darkenColor(baseColor, 0.4);
-
-                  const cols = Math.max(1, ev._cols ?? 1);
-                  const col = clamp(ev._col ?? 0, 0, cols - 1);
-                  const widthPct = 100 / cols;
-                  const leftPct = col * widthPct;
-
-                  return (
-                    <div
-                      key={
-                        ev._renderKey ??
-                        `${ev.id ?? "noid"}-${ev.start ?? ""}-${ev.end ?? ""}-${idxEv}-${index}`
-                      }
-                      className="schedule-event"
-                      style={{
-                        top: `${topPct}%`,
-                        height: `${heightPct}%`,
-                        left: `calc(${leftPct}% + 6px)`,
-                        width: `calc(${widthPct}% - 12px)`,
-                        backgroundImage: `linear-gradient(135deg, ${baseColor}, ${darkerColor})`,
-                      }}
-                    >
-                      <div className="event-time">
-                        {formatTimeRange(ev.start, ev.end)}
-                      </div>
-                      <div className="event-main">
-                        {viewMode === "promo"
-                          ? ev._promos.join(", ") || "Promotion ?"
-                          : ev._profs.join(", ") || "Prof ?"}
-                      </div>
-                      <div className="event-meta">{ev._room || "Salle ?"}</div>
-                    </div>
-                  );
-                })}
-
-                {!eventsForDay.length && (
-                  <div className="schedule-emptyDay smallNote">
-                    Aucun cours ce jour dans la sélection.
+            return (
+              <div key={day.ymd} className="schedule-dayColumn">
+                <div className="schedule-dayHeader">
+                  <div className="schedule-dayName">{day.label}</div>
+                  <div className="schedule-dayDate">
+                    {day.ymd.split("-").reverse().join("/")}
                   </div>
-                )}
+                </div>
+
+                <div className="schedule-dayBody">
+                  <div className="schedule-timeRail">
+                    <span>08h</span>
+                    <span>12h</span>
+                    <span>16h</span>
+                    <span>19h</span>
+                  </div>
+
+                  {eventsForDay.map((ev, idxEv) => {
+                    const start = clamp(
+                      ev._startMin ?? DAY_START_MIN,
+                      DAY_START_MIN,
+                      DAY_END_MIN
+                    );
+                    const end = clamp(
+                      ev._endMin ?? DAY_END_MIN,
+                      DAY_START_MIN,
+                      DAY_END_MIN
+                    );
+
+                    const topPct = ((start - DAY_START_MIN) / DAY_SPAN_MIN) * 100;
+                    const heightPct = Math.max(
+                      8,
+                      ((end - start) / DAY_SPAN_MIN) * 100
+                    );
+
+                    const labelKey =
+                      viewMode === "promo" ? ev._promos[0] ?? "?" : ev._profs[0] ?? "?";
+                    const baseColor = colorMap.get(labelKey) ?? "#4b5563";
+                    const darkerColor = darkenColor(baseColor, 0.4);
+
+                    const cols = Math.max(1, ev._cols ?? 1);
+                    const col = clamp(ev._col ?? 0, 0, cols - 1);
+                    const widthPct = 100 / cols;
+                    const leftPct = col * widthPct;
+
+                    return (
+                      <div
+                        key={
+                          ev._renderKey ??
+                          `${ev.id ?? "noid"}-${ev.start ?? ""}-${ev.end ?? ""}-${idxEv}-${index}`
+                        }
+                        className="schedule-event"
+                        style={{
+                          top: `${topPct}%`,
+                          height: `${heightPct}%`,
+                          left: `calc(${leftPct}% + 6px)`,
+                          width: `calc(${widthPct}% - 12px)`,
+                          backgroundImage: `linear-gradient(135deg, ${baseColor}, ${darkerColor})`,
+                        }}
+                      >
+                        <div className="event-time">
+                          {formatTimeRange(ev.start, ev.end)}
+                        </div>
+                        <div className="event-main">
+                          {viewMode === "promo"
+                            ? ev._promos.join(", ") || "Promotion ?"
+                            : ev._profs.join(", ") || "Prof ?"}
+                        </div>
+                        <div className="event-meta">{ev._room || "Salle ?"}</div>
+                      </div>
+                    );
+                  })}
+
+                  {!eventsForDay.length && (
+                    <div className="schedule-emptyDay smallNote">
+                      Aucun cours ce jour dans la sélection.
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  );
+            );
+          })}
+        </div>
+      )
+
+      }</section>)
 }

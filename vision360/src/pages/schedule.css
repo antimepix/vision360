@@ -153,9 +153,17 @@
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(var(--schedule-cols, 5), 1fr);
   gap: 8px;
   overflow: hidden;
+}
+
+.schedule-noDay {
+  background: linear-gradient(180deg, #10131a, #181c25);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 16px;
+  text-align: center;
 }
 
 .schedule-grid--single {
