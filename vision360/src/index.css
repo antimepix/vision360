@@ -1,0 +1,143 @@
+/* ---------- Thème & variables (Pastel / Light) ---------- */
+
+:root {
+  /* Fond très doux, presque blanc teinté de lavande/bleu */
+  --bg: #fdfcff;
+
+  /* Panneaux plus teintés (moins clairs) */
+  --panel: #f0ecfb;
+  --panel2: #e5def7;
+
+  /* Bordures un peu plus marquées */
+  --border: #d2c8ed;
+
+  /* Texte plus sombre pour contraste */
+  --text: #1a152d;
+
+  /* Card Gradients (Light Default) - More Saturated Violet */
+  --bg-gradient-global: linear-gradient(135deg, #dcd3ff 0%, #9d8ec3 100%);
+  --bg-gradient-morning: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 100%);
+  --bg-gradient-afternoon: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+
+  /* Stat Card Overlay (Light) - Softer to let colors through */
+  --card-overlay: rgba(255, 255, 255, 0.4);
+  --stat-detail-bg: rgba(255, 255, 255, 0.5);
+
+  /* Couleur accent : un violet pastel doux mais lisible */
+  --brand: #9d8ec3;
+  --brand2: #b5a8d6;
+
+  --header-bg: var(--panel);
+  --stat-card-text: var(--text);
+  --stat-card-value: var(--brand);
+  --active-text: #000000;
+}
+
+/* ---------- Thème Nuit (Dark - True Black) ---------- */
+[data-theme='dark'] {
+  /* Fond noir pur (OLED) */
+  --bg: #000000;
+
+  /* Panneaux plus gris (au lieu de presque noir) */
+  --panel: #1e1e1e;
+  --panel2: #252525;
+
+  /* Bordures plus visibles sur noir */
+  --border: #2a2a2a;
+
+  /* Texte clair (blanc cassé) */
+  --text: #e1e1e6;
+
+  /* Textes secondaires */
+  --muted: #a0a0a5;
+  --muted2: #7aa2f7;
+
+  /* Marque accentuée */
+  --brand: #bb9af7;
+  --brand2: #9d7cd8;
+
+  /* Ombres (plus fines sur noir) */
+  --shadow: 0 1px 1px rgba(255, 255, 255, 0.05);
+
+  /* Card Gradients (Dark Mode) - Alignés sur les panneaux */
+  --bg-gradient-global: var(--panel);
+  --bg-gradient-morning: var(--panel);
+  --bg-gradient-afternoon: var(--panel);
+
+  /* Overlays adaptés au noir */
+  --card-overlay: transparent;
+  --stat-detail-bg: var(--panel2);
+
+  --header-bg: #1e1e1e;
+
+  /* Libellés et Valeurs : Noir sur Fond Blanc (Demande spécifique pour les cartes de stats) */
+  --bg-gradient-global: #ffffff;
+  --bg-gradient-morning: #ffffff;
+  --bg-gradient-afternoon: #ffffff;
+  --stat-card-text: #000000;
+  --stat-card-value: #000000;
+  --active-text: #ffffff;
+}
+
+/* ---------- Reset / global ---------- */
+
+/* certains layouts générés par des libs */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: 'Outfit', Inter, "Segoe UI", Roboto, system-ui, sans-serif;
+  /* Plus rond/moderne si possible */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background: var(--header-bg) !important;
+  backdrop-filter: blur(12px);
+  color: var(--text) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+/* liens globaux */
+a {
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--brand2);
+}
+
+/* ---------- Layout principal ---------- */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  /* container flex */
+  flex-direction: column;
+  /* contenu empilé verticalement */
+  padding: var(--page-pad);
+  overflow-x: hidden;
+  /* pas de scroll horizontal */
+  overflow-y: auto;
+  /* autorise le scroll vertical */
+  min-height: 0;
+}

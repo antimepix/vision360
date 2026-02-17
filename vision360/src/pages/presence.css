@@ -1,0 +1,140 @@
+/* CONTENEUR GLOBAL (Pastel / Light) */
+.presence-container {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* FILTRE DATE — aligné à droite */
+.presence-filter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  gap: 12px;
+  align-items: center;
+}
+
+.presence-filter input {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 14px;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.presence-filter input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(157, 142, 195, 0.2);
+}
+
+/* GRILLE 3 COLONNES */
+.presence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* STYLE DES CARTES */
+.presence-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.presence-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -5px rgba(118, 108, 145, 0.2);
+}
+
+.presence-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--brand);
+  /* Violet pastel */
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.presence-card ul {
+  list-style-type: none;
+  /* Plus propre sans puces par défaut, ou on met des puces stylisées */
+  padding-left: 0;
+}
+
+.presence-card li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  background: var(--panel2);
+  border-radius: 8px;
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Optionnel : pastille ou indicateur */
+.presence-card li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand2);
+  margin-right: 10px;
+}
+
+/* TEXTE GRIS POUR ABSENCE DE DONNÉES */
+.presence-empty {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+  background: var(--panel2);
+  border-radius: 12px;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 900px) {
+  .presence-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .presence-container {
+    padding: 16px;
+  }
+}
+
+/* Filtre custom J/M/A */
+.presence-filter-custom select {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-left: 8px;
+  background: white;
+  color: var(--text);
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.presence-filter-custom select:focus {
+  border-color: var(--brand);
+}
+
+.presence-filter-custom select:first-child {
+  margin-left: 0;
+}

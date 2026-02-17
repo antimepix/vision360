@@ -1,0 +1,483 @@
+/* -------- Page globale (Pastel / Light) -------- */
+
+.schedule-page {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* -------- Carte filtres -------- */
+
+.schedule-filtersCard {
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.schedule-filtersTop,
+.schedule-filtersBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.schedule-modeToggle,
+.schedule-weekControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Texte des labels en foncé */
+.schedule-page .filters-label {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Texte des boutons "chips" */
+.schedule-page .chip {
+  color: var(--muted);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+/* Actif */
+.schedule-page .chip-active {
+  color: var(--active-text);
+}
+
+
+/* chips */
+
+.chip {
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.chip:hover {
+  background: var(--panel2);
+  color: var(--brand);
+}
+
+.chip-active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--active-text) !important;
+  box-shadow: 0 4px 12px rgba(157, 142, 195, 0.3);
+}
+
+/* champ semaine */
+
+.schedule-weekDateInput {
+  max-width: 140px;
+}
+
+/* wrapper date texte + input natif invisible */
+.dateField {
+  position: relative;
+  width: 140px;
+  flex: 0 0 auto;
+}
+
+/* input visible jj/mm/aaaa */
+.input-dateText.schedule-weekDateInput {
+  width: 100%;
+  max-width: none;
+  color: var(--text);
+  -webkit-text-fill-color: var(--text);
+  caret-color: transparent;
+  pointer-events: none;
+  font-weight: 600;
+}
+
+.schedule-searchInput {
+  min-width: 180px;
+  height: 32px;
+  font-size: 13px;
+  margin-left: 20px;
+  background: var(--panel2);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0 12px;
+}
+
+.schedule-searchInput:focus {
+  border-color: var(--brand);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(187, 154, 247, 0.2);
+}
+
+/* vrai input type="date" caché */
+.input-dateNative {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.week-label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* bas de la carte filtres */
+
+.schedule-filtersBottom {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.schedule-mainFilter {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.multiSelect {
+  width: 100%;
+  min-height: 80px;
+  background: var(--panel2) !important;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px;
+  font-size: 13px;
+}
+
+.schedule-dayFilter {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dayChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.schedule-warning {
+  margin-top: 6px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  background: rgba(250, 204, 21, 0.1);
+  color: #b45309;
+  /* Darker orange/brown for readability */
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* -------- Grille emploi du temps -------- */
+
+.schedule-grid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(var(--schedule-cols, 5), 1fr);
+  gap: 12px;
+  overflow: hidden;
+}
+
+.schedule-noDay {
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.schedule-grid--single {
+  grid-template-columns: 1fr;
+  /* une seule colonne, pleine largeur */
+}
+
+.schedule-dayColumn {
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.schedule-dayColumn:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-dayHeader {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  background: var(--panel2);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.schedule-dayName {
+  font-weight: 700;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.schedule-dayDate {
+  color: var(--muted);
+}
+
+.schedule-dayBody {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  padding: 8px;
+  overflow: hidden;
+  background: var(--bg);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+/* rail temps 08h–19h */
+
+.schedule-timeRail {
+  position: absolute;
+  inset: 6px 4px 6px 4px;
+  border-radius: 14px;
+  border: 1px dashed var(--border);
+  pointer-events: none;
+  font-size: 11px;
+  color: var(--muted2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 4px 6px;
+  background: rgba(248, 250, 252, 0.4);
+}
+
+/* blocs de cours */
+
+.schedule-event {
+  position: absolute;
+  left: 6px;
+  width: calc(100% - 12px);
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 8px 10px;
+  /* Augmenté */
+  color: #fff;
+  /* Toujours blanc car les cours ont des couleurs de fond */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  /* Augmenté */
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  /* Augmenté */
+  overflow: hidden;
+  transition: transform 0.1s, z-index 0.1s;
+}
+
+.schedule-event:hover {
+  z-index: 10;
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.event-time {
+  font-weight: 700;
+  font-size: 14px;
+  /* Augmenté */
+  opacity: 0.95;
+}
+
+.event-title {
+  font-size: 17px;
+  /* Augmenté */
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.event-type {
+  font-size: 13px;
+  /* Augmenté */
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.event-main {
+  font-size: 14px;
+  /* Augmenté */
+  font-weight: 600;
+  line-height: 1.3;
+  opacity: 0.95;
+}
+
+.event-meta {
+  font-size: 13px;
+  /* Augmenté */
+  color: rgba(255, 255, 255, 1);
+  margin-top: 2px;
+}
+
+/* état "jour vide" */
+
+.schedule-emptyDay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 8px;
+  color: var(--muted2);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   Responsive emploi du temps
+   =========================== */
+
+/* -------- Tablettes / petits laptops -------- */
+@media (max-width: 1200px) {
+  .schedule-filtersCard {
+    padding: 14px;
+  }
+
+  .schedule-filtersTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .schedule-weekControls {
+    flex-wrap: wrap;
+  }
+
+  .schedule-filtersBottom {
+    align-items: stretch;
+  }
+
+  /* 3 colonnes plutôt que 5 */
+  .schedule-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* -------- Mobiles / très petites largeurs -------- */
+@media (max-width: 768px) {
+  .schedule-page {
+    gap: 12px;
+  }
+
+  .schedule-filtersCard {
+    padding: 12px;
+  }
+
+  /* En-tête des filtres en colonne */
+  .schedule-filtersTop {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .schedule-modeToggle,
+  .schedule-weekControls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Si tu as une règle globale .button { width: 100% } (depuis home),
+     on la neutralise ici pour ne pas avoir des boutons flèches pleine largeur */
+  .schedule-page .button {
+    width: auto;
+  }
+
+  .dateField {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .week-label {
+    font-size: 12px;
+  }
+
+  /* Bas de la carte filtres en pile */
+  .schedule-filtersBottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .schedule-mainFilter,
+  .schedule-dayFilter {
+    width: 100%;
+  }
+
+  .multiSelect {
+    width: 100%;
+  }
+
+  .dayChips {
+    gap: 6px;
+  }
+
+  /* Grille : un jour par ligne */
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(280px, auto);
+    gap: 14px;
+  }
+
+  .schedule-dayColumn {
+    min-width: 0;
+  }
+
+  .schedule-dayHeader {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .schedule-dayBody {
+    padding: 6px;
+  }
+
+  .schedule-timeRail {
+    font-size: 10px;
+  }
+
+  .schedule-event {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+
+  .event-time {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "rooms": [
+    {
+      "id": "salle101",
+      "name": "Salle de Cours ",
+      "xPercent": 82,
+      "yPercent": 25,
+      "widthPercent": 12,
+      "heightPercent": 15
+    },
+    {
+      "id": "salle102",
+      "name": "Salle de Cours",
+      "xPercent": 82,
+      "yPercent": 40,
+      "widthPercent": 12,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle103",
+      "name": "Salle de Cours",
+      "xPercent": 82,
+      "yPercent": 55,
+      "widthPercent": 12,
+      "heightPercent": 15
+    },
+    {
+      "id": "salle104",
+      "name": "Salle de Cours",
+      "xPercent": 82,
+      "yPercent": 70,
+      "widthPercent": 12,
+      "heightPercent": 15
+    },
+    {
+      "id": "salle105",
+      "name": "Salle TP Elec",
+      "xPercent": 82,
+      "yPercent": 85,
+      "widthPercent": 12,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle106",
+      "name": "Salle Informatique",
+      "xPercent": 60,
+      "yPercent": 82,
+      "widthPercent": 15,
+      "heightPercent": 18
+    },
+    {
+      "id": "salle107",
+      "name": "Salle Informatique",
+      "xPercent": 45,
+      "yPercent": 82,
+      "widthPercent": 15,
+      "heightPercent": 18
+    },
+    {
+      "id": "salle109",
+      "name": "Salle Classlab",
+      "xPercent": 15,
+      "yPercent": 80,
+      "widthPercent": 18,
+      "heightPercent": 20
+    },
+    {
+      "id": "salle110",
+      "name": "Salle Immersive",
+      "xPercent": 15,
+      "yPercent": 63,
+      "widthPercent": 18,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle111",
+      "name": "Salle de Cuisine Pédagogique",
+      "xPercent": 15,
+      "yPercent": 48,
+      "widthPercent": 18,
+      "heightPercent": 18
+    },
+    {
+      "id": "salle112",
+      "name": "Salle réunion",
+      "xPercent": 42,
+      "yPercent": 22,
+      "widthPercent": 15,
+      "heightPercent": 12
+    }
+  ]
+}

@@ -1,0 +1,697 @@
+/* Page Campus (Pastel / Light) */
+
+.campus-container {
+  min-height: 100vh;
+  /* Fond global géré par body, mais on peut ajouter un dégradé subtil si on veut */
+  background: radial-gradient(circle at top left, rgba(157, 142, 195, 0.05), transparent 40%);
+  padding: 2rem;
+  max-width: 1200px;
+  /* centre le contenu */
+  margin: 0 auto;
+}
+
+.campus-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.campus-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+/* -------- Boutons d'étage -------- */
+
+.campus-floorTabsWrapper {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.campus-floorTabs {
+  display: inline-flex;
+  padding: 6px;
+  gap: 6px;
+  border-radius: 99px;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 15px rgba(118, 108, 145, 0.1);
+}
+
+.campus-floorBtn {
+  border: none;
+  border-radius: 99px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.campus-floorBtn:hover {
+  background: var(--panel2);
+  color: var(--brand);
+}
+
+.campus-floorBtn.active {
+  background: var(--brand);
+  color: var(--active-text);
+  box-shadow: 0 4px 12px rgba(157, 142, 195, 0.4);
+}
+
+/* -------- Légende -------- */
+
+.campus-legend-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.campus-unlock-zone {
+  display: flex;
+  align-items: center;
+  background: var(--panel2);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.unlock-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.unlock-input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  width: 140px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.unlock-input:focus {
+  border-color: var(--brand);
+}
+
+.unlock-btn {
+  background: var(--brand);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.unlock-btn:hover {
+  opacity: 0.9;
+}
+
+.unlock-status-badge {
+  color: #4ade80;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.legend {
+  display: flex;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend-color.libre {
+  background-color: #86efac;
+  /* Green pastel */
+}
+
+.legend-color.utilisee {
+  background-color: #fca5a5;
+  /* Red pastel */
+}
+
+/* -------- Disposition pseudo-topographique -------- */
+
+.campus-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.campus-floor-shape {
+  position: relative;
+  /* On définit une taille fixe ou proportionnelle pour simuler le plan */
+  width: 1000px;
+  height: 840px;
+  background-color: #f8fafc;
+  border: 2px solid var(--border);
+  border-radius: 24px;
+  /* Ombre pour suggérer le bâtiment */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.room-card-positioned {
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  /* Style "case" semi-transparente pour voir le plan dessous */
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  border: 2px solid var(--border);
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.2rem;
+  cursor: grab;
+  user-select: none;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.room-card-positioned:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+  z-index: 20;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Dragging / Resizing state — no transition, elevated */
+.room-card-positioned.dragging,
+.room-card-positioned.resizing {
+  z-index: 50;
+  transition: none;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  opacity: 0.92;
+}
+
+.room-card-positioned.dragging {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.room-card-positioned.resizing {
+  cursor: nwse-resize;
+  transform: translate(-50%, -50%);
+  /* keep scale 1 for accurate resizing visuals */
+}
+
+/* Handle de redimensionnement */
+.resize-handle {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 14px;
+  height: 14px;
+  cursor: nwse-resize;
+  background: rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 100;
+}
+
+.room-card-positioned:hover .resize-handle {
+  opacity: 1;
+}
+
+.resize-handle::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.room-card-positioned.libre {
+  background-color: rgba(220, 252, 231, 0.6);
+  border-color: #4ade80;
+  color: #166534;
+}
+
+.room-card-positioned.utilisee {
+  background-color: rgba(254, 226, 226, 0.6);
+  border-color: #f87171;
+  color: #991b1b;
+}
+
+.room-card-positioned .room-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  pointer-events: none;
+  /* don't interfere with drag */
+}
+
+/* ---- Rename inline input ---- */
+.room-title-editable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.room-title-editable:hover {
+  opacity: 0.8;
+}
+
+.room-title-editable.readonly {
+  cursor: default;
+}
+
+.room-title-editable.readonly:hover {
+  opacity: 1;
+}
+
+.edit-icon {
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.room-title-editable:hover .edit-icon {
+  opacity: 1;
+}
+
+.rename-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.rename-input {
+  flex: 1;
+  padding: 0.35rem 0.6rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.rename-input:focus {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.rename-confirm-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.rename-confirm-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Responsive: sur petit écran, on peut soit scroller, soit réduire l'échelle */
+@media (max-width: 1100px) {
+  .campus-floor-shape {
+    width: 800px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Sur mobile, difficile de tout faire tenir en absolu : on peut permettre le scroll horizontal */
+  .campus-layout {
+    justify-content: flex-start;
+    /* aligne à gauche pour scroller */
+  }
+}
+
+/* -------- Panneau d'info -------- */
+
+.room-info-panel {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.98);
+  /* Force light background */
+  color: #1a1a1a !important;
+  /* Force dark text */
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.15);
+  width: 340px;
+  overflow: hidden;
+  animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.room-info-header {
+  background: var(--brand);
+  /* Violet theme header */
+  color: #ffffff !important;
+  /* Always white text on violet header */
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-info-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.room-info-body {
+  padding: 1.5rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #1a1a1a !important;
+  /* Force dark text instead of var(--text) */
+}
+
+.info-label {
+  font-weight: 600;
+  color: #555555 !important;
+  /* Force readable gray instead of var(--muted) */
+}
+
+.info-section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--panel2);
+  border-radius: 12px;
+}
+
+.section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #666666 !important;
+  /* Force darker gray */
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.time-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.time-slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--brand);
+}
+
+.time-label {
+  font-weight: 700;
+  color: #1a1a1a !important;
+  /* Force dark text */
+  font-size: 0.9rem;
+}
+
+.time-status {
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.time-status.libre {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.time-status.occupee {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-badge {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.status-badge.libre {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.utilisee {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.toggle-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--brand);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 12px rgba(157, 142, 195, 0.3);
+}
+
+.toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(157, 142, 195, 0.45);
+  background: var(--brand2);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+}
+
+.stats-panel {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+  min-width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px -5px rgba(118, 108, 145, 0.2);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--brand);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* === Tablettes / petits écrans (<= 1200px) === */
+@media (max-width: 1200px) {
+  .campus-container {
+    padding: 1.5rem;
+  }
+
+  .campus-header h1 {
+    font-size: 2.1rem;
+  }
+
+
+
+  .legend {
+    gap: 1rem;
+  }
+}
+
+
+/* === Mobiles / très petites largeurs (<= 768px) === */
+@media (max-width: 768px) {
+  .campus-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .campus-header h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Boutons d'étage : ils passent bien sur 2 lignes s'il faut */
+  .campus-floorTabsWrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .campus-floorTabs {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .campus-floorBtn {
+    flex: 1 1 48%;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Légende plus compacte et verticale */
+  .legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  /* Carte moins haute sur mobile */
+
+
+  /* Panneau d'infos type "bottom sheet" */
+  .room-info-panel {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .room-info-body {
+    max-height: 35vh;
+    overflow-y: auto;
+  }
+
+  /* Stats en colonne sous la carte */
+  .stats-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    width: 100%;
+    min-width: 0;
+    padding: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+}
