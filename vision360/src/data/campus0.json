@@ -1,10 +1,52 @@
 {
   "rooms": [
-    { "id": "salleRIO", "name": "Salle RIO", "xPercent": 55, "yPercent": 70 },
-    { "id": "salle005", "name": "Salle Codesign", "xPercent": 91, "yPercent": 85 },
-    { "id": "salle004", "name": "Salle informatique", "xPercent": 89, "yPercent": 71 },
-    { "id": "salle003", "name": "Salle de Cours", "xPercent": 89, "yPercent": 55 },
-    { "id": "salle002", "name": "Salle de Cours", "xPercent": 88, "yPercent": 38 },
-    { "id": "salle001", "name": "Salle Fablab", "xPercent": 55 , "yPercent": 30 }
+    {
+      "id": "salleRIO",
+      "name": "Salle RIO",
+      "xPercent": 40,
+      "yPercent": 65,
+      "widthPercent": 18,
+      "heightPercent": 25
+    },
+    {
+      "id": "salle J005",
+      "name": "Salle Codesign",
+      "xPercent": 85,
+      "yPercent": 82,
+      "widthPercent": 12,
+      "heightPercent": 15
+    },
+    {
+      "id": "salle J004",
+      "name": "Salle informatique",
+      "xPercent": 85,
+      "yPercent": 65,
+      "widthPercent": 12,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle J003",
+      "name": "Salle de Cours",
+      "xPercent": 85,
+      "yPercent": 48,
+      "widthPercent": 12,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle J002",
+      "name": "Salle de Cours",
+      "xPercent": 85,
+      "yPercent": 33,
+      "widthPercent": 12,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle J001",
+      "name": "Salle Fablab",
+      "xPercent": 40,
+      "yPercent": 30,
+      "widthPercent": 20,
+      "heightPercent": 30
+    }
   ]
 }

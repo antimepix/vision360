@@ -10,14 +10,14 @@ const DAY_SPAN_MIN = DAY_END_MIN - DAY_START_MIN;
 const WEEKDAY_LABELS = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"];
 
 const COLORS = [
-  "#f97373",
-  "#fbbf24",
-  "#4ade80",
-  "#22d3ee",
-  "#a855f7",
-  "#fb7185",
-  "#facc6b",
-  "#2dd4bf",
+  "#dcd3ff", // Lavender
+  "#c4b5fd", // Soft Purple
+  "#a0c4ff", // Muted Blue
+  "#b2f2bb", // Mint Green
+  "#fff3bf", // Pale Yellow
+  "#ffd8a8", // Soft Orange
+  "#ffc9c9", // Soft Rose
+  "#95e1d3", // Aqua
 ];
 
 /* -------- helpers -------- */
@@ -216,6 +216,26 @@ function layoutOverlaps(dayEvents) {
   });
 }
 
+/* -------- exports pour les tests -------- */
+export {
+  pad2,
+  todayYMD,
+  shiftYMD,
+  startOfWeekMonday,
+  ymdRangeLabel,
+  ymdToDMY,
+  minutesOf,
+  clamp,
+  promoShort,
+  roomShort,
+  personName,
+  diffDays,
+  formatTimeRange,
+  uniqueSorted,
+  darkenColor,
+  layoutOverlaps,
+};
+
 /* -------- page emploi du temps -------- */
 
 export default function Schedule() {
@@ -238,7 +258,7 @@ export default function Schedule() {
   const [selectedProfs, setSelectedProfs] = useState([]);
   const ALL_DAYS = [0, 1, 2, 3, 4];
   const [selectedDays, setSelectedDays] = useState(ALL_DAYS); // multi-sélection
-
+  const [searchQuery, setSearchQuery] = useState(""); // Re-ajouté
 
   // Dé-doublonnage à la source (le JSON peut contenir des événements strictement identiques).
   // C'est crucial pour éviter des keys React dupliquées et des "fantômes" qui restent affichés
@@ -347,6 +367,8 @@ export default function Schedule() {
           _promos: promos,
           _profs: profs,
           _room: room,
+          _courseName: e.courses?.[0]?.course || e.title?.split("\n")[0] || "Cours ?",
+          _courseType: e.className || e.title?.split("\n")[1] || "",
           _startMin: minutesOf(e.start),
           _endMin: minutesOf(e.end),
           _renderKey: renderKey,
@@ -354,6 +376,17 @@ export default function Schedule() {
       })
       .filter((e) => e._dayIndex >= 0 && e._dayIndex < 5) // dans la semaine lun-ven
       .filter((e) => {
+        // Filtrage par texte (recherche) - Re-ajouté
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          const titleMatch = (e.title || "").toLowerCase().includes(q);
+          const courseMatch = (e._courseName || "").toLowerCase().includes(q);
+          const promoMatch = e._promos.some((p) => p.toLowerCase().includes(q));
+          const profMatch = e._profs.some((p) => p.toLowerCase().includes(q));
+          const roomMatch = (e._room || "").toLowerCase().includes(q);
+          if (!titleMatch && !courseMatch && !promoMatch && !profMatch && !roomMatch) return false;
+        }
+
         if (viewMode === "promo") {
           if (!e._promos.length) return false;
           return e._promos.some((p) => activePromos.includes(p));
@@ -372,6 +405,7 @@ export default function Schedule() {
     allPromos,
     allProfs,
     uniqueEvents,
+    searchQuery,
   ]);
 
   // groupé par jour
@@ -466,6 +500,15 @@ export default function Schedule() {
             >
               Par professeur
             </button>
+
+            {/* Nouveau champ recherche - Intégré à droite des boutons de vue */}
+            <input
+              type="text"
+              className="input schedule-searchInput"
+              placeholder="Rechercher (promo, prof, cours...)"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
           </div>
 
           <div className="schedule-weekControls">
@@ -650,6 +693,10 @@ export default function Schedule() {
                       >
                         <div className="event-time">
                           {formatTimeRange(ev.start, ev.end)}
+                        </div>
+                        <div className="event-title">
+                          <strong>{ev._courseName}</strong>
+                          {ev._courseType && <span className="event-type"> ({ev._courseType})</span>}
                         </div>
                         <div className="event-main">
                           {viewMode === "promo"

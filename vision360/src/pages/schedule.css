@@ -1,4 +1,4 @@
-/* -------- Page globale -------- */
+/* -------- Page globale (Pastel / Light) -------- */
 
 .schedule-page {
   flex: 1;
@@ -11,63 +11,76 @@
 /* -------- Carte filtres -------- */
 
 .schedule-filtersCard {
-  background: radial-gradient(1200px 400px at 10% 0%,
-      rgba(140, 120, 170, 0.1),
-      transparent 55%),
-    linear-gradient(180deg, var(--panel), var(--panel2));
+  background: var(--panel);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  padding: 14px 16px 12px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.schedule-filtersTop {
+.schedule-filtersTop,
+.schedule-filtersBottom {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 24px;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .schedule-modeToggle,
 .schedule-weekControls {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-/* Texte des labels en blanc (ex: "Filtre journée", "Vue", etc.) */
+/* Texte des labels en foncé */
 .schedule-page .filters-label {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Texte des boutons "chips" en blanc (jour + vue promo/prof) */
+/* Texte des boutons "chips" */
 .schedule-page .chip {
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--muted);
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
-/* Optionnel : encore plus blanc quand actif */
+/* Actif */
 .schedule-page .chip-active {
-  color: #ffffff;
+  color: var(--active-text);
 }
 
 
 /* chips */
 
 .chip {
-  border-radius: 999px;
+  border-radius: 99px;
   border: 1px solid var(--border);
-  padding: 6px 12px;
-  background: rgba(0, 0, 0, 0.35);
-  font-size: 12px;
+  padding: 6px 14px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.chip:hover {
+  background: var(--panel2);
+  color: var(--brand);
 }
 
 .chip-active {
-  background: rgba(122, 92, 143, 0.65);
-  border-color: rgba(255, 255, 255, 0.18);
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--active-text) !important;
+  box-shadow: 0 4px 12px rgba(157, 142, 195, 0.3);
 }
 
 /* champ semaine */
@@ -87,10 +100,29 @@
 .input-dateText.schedule-weekDateInput {
   width: 100%;
   max-width: none;
-  color: rgba(255, 255, 255, 0.92);
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  -webkit-text-fill-color: var(--text);
   caret-color: transparent;
   pointer-events: none;
+  font-weight: 600;
+}
+
+.schedule-searchInput {
+  min-width: 180px;
+  height: 32px;
+  font-size: 13px;
+  margin-left: 20px;
+  background: var(--panel2);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0 12px;
+}
+
+.schedule-searchInput:focus {
+  border-color: var(--brand);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(187, 154, 247, 0.2);
 }
 
 /* vrai input type="date" caché */
@@ -102,7 +134,7 @@
 }
 
 .week-label {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
 }
 
@@ -115,20 +147,30 @@
 }
 
 .schedule-mainFilter {
-  min-width: 240px;
   flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .multiSelect {
-  min-height: 60px;
+  width: 100%;
+  min-height: 80px;
+  background: var(--panel2) !important;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px;
+  font-size: 13px;
 }
 
 .schedule-dayFilter {
   flex: 1;
-  min-width: 220px;
+  min-width: 250px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .dayChips {
@@ -139,12 +181,14 @@
 
 .schedule-warning {
   margin-top: 6px;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 12px;
-  border: 1px solid rgba(250, 204, 21, 0.6);
-  background: rgba(250, 204, 21, 0.12);
-  color: #facc6b;
-  font-size: 12px;
+  border: 1px solid rgba(250, 204, 21, 0.3);
+  background: rgba(250, 204, 21, 0.1);
+  color: #b45309;
+  /* Darker orange/brown for readability */
+  font-size: 13px;
+  font-weight: 500;
 }
 
 /* -------- Grille emploi du temps -------- */
@@ -154,16 +198,18 @@
   min-height: 0;
   display: grid;
   grid-template-columns: repeat(var(--schedule-cols, 5), 1fr);
-  gap: 8px;
+  gap: 12px;
   overflow: hidden;
 }
 
 .schedule-noDay {
-  background: linear-gradient(180deg, #10131a, #181c25);
+  background: var(--panel);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   padding: 16px;
   text-align: center;
+  color: var(--muted);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .schedule-grid--single {
@@ -172,28 +218,38 @@
 }
 
 .schedule-dayColumn {
-  background: linear-gradient(180deg, #10131a, #181c25);
+  background: var(--panel);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   min-width: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.schedule-dayColumn:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
 .schedule-dayHeader {
-  padding: 8px 10px;
+  padding: 12px 14px;
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 13px;
+  background: var(--panel2);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .schedule-dayName {
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: capitalize;
 }
 
 .schedule-dayDate {
-  color: var(--muted2);
+  color: var(--muted);
 }
 
 .schedule-dayBody {
@@ -202,6 +258,8 @@
   min-height: 0;
   padding: 8px;
   overflow: hidden;
+  background: var(--bg);
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 
 /* rail temps 08h–19h */
@@ -210,15 +268,16 @@
   position: absolute;
   inset: 6px 4px 6px 4px;
   border-radius: 14px;
-  border: 1px dashed rgba(255, 255, 255, 0.06);
+  border: 1px dashed var(--border);
   pointer-events: none;
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.45);
+  font-size: 11px;
+  color: var(--muted2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   padding: 4px 6px;
+  background: rgba(248, 250, 252, 0.4);
 }
 
 /* blocs de cours */
@@ -228,29 +287,63 @@
   left: 6px;
   width: calc(100% - 12px);
   box-sizing: border-box;
-  border-radius: 12px;
-  padding: 4px 6px;
+  border-radius: 10px;
+  padding: 8px 10px;
+  /* Augmenté */
   color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
-  font-size: 11px;
+  /* Toujours blanc car les cours ont des couleurs de fond */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  /* Augmenté */
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
+  /* Augmenté */
   overflow: hidden;
+  transition: transform 0.1s, z-index 0.1s;
+}
+
+.schedule-event:hover {
+  z-index: 10;
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .event-time {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 14px;
+  /* Augmenté */
+  opacity: 0.95;
+}
+
+.event-title {
+  font-size: 17px;
+  /* Augmenté */
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.event-type {
+  font-size: 13px;
+  /* Augmenté */
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .event-main {
-  font-size: 11px;
+  font-size: 14px;
+  /* Augmenté */
+  font-weight: 600;
+  line-height: 1.3;
+  opacity: 0.95;
 }
 
 .event-meta {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  /* Augmenté */
+  color: rgba(255, 255, 255, 1);
+  margin-top: 2px;
 }
 
 /* état "jour vide" */
@@ -263,6 +356,9 @@
   justify-content: center;
   text-align: center;
   padding: 0 8px;
+  color: var(--muted2);
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 /* ===========================
@@ -272,13 +368,13 @@
 /* -------- Tablettes / petits laptops -------- */
 @media (max-width: 1200px) {
   .schedule-filtersCard {
-    padding: 12px 14px;
+    padding: 14px;
   }
 
   .schedule-filtersTop {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
   }
 
   .schedule-weekControls {
@@ -309,7 +405,7 @@
   .schedule-filtersTop {
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
+    gap: 10px;
   }
 
   .schedule-modeToggle,
@@ -330,7 +426,7 @@
   }
 
   .week-label {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   /* Bas de la carte filtres en pile */
@@ -349,14 +445,14 @@
   }
 
   .dayChips {
-    gap: 4px;
+    gap: 6px;
   }
 
   /* Grille : un jour par ligne */
   .schedule-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(260px, auto);
-    gap: 10px;
+    grid-auto-rows: minmax(280px, auto);
+    gap: 14px;
   }
 
   .schedule-dayColumn {
@@ -364,8 +460,8 @@
   }
 
   .schedule-dayHeader {
-    font-size: 11px;
-    padding: 6px 8px;
+    font-size: 12px;
+    padding: 8px 10px;
   }
 
   .schedule-dayBody {
@@ -373,15 +469,15 @@
   }
 
   .schedule-timeRail {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .schedule-event {
-    font-size: 10px;
-    padding: 4px 5px;
+    font-size: 11px;
+    padding: 6px 8px;
   }
 
   .event-time {
-    font-weight: 600;
+    font-weight: 700;
   }
 }

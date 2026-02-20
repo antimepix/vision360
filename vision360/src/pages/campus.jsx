@@ -1,223 +1,223 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import "./campus.css";
 
-// ⚠️ Ces fichiers doivent exister dans src/data/
-// Tu peux partir de ceux que tu avais dans l'ancien projet (campus0/1/2.json).
-import campus0 from "../data/campus0.json"; // rez-de-chaussée
-import campus1 from "../data/campus1.json"; // 1er étage
-import campus2 from "../data/campus2.json"; // 2e étage
+// External Data
+import campus0 from "../data/campus0.json";
+import campus1 from "../data/campus1.json";
+import campus2 from "../data/campus2.json";
+import events from "../data/data.json";
 
-import events from "../data/data.json"; // cours
+// Utils
+import { loadOverrides, saveOverrides } from "../utils/storage";
+import { buildRoomData } from "../utils/roomUtils";
 
-// Associe chaque étage à son JSON + son image
+// Sub-components
+import FloorSelector from "./campus/FloorSelector";
+import RoomCard from "./campus/RoomCard";
+import CampusLegend from "./campus/CampusLegend";
+import RoomDetails from "./campus/RoomDetails";
+
 const FLOOR_CONFIGS = {
-  ground: {
-    id: "ground",
-    label: "rez de chaussée",
-    data: campus0,
-    imageSrc: "/rdc.png",
-  },
-  first: {
-    id: "first",
-    label: "1er étage",
-    data: campus1,
-    imageSrc: "/premierEtage.jpg", // ✅ ton image du 1er étage
-  },
-  second: {
-    id: "second",
-    label: "2e étage",
-    data: campus2,
-    imageSrc: "/terrasse.png", // ton image actuelle du 2e étage
-  },
+  ground: { id: "ground", label: "rez de chaussee", data: campus0, imageSrc: "/RezDeChaussee.png" },
+  first: { id: "first", label: "1er etage", data: campus1, imageSrc: "/premierEtage.png" },
+  second: { id: "second", label: "2e etage", data: campus2, imageSrc: "/terrasse.png" },
 };
 
-function Campus() {
-  // on démarre sur le 2e étage comme tu voulais
+export default function Campus() {
+  const userRole = localStorage.getItem("userRole");
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [unlockCode, setUnlockCode] = useState("");
+  const isReadOnly = userRole === "eleve" && !isUnlocked;
+
   const [selectedFloor, setSelectedFloor] = useState("second");
   const [rooms, setRooms] = useState([]);
   const [selectedRoom, setSelectedRoom] = useState(null);
 
-  // extrait un numéro de salle dans un label : "BDX_J103_FA143_COURS" → "103"
-  const extractRoomNumber = (labelOrCode) => {
-    const match = String(labelOrCode ?? "").match(/\d+/);
-    return match ? match[0] : null;
+  const [dragging, setDragging] = useState(null);
+  const floorRef = useRef(null);
+  const didDragRef = useRef(false);
+
+  const [editingName, setEditingName] = useState(false);
+  const [nameInput, setNameInput] = useState("");
+
+  const buildRooms = useCallback((floorKey) => {
+    const floorConfig = FLOOR_CONFIGS[floorKey];
+    const baseRooms = floorConfig?.data?.rooms ?? [];
+    const overrides = loadOverrides();
+    return buildRoomData(baseRooms, overrides, events);
+  }, []);
+
+  useEffect(() => {
+    setRooms(buildRooms(selectedFloor));
+    setSelectedRoom(null);
+    setEditingName(false);
+  }, [selectedFloor, buildRooms]);
+
+  const handleUnlock = (e) => {
+    e.preventDefault();
+    if (unlockCode.trim().toUpperCase() === "MODIF") {
+      setIsUnlocked(true);
+      setUnlockCode("");
+    } else {
+      alert("Code incorrect.");
+    }
   };
 
-  // 🔁 Recalcul du nuage de points à chaque changement d’étage
-  useEffect(() => {
-    const floorConfig = FLOOR_CONFIGS[selectedFloor];
-    const campusData = floorConfig?.data;
-    const baseRooms = campusData?.rooms ?? [];
+  const handlePointerDown = (e, room, type = "move") => {
+    if (isReadOnly) return;
+    if (e.button && e.button !== 0) return;
+    if (type === "resize") e.stopPropagation();
+    e.preventDefault();
 
-    const updatedRooms = baseRooms.map((room) => {
-      // "salle209" -> "209"
-      const roomNumber = String(room.id || "").replace("salle", "");
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
 
-      // on cherche un événement correspondant à cette salle
-      const event = events.find((ev) =>
-        (ev.resources ?? []).some((res) => {
-          const num = extractRoomNumber(res.label ?? res.code);
-          return num && num === roomNumber;
-        })
-      );
-
-      if (!event) {
-        return {
-          ...room,
-          status: "libre",
-          morning: "libre",
-          afternoon: "libre",
-        };
-      }
-
-      const startHour = new Date(event.start).getHours();
-      const endHour = new Date(event.end).getHours();
-
-      return {
-        ...room,
-        status: "utilisée",
-        morning: startHour < 12 ? "occupée" : "libre",
-        afternoon: endHour > 12 ? "occupée" : "libre",
-      };
+    didDragRef.current = false;
+    setDragging({
+      roomId: room.id,
+      type,
+      startMouseX: clientX,
+      startMouseY: clientY,
+      startXPct: room.xPercent,
+      startYPct: room.yPercent,
+      startWPct: room.widthPercent,
+      startHPct: room.heightPercent,
     });
+  };
 
-    setRooms(updatedRooms);
-    setSelectedRoom(null); // on ferme le panneau si on change d’étage
-  }, [selectedFloor]);
+  const handlePointerMove = useCallback((e) => {
+    if (!dragging || !floorRef.current) return;
+    e.preventDefault();
 
-  const getRoomColor = (status) =>
-    status === "libre" ? "#4ade80" : "#ef4444";
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    const rect = floorRef.current.getBoundingClientRect();
+    const dx = clientX - dragging.startMouseX;
+    const dy = clientY - dragging.startMouseY;
+
+    if (Math.abs(dx) > 4 || Math.abs(dy) > 4) didDragRef.current = true;
+
+    const dxPct = (dx / rect.width) * 100;
+    const dyPct = (dy / rect.height) * 100;
+
+    setRooms((prev) => prev.map((r) => {
+      if (r.id !== dragging.roomId) return r;
+      if (dragging.type === "move") {
+        return { ...r, xPercent: Math.max(0, Math.min(100, dragging.startXPct + dxPct)), yPercent: Math.max(0, Math.min(100, dragging.startYPct + dyPct)) };
+      } else {
+        return { ...r, widthPercent: Math.max(2, Math.min(50, dragging.startWPct + dxPct)), heightPercent: Math.max(2, Math.min(50, dragging.startHPct + dyPct)) };
+      }
+    }));
+  }, [dragging]);
+
+  const handlePointerUp = useCallback(() => {
+    if (!dragging) return;
+    setRooms((prev) => {
+      const updated = prev.find((r) => r.id === dragging.roomId);
+      if (updated) {
+        const overrides = loadOverrides();
+        overrides[updated.id] = {
+          ...overrides[updated.id],
+          xPercent: Math.round(updated.xPercent * 100) / 100,
+          yPercent: Math.round(updated.yPercent * 100) / 100,
+          widthPercent: Math.round(updated.widthPercent * 100) / 100,
+          heightPercent: Math.round(updated.heightPercent * 100) / 100,
+        };
+        saveOverrides(overrides);
+      }
+      return prev;
+    });
+    setDragging(null);
+  }, [dragging]);
+
+  useEffect(() => {
+    if (!dragging) return;
+    const onMove = (e) => handlePointerMove(e);
+    const onUp = () => handlePointerUp();
+    document.addEventListener("mousemove", onMove, { passive: false });
+    document.addEventListener("mouseup", onUp);
+    document.addEventListener("touchmove", onMove, { passive: false });
+    document.addEventListener("touchend", onUp);
+    return () => {
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup", onUp);
+      document.removeEventListener("touchmove", onMove);
+      document.removeEventListener("touchend", onUp);
+    };
+  }, [dragging, handlePointerMove, handlePointerUp]);
 
   const handleRoomClick = (room) => {
+    if (didDragRef.current) return;
     setSelectedRoom(room);
+    setEditingName(false);
+  };
+
+  const confirmRename = () => {
+    const trimmed = nameInput.trim();
+    if (!trimmed || !selectedRoom) { setEditingName(false); return; }
+    const overrides = loadOverrides();
+    overrides[selectedRoom.id] = { ...overrides[selectedRoom.id], alias: trimmed };
+    saveOverrides(overrides);
+    setRooms((prev) => prev.map((r) => r.id === selectedRoom.id ? { ...r, alias: trimmed, displayName: trimmed } : r));
+    setSelectedRoom((prev) => ({ ...prev, alias: trimmed, displayName: trimmed }));
+    setEditingName(false);
   };
 
   const currentFloor = FLOOR_CONFIGS[selectedFloor];
 
+  const roomList = useMemo(() => rooms.map((room) => (
+    <RoomCard
+      key={room.id}
+      room={room}
+      isDragging={dragging?.roomId === room.id && dragging.type === "move"}
+      isResizing={dragging?.roomId === room.id && dragging.type === "resize"}
+      isReadOnly={isReadOnly}
+      onPointerDown={handlePointerDown}
+      onClick={handleRoomClick}
+    />
+  )), [rooms, dragging, isReadOnly, handlePointerDown]);
+
   return (
     <div className="campus-container">
+      {/* Preload hidden images */}
+      <div style={{ position: "absolute", width: 0, height: 0, overflow: "hidden", pointerEvents: "none", opacity: 0 }}>
+        {Object.values(FLOOR_CONFIGS).map(cfg => <img key={cfg.id} src={cfg.imageSrc} alt="" />)}
+      </div>
+
       <div className="campus-header">
         <h1>Plan Interactif du Campus</h1>
-
-        {/* Boutons d'étage */}
-        <div className="campus-floorTabsWrapper">
-          <div className="campus-floorTabs">
-            <button
-              type="button"
-              className={
-                selectedFloor === "ground"
-                  ? "campus-floorBtn active"
-                  : "campus-floorBtn"
-              }
-              onClick={() => setSelectedFloor("ground")}
-            >
-              rez de chaussée
-            </button>
-
-            <button
-              type="button"
-              className={
-                selectedFloor === "first"
-                  ? "campus-floorBtn active"
-                  : "campus-floorBtn"
-              }
-              onClick={() => setSelectedFloor("first")}
-            >
-              1<sup>er</sup> étage
-            </button>
-
-            <button
-              type="button"
-              className={
-                selectedFloor === "second"
-                  ? "campus-floorBtn active"
-                  : "campus-floorBtn"
-              }
-              onClick={() => setSelectedFloor("second")}
-            >
-              2<sup>e</sup> étage
-            </button>
-          </div>
-        </div>
-
-        <div className="legend">
-          <div className="legend-item">
-            <span className="legend-color libre"></span> Libre
-          </div>
-          <div className="legend-item">
-            <span className="legend-color utilisee"></span> Utilisée
-          </div>
-        </div>
-      </div>
-
-      {/* Carte + nuage de points */}
-      <div className="campus-map">
-        <img
-          src={currentFloor.imageSrc}
-          alt={`Plan du campus - ${currentFloor.label}`}
-          className="campus-image"
+        <FloorSelector selectedFloor={selectedFloor} onSelectFloor={setSelectedFloor} />
+        <CampusLegend
+          userRole={userRole}
+          isUnlocked={isUnlocked}
+          unlockCode={unlockCode}
+          setUnlockCode={setUnlockCode}
+          onUnlock={handleUnlock}
         />
+      </div>
 
-        <div className="rooms-overlay">
-          {rooms.map((room) => (
-            <div
-              key={room.id}
-              className="room-marker"
-              style={{
-                left: `${room.xPercent}%`,
-                top: `${room.yPercent}%`,
-                backgroundColor: getRoomColor(room.status),
-              }}
-              onClick={() => handleRoomClick(room)}
-            >
-              <div
-                className="room-pulse"
-                style={{ backgroundColor: getRoomColor(room.status) }}
-              ></div>
-            </div>
-          ))}
+      <div className="campus-layout">
+        <div
+          ref={floorRef}
+          className="campus-floor-shape"
+          style={{ backgroundImage: `url(${currentFloor.imageSrc})`, backgroundSize: "100% 100%" }}
+        >
+          {roomList}
         </div>
       </div>
 
-      {/* Panneau d'info salle */}
-      {selectedRoom && (
-        <div className="room-info-panel">
-          <div className="room-info-header">
-            <h2>{selectedRoom.name}</h2>
-            <button
-              className="close-btn"
-              onClick={() => setSelectedRoom(null)}
-            >
-              ×
-            </button>
-          </div>
-
-          <div className="room-info-body">
-            <div className="info-row">
-              <span className="info-label">Statut :</span>
-              <span className={`status-badge ${selectedRoom.status}`}>
-                {selectedRoom.status === "libre" ? "🟢 Libre" : "🔴 Utilisée"}
-              </span>
-            </div>
-
-            <h3>Horaires</h3>
-            <div>
-              Matin :{" "}
-              {selectedRoom.morning === "libre" ? "✔ Libre" : "✖ Occupée"}
-            </div>
-            <div>
-              Après-midi :{" "}
-              {selectedRoom.afternoon === "libre" ? "✔ Libre" : "✖ Occupée"}
-            </div>
-
-            <div className="info-row">
-              <span className="info-label">ID :</span> {selectedRoom.id}
-            </div>
-          </div>
-        </div>
-      )}
+      <RoomDetails
+        room={selectedRoom}
+        editingName={editingName}
+        nameInput={nameInput}
+        setNameInput={setNameInput}
+        onStartRename={() => { if (!isReadOnly) { setEditingName(true); setNameInput(selectedRoom.alias || selectedRoom.name); } }}
+        onConfirmRename={confirmRename}
+        onCancelRename={() => setEditingName(false)}
+        onClose={() => setSelectedRoom(null)}
+        isReadOnly={isReadOnly}
+        onKeyDown={(e) => { if (e.key === "Enter") confirmRename(); if (e.key === "Escape") setEditingName(false); }}
+      />
     </div>
   );
 }
-
-export default Campus;

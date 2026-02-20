@@ -1,23 +1,87 @@
-/* ---------- Thème & variables ---------- */
+/* ---------- Thème & variables (Pastel / Light) ---------- */
 
 :root {
-  --bg: #0b0d10;
-  --panel: #11151b;
-  --panel2: #151b23;
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #e8ecf3;
-  --muted: #a5adbf;
-  --muted2: #7f889d;
-  --brand: #7a5c8f;
-  --brand2: #5a456b;
-  --radius: 18px;
-  --shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
-  --navbar-h: 64px;
-  --page-pad: 22px;
+  /* Fond très doux, presque blanc teinté de lavande/bleu */
+  --bg: #fdfcff;
+
+  /* Panneaux plus teintés (moins clairs) */
+  --panel: #f0ecfb;
+  --panel2: #e5def7;
+
+  /* Bordures un peu plus marquées */
+  --border: #d2c8ed;
+
+  /* Texte plus sombre pour contraste */
+  --text: #1a152d;
+
+  /* Card Gradients (Light Default) - More Saturated Violet */
+  --bg-gradient-global: linear-gradient(135deg, #dcd3ff 0%, #9d8ec3 100%);
+  --bg-gradient-morning: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 100%);
+  --bg-gradient-afternoon: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+
+  /* Stat Card Overlay (Light) - Softer to let colors through */
+  --card-overlay: rgba(255, 255, 255, 0.4);
+  --stat-detail-bg: rgba(255, 255, 255, 0.5);
+
+  /* Couleur accent : un violet pastel doux mais lisible */
+  --brand: #9d8ec3;
+  --brand2: #b5a8d6;
+
+  --header-bg: var(--panel);
+  --stat-card-text: var(--text);
+  --stat-card-value: var(--brand);
+  --active-text: #000000;
+}
+
+/* ---------- Thème Nuit (Dark - True Black) ---------- */
+[data-theme='dark'] {
+  /* Fond noir pur (OLED) */
+  --bg: #000000;
+
+  /* Panneaux plus gris (au lieu de presque noir) */
+  --panel: #1e1e1e;
+  --panel2: #252525;
+
+  /* Bordures plus visibles sur noir */
+  --border: #2a2a2a;
+
+  /* Texte clair (blanc cassé) */
+  --text: #e1e1e6;
+
+  /* Textes secondaires */
+  --muted: #a0a0a5;
+  --muted2: #7aa2f7;
+
+  /* Marque accentuée */
+  --brand: #bb9af7;
+  --brand2: #9d7cd8;
+
+  /* Ombres (plus fines sur noir) */
+  --shadow: 0 1px 1px rgba(255, 255, 255, 0.05);
+
+  /* Card Gradients (Dark Mode) - Alignés sur les panneaux */
+  --bg-gradient-global: var(--panel);
+  --bg-gradient-morning: var(--panel);
+  --bg-gradient-afternoon: var(--panel);
+
+  /* Overlays adaptés au noir */
+  --card-overlay: transparent;
+  --stat-detail-bg: var(--panel2);
+
+  --header-bg: #1e1e1e;
+
+  /* Libellés et Valeurs : Noir sur Fond Blanc (Demande spécifique pour les cartes de stats) */
+  --bg-gradient-global: #ffffff;
+  --bg-gradient-morning: #ffffff;
+  --bg-gradient-afternoon: #ffffff;
+  --stat-card-text: #000000;
+  --stat-card-value: #000000;
+  --active-text: #ffffff;
 }
 
 /* ---------- Reset / global ---------- */
 
+/* certains layouts générés par des libs */
 * {
   box-sizing: border-box;
 }
@@ -32,33 +96,29 @@ body {
   margin: 0;
   background: var(--bg) !important;
   color: var(--text) !important;
-  font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  font-family: 'Outfit', Inter, "Segoe UI", Roboto, system-ui, sans-serif;
+  /* Plus rond/moderne si possible */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* certains layouts générés par des libs */
-.app-shell,
-.layout,
-.page,
-.main-content {
-  background: transparent !important;
-  color: var(--text);
-}
-
-.topbar,
-.navbar,
 header {
-  background: rgba(10, 12, 15, 0.85) !important;
+  background: var(--header-bg) !important;
+  backdrop-filter: blur(12px);
   color: var(--text) !important;
   border-bottom: 1px solid var(--border);
 }
 
 /* liens globaux */
 a {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.2s;
 }
-a:hover { color: #fff; }
+
+a:hover {
+  color: var(--brand2);
+}
 
 /* ---------- Layout principal ---------- */
 
@@ -70,173 +130,14 @@ a:hover { color: #fff; }
 
 .main-content {
   flex: 1;
-  display: flex;             /* container flex */
-  flex-direction: column;    /* contenu empilé verticalement */
+  display: flex;
+  /* container flex */
+  flex-direction: column;
+  /* contenu empilé verticalement */
   padding: var(--page-pad);
-  overflow-x: hidden;        /* pas de scroll horizontal */
-  overflow-y: auto;          /* autorise le scroll vertical */
+  overflow-x: hidden;
+  /* pas de scroll horizontal */
+  overflow-y: auto;
+  /* autorise le scroll vertical */
   min-height: 0;
 }
-
-/* ---------- Navbar (unique, minimal change) ---------- */
-
-/* NOTE : version desktop-first. J'ai conservé tes couleurs/paddings/borders EXACTES */
-.navbar {
-  display: flex;
-  justify-content: flex-start; /* liens à gauche sur PC */
-  align-items: center;
-  padding: 12px 20px;
-  gap: 20px;
-  background: #111;            /* conforme à ton visuel */
-  color: white;
-  position: relative;
-  height: var(--navbar-h);
-}
-
-/* logo, conservé */
-.logo {
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  color: var(--text);
-}
-
-/* conteneur des liens (desktop) */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-/* liens + bouton same style, conservés */
-.nav-links a,
-.nav-linkButton {
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  height: 100%;
-  margin-left: 0;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.92);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font: inherit;
-}
-
-/* hover states conservés */
-.nav-links a:hover,
-.nav-linkButton:hover {
-  color: #fff;
-}
-
-/* active (1er niveau) conservé */
-.nav-links > a.active,
-.nav-links > .nav-linkButton.active {
-  font-weight: 700;
-  border-bottom: 2px solid var(--brand);
-}
-
-/* dropdown wrapper (identique à ton style) */
-.nav-dropdown {
-  position: relative;
-}
-
-/* dropdown menu — garde tes couleurs/ombre/bordures */
-.nav-dropdownMenu {
-  position: absolute;
-  top: 100%;           /* collé sous la barre */
-  left: 0;
-  min-width: 160px;
-  padding: 4px 0;
-  background: var(--panel);
-  border-radius: 0;    /* conservé */
-  border: 1px solid var(--border);
-  border-top: none;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
-  z-index: 20;
-}
-
-.nav-dropdownMenu a {
-  display: block;
-  padding: 8px 14px;
-  text-decoration: none;
-  color: rgba(255,255,255,0.9);
-  white-space: nowrap;
-}
-.nav-dropdownMenu a:hover {
-  background: rgba(122, 92, 143, 0.35);
-}
-
-/* ---------- Burger : ne doit rien casser sur PC ---------- */
-
-/* desktop : burger complètement ignoré (hidden) */
-.burger {
-  display: none;
-  margin-left: 0 !important; /* prevent accidental push if another style leaks */
-  font-size: 26px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 6px 8px;
-  border-radius: 6px;
-}
-
-/* ---------- Tables (home & schedule) ---------- */
-
-.table td { color: rgba(255,255,255,0.88); }
-.table th { color: rgba(255,255,255,0.92); }
-
-/* ---------- MOBILE OVERRIDES (strict, minimal, only what is needed) ---------- */
-@media (max-width: 768px) {
-
-  /* force le burger à se placer à droite */
-  .burger {
-    display: block !important;
-    margin-left: auto !important;  /* pousse totalement à droite */
-    order: 2;                      /* s’assure qu’il est après les liens */
-  }
-
-  /* s’assure que la navbar reste en mode PC mais avec burger à droite */
-  .navbar {
-    display: flex !important;
-    justify-content: flex-start !important; /* liens à gauche, identique PC */
-    align-items: center !important;
-    gap: 20px;
-    position: relative;
-  }
-
-  /* liens cachés par défaut en mobile */
-  .nav-links {
-    position: absolute;
-    top: calc(var(--navbar-h));
-    left: 0;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    padding: 20px;
-    background: #111;
-    gap: 16px;
-    z-index: 40;
-    border-top: 1px solid var(--border);
-    order: 1;
-  }
-
-  /* affichage du menu mobile */
-  .nav-links.open {
-    display: flex;
-  }
-}
-
-/* ---------- Small safety helpers (prevent other rules from pushing layout) ---------- */
-
-/* ensure nav-links children don't get margin-left:auto from elsewhere */
-.nav-links * { margin-left: 0; }
-
-/* keep interactive hit areas consistent */
-.burger:focus { outline: 2px solid rgba(122,92,143,0.25); outline-offset: 2px; }
-
-/* preserve original topbar/header appearance */
-.topbar, header { background: rgba(10,12,15,0.85) !important; border-bottom: 1px solid var(--border); }

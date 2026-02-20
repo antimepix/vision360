@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import events from "../data/data.json";
 import "./home.css";
 
@@ -233,79 +233,113 @@ export default function Home() {
   };
 
   return (
-    <section className="home-layout" aria-label="Dashboard">
-      {/* Salles disponibles */}
-      <div className="home-card grid-rooms">
-        <div className="home-cardHeader">
-          <h2 className="home-cardTitle">Salles disponibles</h2>
-          <div className="home-cardSub">Salles libres (uniques)</div>
+    <section className="dashboard-page" aria-label="Dashboard">
+
+      {/* 1. Top Bar / Header */}
+      <header className="dashboard-header">
+        <div className="header-titles">
+          <h1 className="header-title">Tableau de bord</h1>
+          <p className="header-subtitle">Vue d'ensemble de l'occupation et des cours</p>
         </div>
 
-        <div className="home-cardBody">
-          <div className="kpiRow">
-            <div className="kpi">
-              <div className="kpiLabel">Matin</div>
-              <div className="kpiValue">{availableRooms.matin.length}</div>
-              <div className="kpiSmall">{roomsPreview(availableRooms.matin, 8)}</div>
+        <div className="header-controls">
+          {/* Date Picker */}
+          <div className="control-group">
+            <label htmlFor="dateNative">Date</label>
+            <div className="dateField">
+              <input
+                className="input input-dateText"
+                type="text"
+                value={ymdToNice(selectedDate)}
+                readOnly
+              />
+              <input
+                id="dateNative"
+                className="input input-dateNative"
+                type="date"
+                value={selectedDate}
+                onChange={(e) => setSelectedDate(e.target.value)}
+                aria-label="Sélectionner une date"
+              />
             </div>
-            <div className="kpi">
-              <div className="kpiLabel">Après-midi</div>
-              <div className="kpiValue">{availableRooms.aprem.length}</div>
-              <div className="kpiSmall">{roomsPreview(availableRooms.aprem, 8)}</div>
+            <div className="date-nav">
+              <button className="button-icon" onClick={() => setSelectedDate((d) => shiftYMD(d, -1))}>◀</button>
+              <button className="button-icon" onClick={() => setSelectedDate(todayYMD())}>Auj.</button>
+              <button className="button-icon" onClick={() => setSelectedDate((d) => shiftYMD(d, 1))}>▶</button>
             </div>
           </div>
 
-          <div className="smallNote">
-            Total salles connues: <strong>{allRooms.length}</strong>
+          {/* Search */}
+          <div className="control-group">
+            <label htmlFor="q">Recherche rapide</label>
+            <input
+              id="q"
+              className="input search-input"
+              placeholder="Promo, prof..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </div>
+
+
+
+        </div>
+      </header>
+
+      {/* 2. Hero KPI Stats */}
+      <div className="dashboard-stats">
+
+        {/* Card 1: Global */}
+        <div className="stat-card stat-global">
+          <div className="stat-icon">👥</div>
+          <div className="stat-info">
+            <div className="stat-value">{studentsOnSite}</div>
+            <div className="stat-label">Élèves sur site</div>
+          </div>
+          <div className="stat-detail">
+            Taux d'occupation global: <strong>{occupancy.overall}%</strong>
+          </div>
+        </div>
+
+        {/* Card 2: Matin */}
+        <div className="stat-card stat-morning">
+          <div className="stat-icon">🌅</div>
+          <div className="stat-info">
+            <div className="stat-value">{availableRooms.matin.length} <small>/ {allRooms.length}</small></div>
+            <div className="stat-label">Salles libres (Matin)</div>
+          </div>
+          <div className="stat-detail text-truncate">
+            {roomsPreview(availableRooms.matin, 6)}
+          </div>
+        </div>
+
+        {/* Card 3: Aprems */}
+        <div className="stat-card stat-afternoon">
+          <div className="stat-icon">🌇</div>
+          <div className="stat-info">
+            <div className="stat-value">{availableRooms.aprem.length} <small>/ {allRooms.length}</small></div>
+            <div className="stat-label">Salles libres (Après-midi)</div>
+          </div>
+          <div className="stat-detail text-truncate">
+            {roomsPreview(availableRooms.aprem, 6)}
           </div>
         </div>
       </div>
 
-      {/* Présences & occupation */}
-      <div className="home-card grid-occupancy">
-        <div className="home-cardHeader">
-          <h2 className="home-cardTitle">Présences & occupation</h2>
-          <div className="home-cardSub">{ymdToNice(selectedDate)}</div>
-        </div>
+      {/* 3. Content Grid (Split View) */}
+      <div className="dashboard-content">
 
-        <div className="home-cardBody">
-          <div className="kpiRow">
-            <div className="kpi">
-              <div className="kpiLabel">Élèves sur site</div>
-              <div className="kpiValue">{studentsOnSite}</div>
-              <div className="kpiSmall">Basé sur les cours du jour</div>
-            </div>
-            <div className="kpi">
-              <div className="kpiLabel">Taux d’occupation</div>
-              <div className="kpiValue">{occupancy.overall}%</div>
-              <div className="kpiSmall">
-                Matin: {occupancy.pm}% ({occupancy.om}/{occupancy.total}) · Après-midi:{" "}
-                {occupancy.pa}% ({occupancy.oa}/{occupancy.total})
-              </div>
-            </div>
+        {/* Left: Promos */}
+        <div className="content-panel">
+          <div className="panel-header">
+            <h2>Promotions présentes</h2>
+            <span className="badge">{promoRows.length}</span>
           </div>
-
-          {dayEvents.length === 0 ? (
-            <div className="smallNote">
-              Aucune donnée pour cette date dans <code>src/data/data.json</code>.
-            </div>
-          ) : null}
-        </div>
-      </div>
-
-      {/* Promo présente */}
-      <div className="home-card grid-promo">
-        <div className="home-cardHeader">
-          <h2 className="home-cardTitle">Promotions présentes</h2>
-          <div className="home-cardSub">Salle attribuée (matin / après-midi)</div>
-        </div>
-
-        <div className="home-cardBody">
-          <div className="scrollArea" role="region" aria-label="Table promotions">
+          <div className="panel-body scrollArea">
             <table className="table">
               <thead>
                 <tr>
-                  <th style={{ width: 110 }}>Promo</th>
+                  <th style={{ width: 100 }}>Promo</th>
                   <th>Matin</th>
                   <th>Après-midi</th>
                 </tr>
@@ -313,127 +347,52 @@ export default function Home() {
               <tbody>
                 {promoRows.map((r) => (
                   <tr key={r.promo}>
-                    <td>
-                      <strong>{r.promo}</strong>
-                    </td>
-                    <td className={r.matin === "Absent" ? "cell-absent" : undefined}>{r.matin}</td>
-                    <td className={r.aprem === "Absent" ? "cell-absent" : undefined}>{r.aprem}</td>
+                    <td><strong>{r.promo}</strong></td>
+                    <td className={r.matin === "Absent" ? "cell-absent" : ""}>{r.matin}</td>
+                    <td className={r.aprem === "Absent" ? "cell-absent" : ""}>{r.aprem}</td>
                   </tr>
                 ))}
+                {promoRows.length === 0 && (
+                  <tr><td colSpan={3} className="cell-muted">Aucune promotion trouvée.</td></tr>
+                )}
               </tbody>
             </table>
           </div>
         </div>
-      </div>
 
-      {/* Prof dispo */}
-      <div className="home-card grid-prof">
-        <div className="home-cardHeader">
-          <h2 className="home-cardTitle">Profs</h2>
-          <div className="home-cardSub">Affichés uniquement s’ils ont cours ce jour</div>
-        </div>
-
-        <div className="home-cardBody">
-          <div className="scrollArea" role="region" aria-label="Table professeurs">
+        {/* Right: Profs */}
+        <div className="content-panel">
+          <div className="panel-header">
+            <h2>Professeurs</h2>
+            <span className="badge">{profRows.length}</span>
+          </div>
+          <div className="panel-body scrollArea">
             <table className="table">
               <thead>
                 <tr>
-                  <th>Prof</th>
+                  <th>Professeur</th>
                   <th>Matin</th>
                   <th>Après-midi</th>
                 </tr>
               </thead>
               <tbody>
-                {profRows.length ? (
-                  profRows.map((r) => (
-                    <tr key={r.prof}>
-                      <td>
-                        <strong>{r.prof}</strong>
-                      </td>
-                      <td className={r.matin === "Absent" ? "cell-absent" : undefined}>{r.matin}</td>
-                      <td className={r.aprem === "Absent" ? "cell-absent" : undefined}>{r.aprem}</td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td className="cell-muted" colSpan={3}>
-                      Aucun prof à afficher pour cette date.
-                    </td>
+                {profRows.map((r) => (
+                  <tr key={r.prof}>
+                    <td><strong>{r.prof}</strong></td>
+                    <td className={r.matin === "Absent" ? "cell-absent" : ""}>{r.matin}</td>
+                    <td className={r.aprem === "Absent" ? "cell-absent" : ""}>{r.aprem}</td>
                   </tr>
+                ))}
+                {profRows.length === 0 && (
+                  <tr><td colSpan={3} className="cell-muted">Aucun professeur trouvé.</td></tr>
                 )}
               </tbody>
             </table>
           </div>
-
-          <div className="smallNote">
-            Un prof sans aucun cours dans la journée n’apparaît pas ici.
-          </div>
         </div>
+
       </div>
 
-      {/* Filtres */}
-      <aside className="home-card grid-filters">
-        <div className="home-cardHeader">
-          <h2 className="home-cardTitle">Filtres</h2>
-          <div className="home-cardSub">Date + recherche</div>
-        </div>
-
-        <div className="home-cardBody">
-          <div className="controls">
-            <button className="button" type="button" onClick={() => setSelectedDate(todayYMD())}>
-              Aujourd’hui
-            </button>
-            <button className="button" type="button" onClick={() => setSelectedDate((d) => shiftYMD(d, -1))}>
-              ◀
-            </button>
-            <button className="button" type="button" onClick={() => setSelectedDate((d) => shiftYMD(d, 1))}>
-              ▶
-            </button>
-          </div>
-
-          <label className="smallNote" htmlFor="dateNative">Date sélectionnée</label>
-
-          <div className="dateField">
-            <input
-              className="input input-dateText"
-              type="text"
-              value={ymdToDMY(selectedDate)}
-              readOnly
-            />
-
-            <input
-              id="dateNative"
-              className="input input-dateNative"
-              type="date"
-              value={selectedDate}
-              onChange={(e) => setSelectedDate(e.target.value)}
-              aria-label="Sélectionner une date"
-            />
-          </div>
-
-          <label className="smallNote" htmlFor="q">Recherche (promo ou prof)</label>
-          <input
-            id="q"
-            className="input"
-            placeholder="Ex: AP5, CIR2, Diet..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-
-          <div className="hr" />
-
-          <div className="smallNote">
-            <strong>Périodes</strong>
-            <br />
-            Matin: 08:00 → 13:00
-            <br />
-            Après-midi: 13:00 → 19:00
-          </div>
-
-          <div className="smallNote">
-          </div>
-        </div>
-      </aside>
-    </section>
+    </section >
   );
 }

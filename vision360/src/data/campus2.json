@@ -1,14 +1,84 @@
 {
   "rooms": [
-    { "id": "salle209", "name": "Salle Bureau", "xPercent": 66, "yPercent": 6 },
-    { "id": "salle210", "name": "Bureau de Christelle", "xPercent": 72, "yPercent": 6 },
-    { "id": "salle208", "name": "Bureau de Laetitia", "xPercent": 70, "yPercent": 22 },
-    { "id": "salle201", "name": "Salle chercheur", "xPercent": 90, "yPercent": 6 },
-    { "id": "salle202", "name": "Salle Réunion", "xPercent": 90, "yPercent": 20 },
-    { "id": "salle207", "name": "Bureau Damien", "xPercent": 70, "yPercent":32 },
-    { "id": "salle203", "name": "Salle de Cours", "xPercent": 90, "yPercent": 29 },
-    { "id": "salle204", "name": "Salle de Cours", "xPercent": 90, "yPercent": 40 },
-    { "id": "salle205", "name": "Salle de Cours", "xPercent": 90, "yPercent": 53 },
-    { "id": "salle206", "name": "Salle de Cours", "xPercent": 72, "yPercent": 51 }
+    {
+      "id": "salle J209",
+      "name": "Salle Bureau",
+      "xPercent": 60,
+      "yPercent": 10,
+      "widthPercent": 8,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J210",
+      "name": "Bureau de Chrystelle",
+      "xPercent": 70,
+      "yPercent": 10,
+      "widthPercent": 8,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J208",
+      "name": "Bureau de Laetitia",
+      "xPercent": 65,
+      "yPercent": 25,
+      "widthPercent": 10,
+      "heightPercent": 8
+    },
+    {
+      "id": "salle J201",
+      "name": "Salle chercheur",
+      "xPercent": 85,
+      "yPercent": 10,
+      "widthPercent": 10,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J202",
+      "name": "Salle Réunion",
+      "xPercent": 85,
+      "yPercent": 25,
+      "widthPercent": 10,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J207",
+      "name": "Bureau Damien",
+      "xPercent": 65,
+      "yPercent": 40,
+      "widthPercent": 10,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J203",
+      "name": "Salle de Cours",
+      "xPercent": 85,
+      "yPercent": 40,
+      "widthPercent": 10,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle J204",
+      "name": "Salle de Cours",
+      "xPercent": 85,
+      "yPercent": 55,
+      "widthPercent": 10,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle J205",
+      "name": "Salle de Cours",
+      "xPercent": 85,
+      "yPercent": 70,
+      "widthPercent": 10,
+      "heightPercent": 15
+    },
+    {
+      "id": "salle J206",
+      "name": "Salle de Cours",
+      "xPercent": 65,
+      "yPercent": 65,
+      "widthPercent": 15,
+      "heightPercent": 12
+    }
   ]
 }
