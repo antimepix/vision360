@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const ROLE_MAP = {
-    PONASSIE: { role: "damien", redirect: "/" },
-    1234: { role: "eleve", redirect: "/campus" },
-    CHATRIE: { role: "admin", redirect: "/" },
+    "3b4fbc3584d7070dc13bc38f28e6f5be5b088d2b84269650518ce89d5333cce2": { role: "damien", redirect: "/" },
+    "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4": { role: "eleve", redirect: "/campus" },
+    "a41ace4e47ca4b2dd7907663212291edcb4dbbf9ccb45e0b9239cfa461350265": { role: "admin", redirect: "/" },
 };
 
 export default function Login() {
