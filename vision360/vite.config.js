@@ -1,18 +1,14 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://127.0.0.1:3001",
+        changeOrigin: true,
+      },
+    },
   },
-  test: {
-    environment: "jsdom",
-    globals: true,
-    setupFiles: ["./src/tests/setupTests.js"],
-    include: ["src/tests/**/*.{test,spec}.{js,jsx}"],
-    css: true,
-  },
-  projectId: "f4u3ix",
 });

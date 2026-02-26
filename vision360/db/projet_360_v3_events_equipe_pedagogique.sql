@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.44, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: projet_360_v2
+-- Host: 127.0.0.1    Database: projet_360_v3
 -- ------------------------------------------------------
 -- Server version	8.0.44
 
@@ -16,32 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `equipe_enseignante`
+-- Table structure for table `events_equipe_pedagogique`
 --
 
-DROP TABLE IF EXISTS `equipe_enseignante`;
+DROP TABLE IF EXISTS `events_equipe_pedagogique`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `equipe_enseignante` (
-  `id` int NOT NULL,
-  `nom` varchar(50) NOT NULL,
-  `prenom` varchar(50) NOT NULL,
-  `date_` datetime DEFAULT NULL,
-  `debut` time DEFAULT NULL,
-  `fin` time DEFAULT NULL,
-  `activité` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE `events_equipe_pedagogique` (
+  `event_id` bigint NOT NULL,
+  `id` bigint NOT NULL,
+  PRIMARY KEY (`event_id`,`id`),
+  KEY `id` (`id`),
+  CONSTRAINT `events_equipe_pedagogique_ibfk_1` FOREIGN KEY (`event_id`) REFERENCES `events` (`event_id`),
+  CONSTRAINT `events_equipe_pedagogique_ibfk_2` FOREIGN KEY (`id`) REFERENCES `equipe_pedagogique` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `equipe_enseignante`
+-- Dumping data for table `events_equipe_pedagogique`
 --
 
-LOCK TABLES `equipe_enseignante` WRITE;
-/*!40000 ALTER TABLE `equipe_enseignante` DISABLE KEYS */;
-INSERT INTO `equipe_enseignante` VALUES (1,'PONASSIE','Damien','2025-07-01 00:00:00',NULL,NULL,NULL),(2,'VIOT','Lucas','2025-07-01 00:00:00',NULL,NULL,NULL),(3,'PIROG','Antoine','2025-07-01 00:00:00',NULL,NULL,NULL);
-/*!40000 ALTER TABLE `equipe_enseignante` ENABLE KEYS */;
+LOCK TABLES `events_equipe_pedagogique` WRITE;
+/*!40000 ALTER TABLE `events_equipe_pedagogique` DISABLE KEYS */;
+/*!40000 ALTER TABLE `events_equipe_pedagogique` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-02-16 14:23:14
+-- Dump completed on 2026-02-23 14:21:05

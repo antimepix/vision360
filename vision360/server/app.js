@@ -5,6 +5,8 @@ import dbRouter from "./src/routes/dbTest.js";
 import resourcesRouter from "./src/routes/resources.js";
 import studentsRouter from "./src/routes/students.js";
 import eventsRouter from "./src/routes/events.js";
+import exportRouter from "./src/routes/exportData.js";
+import authRouter from "./src/routes/auth.js";
 
 const app = express();
 app.use(cors());
@@ -23,7 +25,16 @@ app.use("/api/db", dbRouter);
 app.use("/api/resources", resourcesRouter);
 app.use("/api/students", studentsRouter);
 app.use("/api/events", eventsRouter);
+app.use("/api/export", exportRouter);
 
 // app.use("/api", routes);
+app.use("/api/auth", authRouter);
+app.use((err, req, res, next) => {
+  if (err?.type === "entity.parse.failed") {
+    return res.status(400).json({ ok: false, message: "JSON invalide" });
+  }
+  console.error(err);
+  return res.status(500).json({ ok: false, message: "Erreur serveur" });
+});
 
 export default app;

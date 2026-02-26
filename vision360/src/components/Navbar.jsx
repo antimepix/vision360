@@ -7,12 +7,14 @@ export default function Navbar({ role }) {
   const [openSchedule, setOpenSchedule] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
-  const navigate = useNavigate();
 
+  // ✅ NEW
+  const [refreshing, setRefreshing] = useState(false);
+
+  const navigate = useNavigate();
   const location = useLocation();
   const isSchedule = location.pathname === "/schedule";
 
-  // Apply theme to document
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
@@ -27,19 +29,67 @@ export default function Navbar({ role }) {
     window.location.reload();
   };
 
+  // ✅ NEW: refresh json depuis la BDD
+  const handleRefreshJson = async () => {
+    // option : limiter à admin/damien
+    // if (!["admin", "damien"].includes(role)) return;
+
+    try {
+      setRefreshing(true);
+
+      const API_BASE =
+        import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
+
+      const res = await fetch(
+        `${API_BASE}/api/export/data?file=data.json`,
+        { method: "GET" }
+      );
+
+      const payload = await res.json().catch(() => ({}));
+
+      if (!res.ok || payload.ok !== true) {
+        throw new Error(payload.message || payload.error || `HTTP ${res.status}`);
+      }
+
+      // recharge pour ré-importer le JSON côté Vite
+      window.location.reload();
+    } catch (e) {
+      alert(
+        `Erreur refresh JSON: ${e?.message || e}\n\n` +
+        `As-tu bien lancé l’API (npm run dev dans /server) ?`
+      );
+    } finally {
+      setRefreshing(false);
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo" onClick={() => navigate("/")} style={{ cursor: 'pointer' }}>Vision360</div>
+      <div
+        className="logo"
+        onClick={() => navigate("/")}
+        style={{ cursor: "pointer" }}
+      >
+        Vision360
+      </div>
 
-      <button className="burger" onClick={() => setMenuOpen((m) => !m)}>☰</button>
+      <button className="burger" onClick={() => setMenuOpen((m) => !m)}>
+        ☰
+      </button>
 
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         {isPathAllowed(role, "/") && (
-          <NavLink to="/" end onClick={() => setMenuOpen(false)}>home</NavLink>
+          <NavLink to="/" end onClick={() => setMenuOpen(false)}>
+            home
+          </NavLink>
         )}
 
         {isPathAllowed(role, "/schedule") && (
-          <div className="nav-dropdown" onMouseLeave={() => setOpenSchedule(false)}>
+          <div
+            className="nav-dropdown"
+            onMouseLeave={() => setOpenSchedule(false)}
+          >
             <button
               type="button"
               className={`nav-linkButton ${isSchedule ? "active" : ""}`}
@@ -50,35 +100,70 @@ export default function Navbar({ role }) {
 
             {openSchedule && (
               <div className="nav-dropdownMenu">
-                <NavLink to="/schedule?mode=promo" onClick={() => { setOpenSchedule(false); setMenuOpen(false); }}>élève</NavLink>
-                <NavLink to="/schedule?mode=prof" onClick={() => { setOpenSchedule(false); setMenuOpen(false); }}>professeur</NavLink>
+                <NavLink
+                  to="/schedule?mode=promo"
+                  onClick={() => {
+                    setOpenSchedule(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  élève
+                </NavLink>
+                <NavLink
+                  to="/schedule?mode=prof"
+                  onClick={() => {
+                    setOpenSchedule(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  professeur
+                </NavLink>
               </div>
             )}
           </div>
         )}
 
         {isPathAllowed(role, "/campus") && (
-          <NavLink to="/campus" onClick={() => setMenuOpen(false)}>campus</NavLink>
+          <NavLink to="/campus" onClick={() => setMenuOpen(false)}>
+            campus
+          </NavLink>
         )}
 
         {isPathAllowed(role, "/presence") && (
-          <NavLink to="/presence" onClick={() => setMenuOpen(false)}>présence</NavLink>
+          <NavLink to="/presence" onClick={() => setMenuOpen(false)}>
+            présence
+          </NavLink>
         )}
 
+        {/* Bouton thème (reste le premier à droite grâce au marginLeft:auto) */}
         <button
           className="nav-linkButton"
-          onClick={() => { toggleTheme(); setMenuOpen(false); }}
+          onClick={() => {
+            toggleTheme();
+            setMenuOpen(false);
+          }}
           title={theme === "light" ? "Passer en mode nuit" : "Passer en mode jour"}
-          style={{ marginLeft: 'auto', gap: '8px' }}
+          style={{ marginLeft: "auto", gap: "8px" }}
         >
           <span>{theme === "light" ? "🌙" : "☀️"}</span>
           <span>{theme === "light" ? "Nuit" : "Jour"}</span>
         </button>
 
+        {/* ✅ NEW: bouton refresh entre thème et déconnexion */}
+        <button
+          className="nav-linkButton"
+          onClick={handleRefreshJson}
+          disabled={refreshing}
+          title="Régénérer data.json depuis la BDD"
+          style={{ gap: "8px" }}
+        >
+          <span>{refreshing ? "Refresh..." : "Refresh"}</span>
+        </button>
+
         <button
           className="nav-linkButton logout-btn"
           onClick={handleLogout}
-          style={{ color: '#ff4757', fontWeight: '600' }}
+          style={{ color: "#ff4757", fontWeight: "600" }}
         >
           Déconnexion
         </button>
