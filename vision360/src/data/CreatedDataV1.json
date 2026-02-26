@@ -89,8 +89,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J102_FA140_COURS",
-        "label": "J102_COURS"
+        "code": "J102_COURS",
+        "label": "BDX_J102_FA140_COURS"
       }
     ],
     "groups": [
@@ -125,12 +125,12 @@
         "firstName": "Maëna"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
-      },
-      {
         "lastName": "BÉGUÉ--HOUET",
         "firstName": "Théo"
+      },
+      {
+        "lastName": "BARRÉ-BEYLOT",
+        "firstName": "Gaël"
       },
       {
         "lastName": "BENEDETTO",
@@ -197,8 +197,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J205_FA282_COURS",
-        "label": "J205_COURS"
+        "code": "J205_COURS",
+        "label": "BDX_J205_FA282_COURS"
       }
     ],
     "groups": [
@@ -301,8 +301,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J103_FA143_COURS",
-        "label": "J103_COURS"
+        "code": "J103_COURS",
+        "label": "BDX_J103_FA143_COURS"
       }
     ],
     "groups": [
@@ -441,8 +441,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J104_FA148_COURS",
-        "label": "J104_COURS"
+        "code": "J104_COURS",
+        "label": "BDX_J104_FA148_COURS"
       }
     ],
     "groups": [
@@ -513,8 +513,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J111_FA110_CUISINE_PEDAGOGIQUE",
-        "label": "J111_CUISINE PEDAGOGIQUE"
+        "code": "J111_CUISINE PEDAGOGIQUE",
+        "label": "BDX_J111_FA110_CUISINE_PEDAGOGIQUE"
       }
     ],
     "groups": [
@@ -617,8 +617,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J103_FA143_COURS",
-        "label": "J103_COURS"
+        "code": "J103_COURS",
+        "label": "BDX_J103_FA143_COURS"
       }
     ],
     "groups": [
@@ -689,8 +689,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J101_FA138_COURS",
-        "label": "J101_COURS"
+        "code": "J101_COURS",
+        "label": "BDX_J101_FA138_COURS"
       }
     ],
     "groups": [
@@ -829,8 +829,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J102_FA140_COURS",
-        "label": "J102_COURS"
+        "code": "J102_COURS",
+        "label": "BDX_J102_FA140_COURS"
       }
     ],
     "groups": [
@@ -865,12 +865,12 @@
         "firstName": "Maëna"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
-      },
-      {
         "lastName": "BÉGUÉ--HOUET",
         "firstName": "Théo"
+      },
+      {
+        "lastName": "BARRÉ-BEYLOT",
+        "firstName": "Gaël"
       },
       {
         "lastName": "BENEDETTO",
@@ -937,8 +937,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J205_FA282_COURS",
-        "label": "J205_COURS"
+        "code": "J205_COURS",
+        "label": "BDX_J205_FA282_COURS"
       }
     ],
     "groups": [
@@ -1077,8 +1077,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J104_FA148_COURS",
-        "label": "J104_COURS"
+        "code": "J104_COURS",
+        "label": "BDX_J104_FA148_COURS"
       }
     ],
     "groups": [
@@ -1217,8 +1217,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J104_FA148_COURS",
-        "label": "J104_COURS"
+        "code": "J104_COURS",
+        "label": "BDX_J104_FA148_COURS"
       }
     ],
     "groups": [
@@ -1357,8 +1357,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J102_FA140_COURS",
-        "label": "J102_COURS"
+        "code": "J102_COURS",
+        "label": "BDX_J102_FA140_COURS"
       }
     ],
     "groups": [
@@ -1465,8 +1465,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J203_FA276_COURS",
-        "label": "J203_COURS"
+        "code": "J203_COURS",
+        "label": "BDX_J203_FA276_COURS"
       }
     ],
     "groups": [
@@ -1501,12 +1501,12 @@
         "firstName": "Maëna"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
-      },
-      {
         "lastName": "BÉGUÉ--HOUET",
         "firstName": "Théo"
+      },
+      {
+        "lastName": "BARRÉ-BEYLOT",
+        "firstName": "Gaël"
       },
       {
         "lastName": "BENEDETTO",
@@ -1573,8 +1573,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J205_FA282_COURS",
-        "label": "J205_COURS"
+        "code": "J205_COURS",
+        "label": "BDX_J205_FA282_COURS"
       }
     ],
     "groups": [
@@ -1645,8 +1645,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J106_FA159_TP_HYBRIDE",
-        "label": "J106_TP HYBRIDE"
+        "code": "J106_TP HYBRIDE",
+        "label": "BDX_J106_FA159_TP_HYBRIDE"
       }
     ],
     "groups": [
@@ -1749,8 +1749,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J103_FA143_COURS",
-        "label": "J103_COURS"
+        "code": "J103_COURS",
+        "label": "BDX_J103_FA143_COURS"
       }
     ],
     "groups": [
@@ -1779,8 +1779,8 @@
     "lecturers": [],
     "resources": [
       {
-        "code": "BDX_J111_FA110_CUISINE_PEDAGOGIQUE",
-        "label": "J111_CUISINE PEDAGOGIQUE"
+        "code": "J111_CUISINE PEDAGOGIQUE",
+        "label": "BDX_J111_FA110_CUISINE_PEDAGOGIQUE"
       }
     ],
     "groups": [],
@@ -1908,8 +1908,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J102_FA140_COURS",
-        "label": "J102_COURS"
+        "code": "J102_COURS",
+        "label": "BDX_J102_FA140_COURS"
       }
     ],
     "groups": [
@@ -2048,8 +2048,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J104_FA148_COURS",
-        "label": "J104_COURS"
+        "code": "J104_COURS",
+        "label": "BDX_J104_FA148_COURS"
       }
     ],
     "groups": [
@@ -2084,12 +2084,12 @@
         "firstName": "Maëna"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
-      },
-      {
         "lastName": "BÉGUÉ--HOUET",
         "firstName": "Théo"
+      },
+      {
+        "lastName": "BARRÉ-BEYLOT",
+        "firstName": "Gaël"
       },
       {
         "lastName": "BENEDETTO",
@@ -2156,8 +2156,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J003_FA024_SALLE_COURS_INFORMATIQUE",
-        "label": "J003_SALLE COURS INFORMATIQUE"
+        "code": "J003_SALLE COURS INFORMATIQUE",
+        "label": "BDX_J003_FA024_SALLE_COURS_INFORMATIQUE"
       }
     ],
     "groups": [
@@ -2264,8 +2264,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J206_FA243_COURS",
-        "label": "J206_COURS"
+        "code": "J206_COURS",
+        "label": "BDX_J206_FA243_COURS"
       }
     ],
     "groups": [
@@ -2336,8 +2336,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J101_FA138_COURS",
-        "label": "J101_COURS"
+        "code": "J101_COURS",
+        "label": "BDX_J101_FA138_COURS"
       }
     ],
     "groups": [
@@ -2440,8 +2440,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J103_FA143_COURS",
-        "label": "J103_COURS"
+        "code": "J103_COURS",
+        "label": "BDX_J103_FA143_COURS"
       }
     ],
     "groups": [
@@ -2492,12 +2492,12 @@
     ],
     "resources": [
       {
-        "code": "BDX_J107_FA163_TP_INFORMATIQUE",
-        "label": "J107_TP INFORMATIQUE"
+        "code": "J205_COURS",
+        "label": "BDX_J205_FA282_COURS"
       },
       {
-        "code": "BDX_J205_FA282_COURS",
-        "label": "J205_COURS"
+        "code": "J107_TP INFORMATIQUE",
+        "label": "BDX_J107_FA163_TP_INFORMATIQUE"
       }
     ],
     "groups": [
@@ -2592,12 +2592,12 @@
     ],
     "resources": [
       {
-        "code": "BDX_J204_FA279_COURS",
-        "label": "J204_COURS"
+        "code": "J206_COURS",
+        "label": "BDX_J206_FA243_COURS"
       },
       {
-        "code": "BDX_J206_FA243_COURS",
-        "label": "J206_COURS"
+        "code": "J204_COURS",
+        "label": "BDX_J204_FA279_COURS"
       }
     ],
     "groups": [
@@ -2666,8 +2666,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J106_FA159_TP_HYBRIDE",
-        "label": "J106_TP HYBRIDE"
+        "code": "J106_TP HYBRIDE",
+        "label": "BDX_J106_FA159_TP_HYBRIDE"
       }
     ],
     "groups": [
@@ -2770,8 +2770,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J103_FA143_COURS",
-        "label": "J103_COURS"
+        "code": "J103_COURS",
+        "label": "BDX_J103_FA143_COURS"
       }
     ],
     "groups": [
@@ -2878,8 +2878,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J102_FA140_COURS",
-        "label": "J102_COURS"
+        "code": "J102_COURS",
+        "label": "BDX_J102_FA140_COURS"
       }
     ],
     "groups": [
@@ -3126,16 +3126,16 @@
     ],
     "resources": [
       {
-        "code": "BDX_J001_FA016_FABLAB",
-        "label": "J001_FABLAB"
+        "code": "J001_FABLAB",
+        "label": "BDX_J001_FA016_FABLAB"
       },
       {
-        "code": "BDX_J004_FA029_COURS_PROTOTYPAGE",
-        "label": "J004_COURS_PROTOTYPAGE"
+        "code": "J004_COURS_PROTOTYPAGE",
+        "label": "BDX_J004_FA029_COURS_PROTOTYPAGE"
       },
       {
-        "code": "BDX_J005_FA032_SALLE_CODESIGN",
-        "label": "J005_SALLE_CODESIGN"
+        "code": "J005_SALLE_CODESIGN",
+        "label": "BDX_J005_FA032_SALLE_CODESIGN"
       }
     ],
     "groups": [
@@ -3251,8 +3251,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J203_FA276_COURS",
-        "label": "J203_COURS"
+        "code": "J203_COURS",
+        "label": "BDX_J203_FA276_COURS"
       }
     ],
     "groups": [
@@ -3393,8 +3393,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J103_FA143_COURS",
-        "label": "J103_COURS"
+        "code": "J103_COURS",
+        "label": "BDX_J103_FA143_COURS"
       }
     ],
     "groups": [
@@ -3541,8 +3541,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J104_FA148_COURS",
-        "label": "J104_COURS"
+        "code": "J104_COURS",
+        "label": "BDX_J104_FA148_COURS"
       }
     ],
     "groups": [
@@ -3649,8 +3649,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J102_FA140_COURS",
-        "label": "J102_COURS"
+        "code": "J102_COURS",
+        "label": "BDX_J102_FA140_COURS"
       }
     ],
     "groups": [
@@ -3701,12 +3701,12 @@
     ],
     "resources": [
       {
-        "code": "BDX_J107_FA163_TP_INFORMATIQUE",
-        "label": "J107_TP INFORMATIQUE"
+        "code": "J205_COURS",
+        "label": "BDX_J205_FA282_COURS"
       },
       {
-        "code": "BDX_J205_FA282_COURS",
-        "label": "J205_COURS"
+        "code": "J107_TP INFORMATIQUE",
+        "label": "BDX_J107_FA163_TP_INFORMATIQUE"
       }
     ],
     "groups": [
@@ -3781,8 +3781,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J203_FA276_COURS",
-        "label": "J203_COURS"
+        "code": "J203_COURS",
+        "label": "BDX_J203_FA276_COURS"
       }
     ],
     "groups": [
@@ -3887,8 +3887,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J104_FA148_COURS",
-        "label": "J104_COURS"
+        "code": "J104_COURS",
+        "label": "BDX_J104_FA148_COURS"
       }
     ],
     "groups": [
@@ -3985,8 +3985,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J103_FA143_COURS",
-        "label": "J103_COURS"
+        "code": "J103_COURS",
+        "label": "BDX_J103_FA143_COURS"
       }
     ],
     "groups": [
@@ -4021,12 +4021,12 @@
         "firstName": "Maëna"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
-      },
-      {
         "lastName": "BÉGUÉ--HOUET",
         "firstName": "Théo"
+      },
+      {
+        "lastName": "BARRÉ-BEYLOT",
+        "firstName": "Gaël"
       },
       {
         "lastName": "BENEDETTO",
@@ -4093,8 +4093,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J205_FA282_COURS",
-        "label": "J205_COURS"
+        "code": "J205_COURS",
+        "label": "BDX_J205_FA282_COURS"
       }
     ],
     "groups": [
@@ -4233,12 +4233,12 @@
     ],
     "resources": [
       {
-        "code": "BDX_J004_FA029_COURS_PROTOTYPAGE",
-        "label": "J004_COURS_PROTOTYPAGE"
+        "code": "J004_COURS_PROTOTYPAGE",
+        "label": "BDX_J004_FA029_COURS_PROTOTYPAGE"
       },
       {
-        "code": "BDX_J005_FA032_SALLE_CODESIGN",
-        "label": "J005_SALLE_CODESIGN"
+        "code": "J005_SALLE_CODESIGN",
+        "label": "BDX_J005_FA032_SALLE_CODESIGN"
       }
     ],
     "groups": [
@@ -4386,8 +4386,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J001_FA016_FABLAB",
-        "label": "J001_FABLAB"
+        "code": "J001_FABLAB",
+        "label": "BDX_J001_FA016_FABLAB"
       }
     ],
     "groups": [
@@ -4458,8 +4458,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J104_FA148_COURS",
-        "label": "J104_COURS"
+        "code": "J104_COURS",
+        "label": "BDX_J104_FA148_COURS"
       }
     ],
     "groups": [
@@ -4566,8 +4566,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J102_FA140_COURS",
-        "label": "J102_COURS"
+        "code": "J102_COURS",
+        "label": "BDX_J102_FA140_COURS"
       }
     ],
     "groups": [
@@ -4778,8 +4778,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J109_FA101_CLASSLAB",
-        "label": "J109_CLASSLAB"
+        "code": "J109_CLASSLAB",
+        "label": "BDX_J109_FA101_CLASSLAB"
       }
     ],
     "groups": [
@@ -4998,8 +4998,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J103_FA143_COURS",
-        "label": "J103_COURS"
+        "code": "J103_COURS",
+        "label": "BDX_J103_FA143_COURS"
       }
     ],
     "groups": [
@@ -5146,8 +5146,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J003_FA024_SALLE_COURS_INFORMATIQUE",
-        "label": "J003_SALLE COURS INFORMATIQUE"
+        "code": "J003_SALLE COURS INFORMATIQUE",
+        "label": "BDX_J003_FA024_SALLE_COURS_INFORMATIQUE"
       }
     ],
     "groups": [
@@ -5231,8 +5231,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J101_FA138_COURS",
-        "label": "J101_COURS"
+        "code": "J101_COURS",
+        "label": "BDX_J101_FA138_COURS"
       }
     ],
     "groups": [
@@ -5479,16 +5479,16 @@
     ],
     "resources": [
       {
-        "code": "BDX_J001_FA016_FABLAB",
-        "label": "J001_FABLAB"
+        "code": "J001_FABLAB",
+        "label": "BDX_J001_FA016_FABLAB"
       },
       {
-        "code": "BDX_J004_FA029_COURS_PROTOTYPAGE",
-        "label": "J004_COURS_PROTOTYPAGE"
+        "code": "J004_COURS_PROTOTYPAGE",
+        "label": "BDX_J004_FA029_COURS_PROTOTYPAGE"
       },
       {
-        "code": "BDX_J005_FA032_SALLE_CODESIGN",
-        "label": "J005_SALLE_CODESIGN"
+        "code": "J005_SALLE_CODESIGN",
+        "label": "BDX_J005_FA032_SALLE_CODESIGN"
       }
     ],
     "groups": [
@@ -5600,8 +5600,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J104_FA148_COURS",
-        "label": "J104_COURS"
+        "code": "J104_COURS",
+        "label": "BDX_J104_FA148_COURS"
       }
     ],
     "groups": [
@@ -5708,8 +5708,8 @@
     ],
     "resources": [
       {
-        "code": "BDX_J102_FA140_COURS",
-        "label": "J102_COURS"
+        "code": "J102_COURS",
+        "label": "BDX_J102_FA140_COURS"
       }
     ],
     "groups": [
