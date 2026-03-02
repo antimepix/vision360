@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "react-router-dom": "^7.9.6",
-    "snyk": "^1.1302.1"
-  }
-}

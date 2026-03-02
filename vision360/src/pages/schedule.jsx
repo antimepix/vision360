@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { X, Clock, MapPin, User, Users, GraduationCap } from "lucide-react";
 import events from "../data/data.json";
 import "./schedule.css";
 
@@ -259,6 +260,7 @@ export default function Schedule() {
   const ALL_DAYS = [0, 1, 2, 3, 4];
   const [selectedDays, setSelectedDays] = useState(ALL_DAYS); // multi-sélection
   const [searchQuery, setSearchQuery] = useState(""); // Re-ajouté
+  const [selectedEvent, setSelectedEvent] = useState(null); // État pour la popup
 
   // Dé-doublonnage à la source (le JSON peut contenir des événements strictement identiques).
   // C'est crucial pour éviter des keys React dupliquées et des "fantômes" qui restent affichés
@@ -615,6 +617,61 @@ export default function Schedule() {
         {warningText && <div className="schedule-warning">⚠️ {warningText}</div>}
       </div>
 
+      {/* Modal de détails du cours */}
+      {selectedEvent && (
+        <div className="schedule-modalOverlay" onClick={() => setSelectedEvent(null)}>
+          <div className="schedule-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="schedule-modalClose" onClick={() => setSelectedEvent(null)}>
+              <X size={24} />
+            </button>
+            <div className="schedule-modalHeader">
+              <div className="schedule-modalTag">{selectedEvent._courseType}</div>
+              <h2>{selectedEvent._courseName}</h2>
+            </div>
+            <div className="schedule-modalBody">
+              <div className="schedule-modalInfo">
+                <div className="info-item">
+                  <Clock size={18} />
+                  <span>{formatTimeRange(selectedEvent.start, selectedEvent.end)}</span>
+                </div>
+                <div className="info-item">
+                  <MapPin size={18} />
+                  <span>{selectedEvent._room || "Salle non spécifiée"}</span>
+                </div>
+                {selectedEvent._profs && selectedEvent._profs.length > 0 && (
+                  <div className="info-item">
+                    <User size={18} />
+                    <span>{selectedEvent._profs.join(", ")}</span>
+                  </div>
+                )}
+                {selectedEvent._promos && selectedEvent._promos.length > 0 && (
+                  <div className="info-item">
+                    <GraduationCap size={18} />
+                    <span>{selectedEvent._promos.join(", ")}</span>
+                  </div>
+                )}
+              </div>
+
+              {selectedEvent.students && selectedEvent.students.length > 0 && (
+                <div className="schedule-modalStudents">
+                  <h3>
+                    <Users size={18} />
+                    Étudiants ({selectedEvent.students.length})
+                  </h3>
+                  <div className="students-list">
+                    {selectedEvent.students.map((student, idx) => (
+                      <div key={idx} className="student-badge">
+                        {student.firstName} {student.lastName}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Tableau emploi du temps */}
       {/* Tableau emploi du temps */}
       {selectedDays.length === 0 ? (
@@ -683,6 +740,7 @@ export default function Schedule() {
                           `${ev.id ?? "noid"}-${ev.start ?? ""}-${ev.end ?? ""}-${idxEv}-${index}`
                         }
                         className="schedule-event"
+                        onClick={() => setSelectedEvent(ev)}
                         style={{
                           top: `${topPct}%`,
                           height: `${heightPct}%`,
