@@ -66,7 +66,7 @@ export default function Campus() {
   const handlePointerDown = (e, room, type = "move") => {
     if (isReadOnly) return;
     if (e.button && e.button !== 0) return;
-    if (type === "resize") e.stopPropagation();
+    if (type === "resize" || type === "rotate") e.stopPropagation();
     e.preventDefault();
 
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
@@ -104,9 +104,16 @@ export default function Campus() {
       if (r.id !== dragging.roomId) return r;
       if (dragging.type === "move") {
         return { ...r, xPercent: Math.max(0, Math.min(100, dragging.startXPct + dxPct)), yPercent: Math.max(0, Math.min(100, dragging.startYPct + dyPct)) };
-      } else {
+      } else if (dragging.type === "resize") {
         return { ...r, widthPercent: Math.max(2, Math.min(50, dragging.startWPct + dxPct)), heightPercent: Math.max(2, Math.min(50, dragging.startHPct + dyPct)) };
+      } else if (dragging.type === "rotate") {
+        // Calcul de l'angle par rapport au centre théorique (en %) converti en px
+        const centerX = rect.left + (r.xPercent + r.widthPercent / 2) * rect.width / 100;
+        const centerY = rect.top + (r.yPercent + r.heightPercent / 2) * rect.height / 100;
+        const angle = Math.atan2(clientY - centerY, clientX - centerX) * (180 / Math.PI);
+        return { ...r, rotation: (angle + 90) % 360 };
       }
+      return r;
     }));
   }, [dragging]);
 
@@ -122,6 +129,7 @@ export default function Campus() {
           yPercent: Math.round(updated.yPercent * 100) / 100,
           widthPercent: Math.round(updated.widthPercent * 100) / 100,
           heightPercent: Math.round(updated.heightPercent * 100) / 100,
+          rotation: Math.round(updated.rotation || 0),
         };
         saveOverrides(overrides);
       }
@@ -152,6 +160,35 @@ export default function Campus() {
     setEditingName(false);
   };
 
+  const handleDeleteRoom = () => {
+    if (!selectedRoom || isReadOnly) return;
+    if (!window.confirm(`Supprimer la salle "${selectedRoom.displayName}" ?`)) return;
+
+    const overrides = loadOverrides();
+    overrides[selectedRoom.id] = { ...overrides[selectedRoom.id], isDeleted: true };
+    saveOverrides(overrides);
+
+    setRooms((prev) => prev.filter((r) => r.id !== selectedRoom.id));
+    setSelectedRoom(null);
+  };
+
+  const handleAddRoom = () => {
+    if (isReadOnly) return;
+    const newId = `custom-${Date.now()}`;
+    const overrides = loadOverrides();
+    overrides[newId] = {
+      isCustom: true,
+      xPercent: 45,
+      yPercent: 40,
+      widthPercent: 12,
+      heightPercent: 10,
+      rotation: 0,
+      alias: "Nouvelle salle",
+    };
+    saveOverrides(overrides);
+    setRooms(buildRooms(selectedFloor)); // Recharge tout pour inclure la nouvelle salle
+  };
+
   const confirmRename = () => {
     const trimmed = nameInput.trim();
     if (!trimmed || !selectedRoom) { setEditingName(false); return; }
@@ -171,6 +208,7 @@ export default function Campus() {
       room={room}
       isDragging={dragging?.roomId === room.id && dragging.type === "move"}
       isResizing={dragging?.roomId === room.id && dragging.type === "resize"}
+      isRotating={dragging?.roomId === room.id && dragging.type === "rotate"}
       isReadOnly={isReadOnly}
       onPointerDown={handlePointerDown}
       onClick={handleRoomClick}
@@ -193,6 +231,8 @@ export default function Campus() {
           unlockCode={unlockCode}
           setUnlockCode={setUnlockCode}
           onUnlock={handleUnlock}
+          onAddRoom={handleAddRoom}
+          isReadOnly={isReadOnly}
         />
       </div>
 
@@ -214,6 +254,7 @@ export default function Campus() {
         onStartRename={() => { if (!isReadOnly) { setEditingName(true); setNameInput(selectedRoom.alias || selectedRoom.name); } }}
         onConfirmRename={confirmRename}
         onCancelRename={() => setEditingName(false)}
+        onDeleteRoom={handleDeleteRoom}
         onClose={() => setSelectedRoom(null)}
         isReadOnly={isReadOnly}
         onKeyDown={(e) => { if (e.key === "Enter") confirmRename(); if (e.key === "Escape") setEditingName(false); }}

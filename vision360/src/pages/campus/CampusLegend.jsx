@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CampusLegend({ userRole, isUnlocked, unlockCode, setUnlockCode, onUnlock }) {
+export default function CampusLegend({ userRole, isUnlocked, unlockCode, setUnlockCode, onUnlock, onAddRoom, isReadOnly }) {
     return (
         <div className="campus-legend-container">
             <div className="legend">
@@ -10,6 +10,11 @@ export default function CampusLegend({ userRole, isUnlocked, unlockCode, setUnlo
                 <div className="legend-item">
                     <span className="legend-color utilisee"></span> Utilisee
                 </div>
+                {!isReadOnly && (
+                    <button className="add-room-btn-mini" onClick={onAddRoom} title="Ajouter une salle">
+                        ➕
+                    </button>
+                )}
             </div>
 
             {userRole === "eleve" && (

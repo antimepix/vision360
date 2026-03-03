@@ -661,3 +661,101 @@
   }
 }
 
+
+/* ===========================
+   Styles d'impression
+   =========================== */
+
+@media print {
+  /* Orientation Paysage */
+  @page {
+    size: landscape;
+    margin: 1cm;
+  }
+
+  /* Cacher les elements inutiles */
+  .navbar,
+  .schedule-filtersCard,
+  .schedule-modalOverlay,
+  .schedule-warning,
+  .schedule-printButton,
+  .footer-container,
+  .schedule-modalClose,
+  .schedule-modeToggle,
+  .schedule-weekControls,
+  .schedule-filtersTop,
+  .schedule-filtersBottom,
+  .filters-label,
+  .smallNote,
+  .schedule-dayFilter,
+  .schedule-mainFilter,
+  .schedule-dayHeader {
+    display: none !important;
+  }
+
+  /* Reset layout pour l'impression */
+  body {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .schedule-page {
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  /* Carte de la grille */
+  .schedule-grid {
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: 18cm !important; /* Force une certaine hauteur sur papier */
+  }
+
+  .schedule-dayColumn {
+    border: 1px solid #e2e8f0 !important;
+    background: white !important;
+  }
+
+  .schedule-dayHeader {
+    background: #f8fafc !important;
+    border-bottom: 2px solid #e2e8f0 !important;
+    color: black !important;
+    padding: 8px !important;
+  }
+
+  .schedule-dayName, .schedule-dayDate {
+    color: black !important;
+  }
+
+  .schedule-dayBody {
+    background: white !important;
+  }
+
+  .schedule-timeRail {
+    background: rgba(0, 0, 0, 0.02) !important;
+    border: 1px dashed #e2e8f0 !important;
+    color: #64748b !important;
+  }
+
+  /* Blocs de cours - Optimisation contraste */
+  .schedule-event {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: none !important;
+    color: black !important; /* Texte noir pour lisibilite papier si non couleur */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Si on veut garder les couleurs de fond mais s'assurer que le texte est lisible */
+  .event-time, .event-title, .event-main, .event-meta {
+    color: inherit !important;
+    text-shadow: none !important;
+  }
+}
