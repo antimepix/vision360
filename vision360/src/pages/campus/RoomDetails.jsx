@@ -8,6 +8,7 @@ export default function RoomDetails({
     onStartRename,
     onConfirmRename,
     onCancelRename,
+    onDeleteRoom,
     onClose,
     isReadOnly,
     onKeyDown
@@ -68,6 +69,14 @@ export default function RoomDetails({
                 {room.alias && (
                     <div className="info-row">
                         <span className="info-label">Nom original :</span> {room.name}
+                    </div>
+                )}
+
+                {!isReadOnly && (
+                    <div className="delete-row">
+                        <button className="delete-room-btn" onClick={onDeleteRoom}>
+                            🗑 Supprimer la salle
+                        </button>
                     </div>
                 )}
             </div>

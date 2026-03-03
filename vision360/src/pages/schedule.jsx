@@ -4,7 +4,7 @@ import { X, Clock, MapPin, User, Users, GraduationCap } from "lucide-react";
 import events from "../data/data.json";
 import "./schedule.css";
 
-const DAY_START_MIN = 8 * 60;
+const DAY_START_MIN = 7.5 * 60; // 07h30 au lieu de 08h00 pour avoir de l'air en haut
 const DAY_END_MIN = 19 * 60;
 const DAY_SPAN_MIN = DAY_END_MIN - DAY_START_MIN;
 
@@ -480,6 +480,10 @@ export default function Schedule() {
   const isSingleDay = selectedDays.length === 1;
   const isAllDaysSelected = selectedDays.length === 5;
 
+  const handlePrint = () => {
+    window.print();
+  };
+
 
   return (
     <section className="schedule-page">
@@ -520,6 +524,15 @@ export default function Schedule() {
             </button>
             <button className="button" type="button" onClick={handleNextWeek}>
               ▶
+            </button>
+
+            <button
+              className="button schedule-printButton"
+              type="button"
+              onClick={handlePrint}
+              title="Imprimer l'emploi du temps"
+            >
+              🖨️ Imprimer
             </button>
 
             {/* date de semaine (lundi) en jj/mm/aaaa + input natif caché */}
@@ -699,7 +712,7 @@ export default function Schedule() {
 
                 <div className="schedule-dayBody">
                   <div className="schedule-timeRail">
-                    <span>08h</span>
+                    <span>07h30</span>
                     <span>12h</span>
                     <span>16h</span>
                     <span>19h</span>

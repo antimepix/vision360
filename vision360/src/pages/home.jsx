@@ -38,6 +38,23 @@ function shiftYMD(ymd, deltaDays) {
   return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
 }
 
+function getWeekRange(ymd) {
+  const d = new Date(`${ymd}T12:00:00`);
+  const day = d.getDay(); // 0(Sun) - 6(Sat)
+  const diffToMon = day === 0 ? -6 : 1 - day;
+
+  const mon = new Date(d);
+  mon.setDate(d.getDate() + diffToMon);
+
+  const sun = new Date(mon);
+  sun.setDate(mon.getDate() + 6);
+
+  return {
+    start: `${mon.getFullYear()}-${pad2(mon.getMonth() + 1)}-${pad2(mon.getDate())}`,
+    end: `${sun.getFullYear()}-${pad2(sun.getMonth() + 1)}-${pad2(sun.getDate())}`
+  };
+}
+
 function minutesOf(isoLike) {
   if (!isoLike || typeof isoLike !== "string" || isoLike.length < 16) return null;
   const hh = Number(isoLike.slice(11, 13));
@@ -146,6 +163,28 @@ export default function Home() {
 
   const dayEvents = useMemo(() => {
     return events.filter((e) => String(e?.start ?? "").slice(0, 10) === selectedDate);
+  }, [selectedDate]);
+
+  const evalStats = useMemo(() => {
+    const range = getWeekRange(selectedDate);
+    const weekEvents = events.filter(e => {
+      const d = String(e?.start ?? "").slice(0, 10);
+      return d >= range.start && d <= range.end;
+    });
+
+    const evals = weekEvents.filter(e => e.className === "Evaluation");
+    const promos = new Set();
+    evals.forEach(e => {
+      (e.groups ?? []).forEach(g => {
+        const s = promoShort(g.code, g.label);
+        if (s !== "?") promos.add(s);
+      });
+    });
+
+    return {
+      count: evals.length,
+      promos: Array.from(promos).sort()
+    };
   }, [selectedDate]);
 
   const occupiedRooms = useMemo(() => {
@@ -350,6 +389,18 @@ export default function Home() {
             {roomsPreview(availableRooms.aprem, 6)}
           </div>
         </div>
+
+        {/* Card 4: Evaluations */}
+        <div className="stat-card stat-eval">
+          <div className="stat-icon">📝</div>
+          <div className="stat-info">
+            <div className="stat-value">{evalStats.count}</div>
+            <div className="stat-label">Évaluations (Semaine)</div>
+          </div>
+          <div className="stat-detail text-truncate">
+            {evalStats.promos.length > 0 ? evalStats.promos.join(", ") : "Aucune éval"}
+          </div>
+        </div>
       </div>
 
       {/* 3. Content Grid (Split View) */}
@@ -418,6 +469,6 @@ export default function Home() {
         </div>
 
       </div>
-    </section >
+    </section>
   );
 }

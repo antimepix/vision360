@@ -130,7 +130,30 @@
 
 .legend {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.add-room-btn-mini {
+  background: var(--brand);
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.add-room-btn-mini:hover {
+  transform: scale(1.1);
+  background: var(--brand2);
 }
 
 .legend-item {
@@ -694,4 +717,88 @@
   .stat-number {
     font-size: 2.5rem;
   }
+}
+/* ---- Rotation and Delete enhancements ---- */
+
+.rotate-handle {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: var(--brand);
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: grab;
+  z-index: 5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.rotate-handle::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 6px;
+  background: var(--brand);
+}
+
+.room-card-positioned.rotating {
+  cursor: grabbing;
+}
+
+.delete-row {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.delete-room-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.delete-room-btn:hover {
+  background: #fecaca;
+  transform: translateY(-2px);
+}
+
+/* ---- Add Room Button ---- */
+.add-room-btn {
+  padding: 0.8rem 1.5rem;
+  background: var(--brand);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(157, 142, 195, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-room-btn:hover {
+  transform: translateY(-2px);
+  background: var(--brand2);
+  box-shadow: 0 8px 20px rgba(157, 142, 195, 0.45);
+}
+
+.add-room-btn:active {
+  transform: translateY(0);
 }
