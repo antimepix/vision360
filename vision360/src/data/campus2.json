@@ -1,0 +1,84 @@
+{
+  "rooms": [
+    {
+      "id": "salle J209",
+      "name": "Salle Bureau",
+      "xPercent": 60,
+      "yPercent": 10,
+      "widthPercent": 8,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J210",
+      "name": "Bureau de Chrystelle",
+      "xPercent": 70,
+      "yPercent": 10,
+      "widthPercent": 8,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J208",
+      "name": "Bureau de Laetitia",
+      "xPercent": 65,
+      "yPercent": 25,
+      "widthPercent": 10,
+      "heightPercent": 8
+    },
+    {
+      "id": "salle J201",
+      "name": "Salle chercheur",
+      "xPercent": 85,
+      "yPercent": 10,
+      "widthPercent": 10,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J202",
+      "name": "Salle Réunion",
+      "xPercent": 85,
+      "yPercent": 25,
+      "widthPercent": 10,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J207",
+      "name": "Bureau Damien",
+      "xPercent": 65,
+      "yPercent": 40,
+      "widthPercent": 10,
+      "heightPercent": 10
+    },
+    {
+      "id": "salle J203",
+      "name": "Salle de Cours",
+      "xPercent": 85,
+      "yPercent": 40,
+      "widthPercent": 10,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle J204",
+      "name": "Salle de Cours",
+      "xPercent": 85,
+      "yPercent": 55,
+      "widthPercent": 10,
+      "heightPercent": 12
+    },
+    {
+      "id": "salle J205",
+      "name": "Salle de Cours",
+      "xPercent": 85,
+      "yPercent": 70,
+      "widthPercent": 10,
+      "heightPercent": 15
+    },
+    {
+      "id": "salle J206",
+      "name": "Salle de Cours",
+      "xPercent": 65,
+      "yPercent": 65,
+      "widthPercent": 15,
+      "heightPercent": 12
+    }
+  ]
+}

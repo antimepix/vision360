@@ -1,0 +1,201 @@
+/* ---------- Navbar (Light Version) ---------- */
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    /* liens à gauche sur PC */
+    align-items: center;
+    padding: 12px 24px;
+    gap: 24px;
+    background: var(--header-bg) !important;
+    backdrop-filter: blur(12px);
+    color: var(--text) !important;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    height: var(--navbar-h);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    z-index: 100;
+}
+
+/* logo */
+.logo {
+    font-weight: 800;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    color: var(--brand);
+    /* Couleur marque */
+    letter-spacing: -0.5px;
+}
+
+/* conteneur des liens (desktop) */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+/* liens + bouton style "pillule" */
+.nav-links a,
+.nav-linkButton {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 99px;
+    height: auto;
+    margin-left: 0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* hover states */
+.nav-links a:hover,
+.nav-linkButton:hover {
+    color: var(--brand);
+    background: rgba(157, 142, 195, 0.08);
+    /* brand très léger */
+}
+
+/* active state */
+.nav-links>a.active,
+.nav-links>.nav-linkButton.active {
+    color: var(--active-text) !important;
+    background: var(--brand);
+    box-shadow: 0 4px 12px rgba(157, 142, 195, 0.3);
+    font-weight: 600;
+    border-bottom: none;
+    /* On retire la bordure du thème dark */
+}
+
+/* dropdown wrapper */
+.nav-dropdown {
+    position: relative;
+}
+
+/* dropdown menu */
+.nav-dropdownMenu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 180px;
+    padding: 8px;
+    background: var(--panel);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    z-index: 20;
+}
+
+/* Pont invisible pour éviter la fermeture au survol du gap */
+.nav-dropdownMenu::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    /* Couvre l'espace entre le bouton et le menu */
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.nav-dropdownMenu a {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-dropdownMenu a:hover {
+    background: var(--panel2);
+    color: var(--brand);
+}
+
+/* ---------- Burger (Mobile) ---------- */
+
+/* desktop : hidden */
+.burger {
+    display: none;
+    margin-left: 0 !important;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--text);
+    /* Darker text for visibility */
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.burger:hover {
+    background: var(--panel2);
+}
+
+/* ---------- MOBILE OVERRIDES (strict, minimal) ---------- */
+@media (max-width: 768px) {
+
+    /* force le burger à se placer à droite */
+    .burger {
+        display: block !important;
+        margin-left: auto !important;
+        order: 2;
+    }
+
+    /* navbar reste flex */
+    .navbar {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 16px;
+        padding: 10px 16px;
+    }
+
+    /* liens cachés par défaut en mobile */
+    .nav-links {
+        position: absolute;
+        top: var(--navbar-h);
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        padding: 16px;
+        background: var(--panel);
+        gap: 8px;
+        z-index: 40;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        order: 1;
+    }
+
+    .nav-links a,
+    .nav-linkButton {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* affichage du menu mobile */
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* ---------- Small safety helpers ---------- */
+
+.nav-links * {
+    margin-left: 0;
+}
+
+.burger:focus {
+    outline: none;
+    background: var(--panel2);
+}
