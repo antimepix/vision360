@@ -84,7 +84,7 @@ export default function Presence() {
       if (!name) continue;
 
       const status = String(entry.title || "").toLowerCase();
-      const isOccupied = status === "busy" || status === "away" || status === "tentative";
+      const isOccupied = status === "busy" || status === "away" || status === "tentative" || status === "working elsewhere";
 
       if (isOccupied) {
         const rec = map.get(name);
