@@ -123,16 +123,19 @@ export default function Home() {
       const API_BASE =
         import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
 
-      const res = await fetch(`${API_BASE}/api/export/data?file=data.json`, {
-        method: "GET",
-      });
+      const res = await fetch(`${API_BASE}/api/import/outlook/week`, { method: "GET" });
 
-      const payload = await res.json().catch(() => ({}));
-      if (!res.ok || payload.ok !== true) {
-        throw new Error(payload.message || payload.error || `HTTP ${res.status}`);
+      if (!res.ok) {
+        const msg = await res.text().catch(() => "");
+        throw new Error(msg || `HTTP ${res.status}`);
       }
 
-      // Recharge pour que le front relise data.json
+      const data = await res.json().catch(() => null);
+      if (!Array.isArray(data)) {
+        throw new Error("Fichier outlook_week.json invalide ou non trouvé.");
+      }
+
+      // recharge pour recharger le JSON côté front
       window.location.reload();
     } catch (e) {
       alert(`Erreur refresh JSON: ${e?.message || e}`);

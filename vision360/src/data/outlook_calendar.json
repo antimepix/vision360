@@ -1,17 +1,6 @@
 [
   {
     "calendar": "Damien PONASSIE",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+1"
-  },
-  {
-    "calendar": "Damien PONASSIE",
     "day": "2026-03-02",
     "title": "Free",
     "text": "Free",
@@ -39,127 +28,6 @@
     "text": "18:00\nTentative",
     "start": "18:00",
     "end": "19:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-09",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "08:00\nBusy",
-    "start": "08:00",
-    "end": "09:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "09:30\nBusy",
-    "start": "09:30",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "17:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-09",
-    "title": "Tentative",
-    "text": "14:00\nTentative",
-    "start": "14:00",
-    "end": "15:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-23",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "16:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-30",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-30",
-    "title": "Busy",
-    "text": "08:30\nBusy",
-    "start": "08:30",
-    "end": "12:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-30",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "17:30",
     "allDay": false,
     "kind": "overflow_event",
     "from": "+3"
@@ -254,182 +122,6 @@
   },
   {
     "calendar": "Damien PONASSIE",
-    "day": "2026-03-10",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "10:30\nBusy",
-    "start": "10:30",
-    "end": "11:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "11:30\nBusy",
-    "start": "11:30",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "13:00\nBusy",
-    "start": "13:00",
-    "end": "16:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "16:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-17",
-    "title": "Tentative",
-    "text": "10:00\nTentative",
-    "start": "10:00",
-    "end": "11:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "11:00\nBusy",
-    "start": "11:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "16:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "09:30\nBusy",
-    "start": "09:30",
-    "end": "12:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-24",
-    "title": "Tentative",
-    "text": "10:00\nTentative",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-31",
-    "title": "Free",
-    "text": "01:00\nFree",
-    "start": "01:00",
-    "end": "01:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "11:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
     "day": "2026-03-04",
     "title": "Free",
     "text": "Free",
@@ -485,116 +177,6 @@
   },
   {
     "calendar": "Damien PONASSIE",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "16:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-11",
-    "title": "Tentative",
-    "text": "14:00\nTentative",
-    "start": "14:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-25",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "16:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-31",
-    "title": "Free",
-    "text": "01:00\nFree",
-    "start": "01:00",
-    "end": "01:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-01",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-01",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-01",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "17:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
     "day": "2026-03-05",
     "title": "Busy",
     "text": "08:00\nBusy",
@@ -621,7 +203,7 @@
     "title": "Tentative",
     "text": "11:00\nTentative",
     "start": "11:00",
-    "end": "11:30",
+    "end": "12:00",
     "allDay": false,
     "kind": "overflow_event",
     "from": "+7"
@@ -661,223 +243,14 @@
   },
   {
     "calendar": "Damien PONASSIE",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-12",
+    "day": "2026-03-06",
     "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
+    "text": "08:00\nBusy",
+    "start": "08:00",
+    "end": "08:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-19",
-    "title": "Tentative",
-    "text": "15:30\nTentative",
-    "start": "15:30",
-    "end": "16:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-26",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-02",
-    "title": "Tentative",
-    "text": "10:00\nTentative",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
+    "from": "+10"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -888,7 +261,18 @@
     "end": "09:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+4"
+    "from": "+10"
+  },
+  {
+    "calendar": "Damien PONASSIE",
+    "day": "2026-03-06",
+    "title": "Busy",
+    "text": "09:30\nBusy",
+    "start": "09:30",
+    "end": "10:00",
+    "allDay": false,
+    "kind": "overflow_event",
+    "from": "+10"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -899,7 +283,51 @@
     "end": "11:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+4"
+    "from": "+10"
+  },
+  {
+    "calendar": "Damien PONASSIE",
+    "day": "2026-03-06",
+    "title": "Busy",
+    "text": "11:30\nBusy",
+    "start": "11:30",
+    "end": "12:00",
+    "allDay": false,
+    "kind": "overflow_event",
+    "from": "+10"
+  },
+  {
+    "calendar": "Damien PONASSIE",
+    "day": "2026-03-06",
+    "title": "Tentative",
+    "text": "12:00\nTentative",
+    "start": "12:00",
+    "end": "12:30",
+    "allDay": false,
+    "kind": "overflow_event",
+    "from": "+10"
+  },
+  {
+    "calendar": "Damien PONASSIE",
+    "day": "2026-03-06",
+    "title": "Busy",
+    "text": "12:30\nBusy",
+    "start": "12:30",
+    "end": "13:00",
+    "allDay": false,
+    "kind": "overflow_event",
+    "from": "+10"
+  },
+  {
+    "calendar": "Damien PONASSIE",
+    "day": "2026-03-06",
+    "title": "Busy",
+    "text": "13:00\nBusy",
+    "start": "13:00",
+    "end": "13:30",
+    "allDay": false,
+    "kind": "overflow_event",
+    "from": "+10"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -910,7 +338,7 @@
     "end": "18:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+4"
+    "from": "+10"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -921,106 +349,7 @@
     "end": "15:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "13:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "16:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-27",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "10:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-27",
-    "title": "Tentative",
-    "text": "12:00\nTentative",
-    "start": "12:00",
-    "end": "14:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-03",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-03",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-03",
-    "title": "Busy",
-    "text": "13:00\nBusy",
-    "start": "13:00",
-    "end": "16:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-04-03",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "17:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
+    "from": "+10"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -1043,17 +372,6 @@
     "allDay": false,
     "kind": "overflow_event",
     "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+1"
   },
   {
     "calendar": "Olivier DEVIENNE",
@@ -1090,72 +408,6 @@
   },
   {
     "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "09:30\nBusy",
-    "start": "09:30",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "15:00\nBusy",
-    "start": "15:00",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-30",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-30",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
     "day": "2026-03-03",
     "title": "Busy",
     "text": "10:00\nBusy",
@@ -1186,50 +438,6 @@
     "allDay": false,
     "kind": "overflow_event",
     "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "20:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-31",
-    "title": "Free",
-    "text": "01:00\nFree",
-    "start": "01:00",
-    "end": "01:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+1"
   },
   {
     "calendar": "Olivier DEVIENNE",
@@ -1274,83 +482,6 @@
     "allDay": false,
     "kind": "overflow_event",
     "from": "+4"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-11",
-    "title": "Tentative",
-    "text": "11:00\nTentative",
-    "start": "11:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "16:00\nBusy",
-    "start": "16:00",
-    "end": "16:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-25",
-    "title": "Busy",
-    "text": "Busy",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-25",
-    "title": "Tentative",
-    "text": "11:00\nTentative",
-    "start": "11:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-31",
-    "title": "Free",
-    "text": "01:00\nFree",
-    "start": "01:00",
-    "end": "01:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-04-01",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
   },
   {
     "calendar": "Olivier DEVIENNE",
@@ -1387,39 +518,6 @@
   },
   {
     "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-12",
-    "title": "Tentative",
-    "text": "12:00\nTentative",
-    "start": "12:00",
-    "end": "17:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+1"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
     "day": "2026-03-06",
     "title": "Busy",
     "text": "14:00\nBusy",
@@ -1450,28 +548,6 @@
     "allDay": false,
     "kind": "overflow_event",
     "from": "+3"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+1"
-  },
-  {
-    "calendar": "Olivier DEVIENNE",
-    "day": "2026-03-27",
-    "title": "Tentative",
-    "text": "12:00\nTentative",
-    "start": "12:00",
-    "end": "14:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
   },
   {
     "calendar": "Olivier DEVIENNE",
@@ -1497,17 +573,6 @@
   },
   {
     "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+1"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
     "day": "2026-03-02",
     "title": "Busy",
     "text": "09:00\nBusy",
@@ -1563,138 +628,6 @@
   },
   {
     "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-09",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "11:30\nBusy",
-    "start": "11:30",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "17:30\nBusy",
-    "start": "17:30",
-    "end": "18:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-16",
-    "title": "Busy",
-    "text": "11:00\nBusy",
-    "start": "11:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-16",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-16",
-    "title": "Busy",
-    "text": "15:15\nBusy",
-    "start": "15:15",
-    "end": "16:45",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-16",
-    "title": "Busy",
-    "text": "17:30\nBusy",
-    "start": "17:30",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-23",
-    "title": "Busy",
-    "text": "10:30\nBusy",
-    "start": "10:30",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-23",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
     "day": "2026-03-03",
     "title": "Busy",
     "text": "09:00\nBusy",
@@ -1750,182 +683,6 @@
   },
   {
     "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-10",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-10",
-    "title": "Tentative",
-    "text": "08:30\nTentative",
-    "start": "08:30",
-    "end": "10:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "11:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "11:00\nBusy",
-    "start": "11:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "16:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "10:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "10:15\nBusy",
-    "start": "10:15",
-    "end": "11:45",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-24",
-    "title": "Tentative",
-    "text": "08:30\nTentative",
-    "start": "08:30",
-    "end": "10:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-31",
-    "title": "Free",
-    "text": "01:00\nFree",
-    "start": "01:00",
-    "end": "01:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "11:30\nBusy",
-    "start": "11:30",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "15:00\nBusy",
-    "start": "15:00",
-    "end": "17:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
     "day": "2026-03-04",
     "title": "Free",
     "text": "Free",
@@ -1959,72 +716,6 @@
   },
   {
     "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-11",
-    "title": "Away",
-    "text": "09:00\nAway",
-    "start": "09:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-25",
-    "title": "Away",
-    "text": "09:00\nAway",
-    "start": "09:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-04-01",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-04-01",
-    "title": "Away",
-    "text": "09:00\nAway",
-    "start": "09:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
     "day": "2026-03-05",
     "title": "Busy",
     "text": "09:00\nBusy",
@@ -2032,7 +723,7 @@
     "end": "10:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+5"
+    "from": "+4"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2043,7 +734,7 @@
     "end": "11:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+5"
+    "from": "+4"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2054,18 +745,7 @@
     "end": "12:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-05",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "16:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
+    "from": "+4"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2076,161 +756,7 @@
     "end": "19:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-12",
-    "title": "Tentative",
-    "text": "10:30\nTentative",
-    "start": "10:30",
-    "end": "11:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "17:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "16:00\nBusy",
-    "start": "16:00",
-    "end": "17:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
     "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "08:30\nBusy",
-    "start": "08:30",
-    "end": "10:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "16:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "10:30\nBusy",
-    "start": "10:30",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "16:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-04-02",
-    "title": "Tentative",
-    "text": "18:00\nTentative",
-    "start": "18:00",
-    "end": "23:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2241,7 +767,7 @@
     "end": "10:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+6"
+    "from": "+8"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2252,7 +778,7 @@
     "end": "09:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+6"
+    "from": "+8"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2263,7 +789,18 @@
     "end": "12:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+6"
+    "from": "+8"
+  },
+  {
+    "calendar": "Chrystelle GAUJARD",
+    "day": "2026-03-06",
+    "title": "Busy",
+    "text": "12:00\nBusy",
+    "start": "12:00",
+    "end": "12:30",
+    "allDay": false,
+    "kind": "overflow_event",
+    "from": "+8"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2274,7 +811,7 @@
     "end": "14:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+6"
+    "from": "+8"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2285,7 +822,7 @@
     "end": "15:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+6"
+    "from": "+8"
   },
   {
     "calendar": "Chrystelle GAUJARD",
@@ -2296,216 +833,18 @@
     "end": "18:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+6"
+    "from": "+8"
   },
   {
     "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-13",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "11:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "12:00\nBusy",
-    "start": "12:00",
-    "end": "13:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-13",
+    "day": "2026-03-06",
     "title": "Busy",
     "text": "15:30\nBusy",
     "start": "15:30",
-    "end": "17:00",
+    "end": "17:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-20",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-27",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-27",
-    "title": "Busy",
-    "text": "12:00\nBusy",
-    "start": "12:00",
-    "end": "14:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Chrystelle GAUJARD",
-    "day": "2026-03-27",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-02-28",
-    "title": "Away",
-    "text": "Away",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-02-28",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-09",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-14",
-    "title": "Away",
-    "text": "Away",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-21",
-    "title": "Away",
-    "text": "Away",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
+    "from": "+8"
   },
   {
     "calendar": "Margaux BRULATOUT",
@@ -2575,193 +914,6 @@
   },
   {
     "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-09",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-09",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-09",
-    "title": "Away",
-    "text": "15:10\nAway",
-    "start": "15:10",
-    "end": "16:10",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-16",
-    "title": "Busy",
-    "text": "09:30\nBusy",
-    "start": "09:30",
-    "end": "09:50",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-16",
-    "title": "Busy",
-    "text": "11:00\nBusy",
-    "start": "11:00",
-    "end": "11:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-16",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Working elsewhere",
-    "text": "Working elsewhere",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Away",
-    "text": "08:45\nAway",
-    "start": "08:45",
-    "end": "09:50",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Busy",
-    "text": "12:00\nBusy",
-    "start": "12:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Tentative",
-    "text": "12:00\nTentative",
-    "start": "12:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-30",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-30",
-    "title": "Busy",
-    "text": "09:30\nBusy",
-    "start": "09:30",
-    "end": "09:50",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-30",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-30",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "14:45",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
     "day": "2026-03-03",
     "title": "Busy",
     "text": "10:00\nBusy",
@@ -2799,204 +951,6 @@
     "title": "Busy",
     "text": "16:00\nBusy",
     "start": "16:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-09",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-10",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-09",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-17",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "11:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-17",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Working elsewhere",
-    "text": "Working elsewhere",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "08:30\nBusy",
-    "start": "08:30",
-    "end": "09:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-24",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-31",
-    "title": "Free",
-    "text": "01:00\nFree",
-    "start": "01:00",
-    "end": "01:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
     "end": "18:00",
     "allDay": false,
     "kind": "overflow_event",
@@ -3048,193 +1002,6 @@
   },
   {
     "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-09",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "10:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-11",
-    "title": "Tentative",
-    "text": "10:00\nTentative",
-    "start": "10:00",
-    "end": "10:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "17:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+8"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-18",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-18",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-25",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-25",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-25",
-    "title": "Away",
-    "text": "13:12\nAway",
-    "start": "13:12",
-    "end": "18:12",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-25",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-25",
-    "title": "Away",
-    "text": "14:17\nAway",
-    "start": "14:17",
-    "end": "15:59",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+7"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-04-01",
-    "title": "Busy",
-    "text": "Busy",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-04-01",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-04-01",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
     "day": "2026-03-05",
     "title": "Busy",
     "text": "11:00\nBusy",
@@ -3258,156 +1025,13 @@
   {
     "calendar": "Margaux BRULATOUT",
     "day": "2026-03-05",
-    "title": "Busy",
-    "text": "13:00\nBusy",
+    "title": "Away",
+    "text": "13:00\nAway",
     "start": "13:00",
     "end": "17:00",
     "allDay": false,
     "kind": "overflow_event",
     "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "09:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "15:00\nBusy",
-    "start": "15:00",
-    "end": "17:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-04-02",
-    "title": "Tentative",
-    "text": "11:00\nTentative",
-    "start": "11:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "15:00\nBusy",
-    "start": "15:00",
-    "end": "17:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
   },
   {
     "calendar": "Margaux BRULATOUT",
@@ -3444,116 +1068,6 @@
   },
   {
     "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "11:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-20",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-20",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-20",
-    "title": "Away",
-    "text": "17:08\nAway",
-    "start": "17:08",
-    "end": "19:26",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-27",
-    "title": "Busy",
-    "text": "12:00\nBusy",
-    "start": "12:00",
-    "end": "14:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-27",
-    "title": "Busy",
-    "text": "12:30\nBusy",
-    "start": "12:30",
-    "end": "13:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-27",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "18:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
     "day": "2026-03-07",
     "title": "Away",
     "text": "14:00\nAway",
@@ -3584,39 +1098,6 @@
     "allDay": false,
     "kind": "overflow_event",
     "from": "+3"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-28",
-    "title": "Away",
-    "text": "Away",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Margaux BRULATOUT",
-    "day": "2026-03-28",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "13:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+1"
   },
   {
     "calendar": "Laëtitia PAUL",
@@ -3653,28 +1134,6 @@
   },
   {
     "calendar": "Laëtitia PAUL",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
     "day": "2026-03-03",
     "title": "Busy",
     "text": "10:00\nBusy",
@@ -3694,127 +1153,6 @@
     "allDay": false,
     "kind": "overflow_event",
     "from": "+2"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-24",
-    "title": "Tentative",
-    "text": "10:00\nTentative",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-31",
-    "title": "Free",
-    "text": "01:00\nFree",
-    "start": "01:00",
-    "end": "01:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-31",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "15:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-11",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "17:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+4"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+1"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-04-01",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+3"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-04-01",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+3"
   },
   {
     "calendar": "Laëtitia PAUL",
@@ -3862,160 +1200,6 @@
   },
   {
     "calendar": "Laëtitia PAUL",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+9"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "09:00\nBusy",
-    "start": "09:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+9"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+9"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+9"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-12",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+9"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-19",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-19",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+6"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-23",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-26",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "10:00\nBusy",
-    "start": "10:00",
-    "end": "12:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "15:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-04-02",
-    "title": "Busy",
-    "text": "13:30\nBusy",
-    "start": "13:30",
-    "end": "14:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
     "day": "2026-03-06",
     "title": "Busy",
     "text": "08:30\nBusy",
@@ -4023,7 +1207,18 @@
     "end": "12:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+2"
+    "from": "+3"
+  },
+  {
+    "calendar": "Laëtitia PAUL",
+    "day": "2026-03-06",
+    "title": "Busy",
+    "text": "12:00\nBusy",
+    "start": "12:00",
+    "end": "12:30",
+    "allDay": false,
+    "kind": "overflow_event",
+    "from": "+3"
   },
   {
     "calendar": "Laëtitia PAUL",
@@ -4034,62 +1229,7 @@
     "end": "18:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+2"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-11",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-13",
-    "title": "Free",
-    "text": "Free",
-    "start": null,
-    "end": null,
-    "allDay": true,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "08:00\nBusy",
-    "start": "08:00",
-    "end": "12:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-13",
-    "title": "Busy",
-    "text": "14:00\nBusy",
-    "start": "14:00",
-    "end": "16:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+5"
-  },
-  {
-    "calendar": "Laëtitia PAUL",
-    "day": "2026-03-27",
-    "title": "Tentative",
-    "text": "12:00\nTentative",
-    "start": "12:00",
-    "end": "14:00",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+2"
+    "from": "+3"
   },
   {
     "calendar": "Laëtitia PAUL",
