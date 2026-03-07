@@ -245,23 +245,12 @@
     "calendar": "Damien PONASSIE",
     "day": "2026-03-06",
     "title": "Busy",
-    "text": "08:00\nBusy",
-    "start": "08:00",
-    "end": "08:30",
-    "allDay": false,
-    "kind": "overflow_event",
-    "from": "+10"
-  },
-  {
-    "calendar": "Damien PONASSIE",
-    "day": "2026-03-06",
-    "title": "Busy",
     "text": "08:30\nBusy",
     "start": "08:30",
     "end": "09:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -272,7 +261,7 @@
     "end": "10:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -283,7 +272,7 @@
     "end": "11:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -294,7 +283,7 @@
     "end": "12:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -305,7 +294,7 @@
     "end": "12:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -316,7 +305,7 @@
     "end": "13:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -327,7 +316,7 @@
     "end": "13:30",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -338,7 +327,7 @@
     "end": "18:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",
@@ -349,7 +338,18 @@
     "end": "15:00",
     "allDay": false,
     "kind": "overflow_event",
-    "from": "+10"
+    "from": "+11"
+  },
+  {
+    "calendar": "Damien PONASSIE",
+    "day": "2026-03-06",
+    "title": "Busy",
+    "text": "15:00\nBusy",
+    "start": "15:00",
+    "end": "15:30",
+    "allDay": false,
+    "kind": "overflow_event",
+    "from": "+11"
   },
   {
     "calendar": "Damien PONASSIE",

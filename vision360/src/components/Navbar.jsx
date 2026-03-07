@@ -31,34 +31,27 @@ export default function Navbar({ role }) {
 
   // ✅ NEW: refresh json depuis la BDD
   const handleRefreshJson = async () => {
-    // option : limiter à admin/damien
-    // if (!["admin", "damien"].includes(role)) return;
-
     try {
       setRefreshing(true);
 
       const API_BASE =
         import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
 
-      const res = await fetch(`${API_BASE}/api/import/outlook/week`, { method: "GET" });
+      // ✅ On régénère data.json depuis la BDD (et plus Outlook)
+      const res = await fetch(`${API_BASE}/api/export/data?file=data.json`, {
+        method: "GET",
+      });
 
-      if (!res.ok) {
-        const msg = await res.text().catch(() => "");
-        throw new Error(msg || `HTTP ${res.status}`);
+      const payload = await res.json().catch(() => ({}));
+
+      if (!res.ok || payload.ok !== true) {
+        throw new Error(payload.message || payload.error || `HTTP ${res.status}`);
       }
 
-      const data = await res.json().catch(() => null);
-      if (!Array.isArray(data)) {
-        throw new Error("Fichier outlook_week.json invalide ou non trouvé.");
-      }
-
-      // recharge pour recharger le JSON côté front
+      // ✅ rechargement après succès
       window.location.reload();
     } catch (e) {
-      alert(
-        `Erreur refresh JSON: ${e?.message || e}\n\n` +
-        `As-tu bien importé via l’extension Outlook et lancé l’API (npm run dev dans /server) ?`
-      );
+      alert(`Erreur refresh JSON: ${e?.message || e}`);
     } finally {
       setRefreshing(false);
       setMenuOpen(false);

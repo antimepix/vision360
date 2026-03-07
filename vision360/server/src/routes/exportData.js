@@ -101,6 +101,17 @@ function fixMojibake(str) {
   return t.includes("�") ? str : t;
 }
 
+function fixDeep(value) {
+  if (typeof value === "string") return fixMojibake(value);
+  if (Array.isArray(value)) return value.map(fixDeep);
+  if (value && typeof value === "object") {
+    const out = {};
+    for (const [k, v] of Object.entries(value)) out[k] = fixDeep(v);
+    return out;
+  }
+  return value;
+}
+
 // Log uniquement si une correction a été appliquée (pratique pour vérifier champ par champ)
 function fixField(value, label = "") {
   if (value == null) return "";
@@ -256,7 +267,8 @@ router.get("/data", async (req, res) => {
 
     // ---- Écrit le JSON dans /src/data ----
     await fs.mkdir(OUT_DIR, { recursive: true });
-    await fs.writeFile(outPath, JSON.stringify(out, null, 2), "utf-8");
+    const cleaned = fixDeep(out);
+    await fs.writeFile(outPath, JSON.stringify(cleaned, null, 2), "utf-8");
 
     res.json({
       ok: true,

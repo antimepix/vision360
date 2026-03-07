@@ -132,7 +132,7 @@ export default function Home() {
 
       const data = await res.json().catch(() => null);
       if (!Array.isArray(data)) {
-        throw new Error("Fichier outlook_week.json invalide ou non trouvé.");
+        throw new Error("Fichier outlook_calendar.json invalide ou non trouvé.");
       }
 
       // recharge pour recharger le JSON côté front

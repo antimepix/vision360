@@ -2,7 +2,7 @@
   "name": "vision360-api",
   "version": "1.0.0",
   "type": "module",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "dev": "node --watch index.js",
     "start": "node index.js",
