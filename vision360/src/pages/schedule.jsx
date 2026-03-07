@@ -8,7 +8,7 @@ const DAY_START_MIN = 7.5 * 60; // 07h30 au lieu de 08h00 pour avoir de l'air en
 const DAY_END_MIN = 19 * 60;
 const DAY_SPAN_MIN = DAY_END_MIN - DAY_START_MIN;
 
-const WEEKDAY_LABELS = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"];
+const WEEKDAY_LABELS = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 
 const COLORS = [
   "#dcd3ff", // Lavender
@@ -48,9 +48,9 @@ function startOfWeekMonday(ymd) {
 
 function ymdRangeLabel(mondayYmd) {
   const mon = mondayYmd;
-  const fri = shiftYMD(mondayYmd, 4);
+  const sat = shiftYMD(mondayYmd, 5);
   const [y1, m1, d1] = mon.split("-");
-  const [y2, m2, d2] = fri.split("-");
+  const [y2, m2, d2] = sat.split("-");
   return `Semaine du ${d1}/${m1}/${y1} au ${d2}/${m2}/${y2}`;
 }
 
@@ -257,7 +257,7 @@ export default function Schedule() {
   const [anchorDate, setAnchorDate] = useState(startOfWeekMonday(todayYMD()));
   const [selectedPromos, setSelectedPromos] = useState([]);
   const [selectedProfs, setSelectedProfs] = useState([]);
-  const ALL_DAYS = [0, 1, 2, 3, 4];
+  const ALL_DAYS = [0, 1, 2, 3, 4, 5];
   const [selectedDays, setSelectedDays] = useState(ALL_DAYS); // multi-sélection
   const [searchQuery, setSearchQuery] = useState(""); // Re-ajouté
   const [selectedEvent, setSelectedEvent] = useState(null); // État pour la popup
@@ -376,7 +376,7 @@ export default function Schedule() {
           _renderKey: renderKey,
         };
       })
-      .filter((e) => e._dayIndex >= 0 && e._dayIndex < 5) // dans la semaine lun-ven
+      .filter((e) => e._dayIndex >= 0 && e._dayIndex < 6) // dans la semaine lun-sam
       .filter((e) => {
         // Filtrage par texte (recherche) - Re-ajouté
         if (searchQuery) {
@@ -412,9 +412,9 @@ export default function Schedule() {
 
   // groupé par jour
   const eventsByDay = useMemo(() => {
-    const days = Array.from({ length: 5 }, () => []);
+    const days = Array.from({ length: 6 }, () => []);
     for (const e of filteredEvents) {
-      if (e._dayIndex >= 0 && e._dayIndex < 5) {
+      if (e._dayIndex >= 0 && e._dayIndex < 6) {
         days[e._dayIndex].push(e);
       }
     }
@@ -442,7 +442,7 @@ export default function Schedule() {
 
   const weekDays = useMemo(
     () =>
-      Array.from({ length: 5 }, (_, i) => {
+      Array.from({ length: 6 }, (_, i) => {
         const ymd = shiftYMD(weekStart, i);
         return { ymd, label: WEEKDAY_LABELS[i] };
       }),
@@ -478,7 +478,7 @@ export default function Schedule() {
 
 
   const isSingleDay = selectedDays.length === 1;
-  const isAllDaysSelected = selectedDays.length === 5;
+  const isAllDaysSelected = selectedDays.length === 6;
 
   const handlePrint = () => {
     window.print();
