@@ -37,7 +37,7 @@ export default function Navbar({ role }) {
       const API_BASE =
         import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
 
-      // ✅ On régénère data.json depuis la BDD (et plus Outlook)
+      // ✅ On régénère data.json depuis la BDD
       const res = await fetch(`${API_BASE}/api/export/data?file=data.json`, {
         method: "GET",
       });
