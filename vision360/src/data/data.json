@@ -1,9 +1,9 @@
-[
+﻿[
   {
     "id": "66324671",
-    "title": "Programmation 3 : Orientée Objet\nTP\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n08:00 - 12:00",
-    "start": "2025-11-10T08:00:00+0100",
-    "end": "2025-11-10T12:00:00+0100",
+    "title": "Programmation 3 : OrientÃ©e Objet\nTP\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n08:00 - 12:00",
+    "start": "2026-03-02T08:00:00+0100",
+    "end": "2026-03-02T12:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "TP",
@@ -14,11 +14,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "DENIS",
@@ -41,7 +41,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -54,7 +54,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "SABADIE",
@@ -70,7 +70,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -96,22 +96,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2_S3_PROG3",
-        "course": "Programmation 3 : Orientée Objet",
-        "module": "Unité d'Enseignement : Informatique S3"
+        "course": "Programmation 3 : OrientÃ©e Objet",
+        "module": "UnitÃ© d'Enseignement : Informatique S3"
       }
     ]
   },
   {
     "id": "68060601",
     "title": "DevSecOPS\nCOURS_TD\n2526_ISEN_BORDEAUX_AP5\nJ205_COURS\n08:30 - 12:30",
-    "start": "2025-11-10T08:30:00+0100",
-    "end": "2025-11-10T12:30:00+0100",
+    "start": "2026-03-02T08:30:00+0100",
+    "end": "2026-03-02T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -121,16 +121,16 @@
         "firstName": "Elvin"
       },
       {
-        "lastName": "ARGAÑO",
-        "firstName": "Maëna"
+        "lastName": "ARGAÃ‘O",
+        "firstName": "MaÃ«na"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
+        "lastName": "BARRÃ‰-BEYLOT",
+        "firstName": "GaÃ«l"
       },
       {
-        "lastName": "BÉGUÉ--HOUET",
-        "firstName": "Théo"
+        "lastName": "BÃ‰GUÃ‰--HOUET",
+        "firstName": "ThÃ©o"
       },
       {
         "lastName": "BENEDETTO",
@@ -166,7 +166,7 @@
       },
       {
         "lastName": "LE BLANC",
-        "firstName": "Eloïse"
+        "firstName": "EloÃ¯se"
       },
       {
         "lastName": "LOZANO",
@@ -186,7 +186,7 @@
       },
       {
         "lastName": "STROTZ",
-        "firstName": "Naëla"
+        "firstName": "NaÃ«la"
       }
     ],
     "lecturers": [
@@ -204,22 +204,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5_DEVSECOPS",
         "course": "DevSecOPS",
-        "module": "Unité d'Enseignement SI et développement responsable"
+        "module": "UnitÃ© d'Enseignement SI et dÃ©veloppement responsable"
       }
     ]
   },
   {
     "id": "66318795",
     "title": "Programmation 1 : Fondamentaux\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n08:45 - 11:45",
-    "start": "2025-11-10T08:45:00+0100",
-    "end": "2025-11-10T11:45:00+0100",
+    "start": "2026-03-02T08:45:00+0100",
+    "end": "2026-03-02T11:45:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -281,12 +281,12 @@
         "firstName": "Alexandre"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "VERRON",
@@ -295,7 +295,7 @@
     ],
     "lecturers": [
       {
-        "lastName": "FABRE SINEGRE",
+        "lastName": "FABREÂ SINEGRE",
         "firstName": "Laureen"
       }
     ],
@@ -308,22 +308,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1_S1_PROG1",
         "course": "Programmation 1 : Fondamentaux",
-        "module": "Unité d'enseignement : Informatique S1"
+        "module": "UnitÃ© d'enseignement : Informatique S1"
       }
     ]
   },
   {
     "id": "66127452",
-    "title": "[ADI1] Mécanique du point S1\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A1\nJ104_COURS\n09:00 - 12:00",
-    "start": "2025-11-10T09:00:00+0100",
-    "end": "2025-11-10T12:00:00+0100",
+    "title": "[ADI1] MÃ©canique du point S1\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A1\nJ104_COURS\n09:00 - 12:00",
+    "start": "2026-03-02T09:00:00+0100",
+    "end": "2026-03-02T12:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -338,7 +338,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -373,8 +373,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -386,7 +386,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MALLIER",
@@ -418,7 +418,7 @@
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -426,7 +426,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -448,22 +448,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_SCI1_MECA",
-        "course": "[ADI1] Mécanique du point S1",
-        "module": "Unité d'enseignement Sciences de l'Ingénieur 1"
+        "course": "[ADI1] MÃ©canique du point S1",
+        "module": "UnitÃ© d'enseignement Sciences de l'IngÃ©nieur 1"
       }
     ]
   },
   {
     "id": "67479405",
     "title": "Anglais S1\nCOURS_TD\n2526_ISEN_BORDEAUX_CSI3\nJ111_CUISINE PEDAGOGIQUE\n09:00 - 12:00",
-    "start": "2025-11-10T09:00:00+0100",
-    "end": "2025-11-10T12:00:00+0100",
+    "start": "2026-03-02T09:00:00+0100",
+    "end": "2026-03-02T12:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -473,11 +473,11 @@
         "firstName": "Rayan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Joan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Xan"
       },
       {
@@ -494,14 +494,14 @@
       },
       {
         "lastName": "PHAN",
-        "firstName": "Thanh-Tùng"
+        "firstName": "Thanh-TÃ¹ng"
       },
       {
         "lastName": "PRADEL DAVAULT",
         "firstName": "Pierre-Adrien"
       },
       {
-        "lastName": "RÉMY",
+        "lastName": "RÃ‰MY",
         "firstName": "Killian"
       }
     ],
@@ -520,22 +520,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3",
-        "label": "Promotion 1ère année de Cycle Ingénieur (CSI3) 2025-2026"
+        "label": "Promotion 1Ã¨re annÃ©e de Cycle IngÃ©nieur (CSI3) 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3_S5_ANGLAIS",
         "course": "Anglais S1",
-        "module": "Unité d'Enseignement : Humanités, Langues"
+        "module": "UnitÃ© d'Enseignement : HumanitÃ©s, Langues"
       }
     ]
   },
   {
     "id": "66318808",
     "title": "Programmation 1 : Fondamentaux\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n12:45 - 15:45",
-    "start": "2025-11-10T12:45:00+0100",
-    "end": "2025-11-10T15:45:00+0100",
+    "start": "2026-03-02T12:45:00+0100",
+    "end": "2026-03-02T15:45:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -597,12 +597,12 @@
         "firstName": "Alexandre"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "VERRON",
@@ -611,7 +611,7 @@
     ],
     "lecturers": [
       {
-        "lastName": "FABRE SINEGRE",
+        "lastName": "FABREÂ SINEGRE",
         "firstName": "Laureen"
       }
     ],
@@ -624,22 +624,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1_S1_PROG1",
         "course": "Programmation 1 : Fondamentaux",
-        "module": "Unité d'enseignement : Informatique S1"
+        "module": "UnitÃ© d'enseignement : Informatique S1"
       }
     ]
   },
   {
     "id": "67491905",
-    "title": "Mécanique Quantique \nCOURS_TD\n2526_ISEN_BORDEAUX_CSI3\nJ101_COURS\n13:00 - 16:00",
-    "start": "2025-11-10T13:00:00+0100",
-    "end": "2025-11-10T16:00:00+0100",
+    "title": "MÃ©canique Quantique \nCOURS_TD\n2526_ISEN_BORDEAUX_CSI3\nJ101_COURS\n13:00 - 16:00",
+    "start": "2026-03-02T13:00:00+0100",
+    "end": "2026-03-02T16:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -649,11 +649,11 @@
         "firstName": "Rayan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Joan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Xan"
       },
       {
@@ -670,14 +670,14 @@
       },
       {
         "lastName": "PHAN",
-        "firstName": "Thanh-Tùng"
+        "firstName": "Thanh-TÃ¹ng"
       },
       {
         "lastName": "PRADEL DAVAULT",
         "firstName": "Pierre-Adrien"
       },
       {
-        "lastName": "RÉMY",
+        "lastName": "RÃ‰MY",
         "firstName": "Killian"
       }
     ],
@@ -696,22 +696,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3",
-        "label": "Promotion 1ère année de Cycle Ingénieur (CSI3) 2025-2026"
+        "label": "Promotion 1Ã¨re annÃ©e de Cycle IngÃ©nieur (CSI3) 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3_S5_MECAQ",
-        "course": "Mécanique Quantique",
-        "module": "Unité d'Enseignement : Physique, Electronique"
+        "course": "MÃ©canique Quantique",
+        "module": "UnitÃ© d'Enseignement : Physique, Electronique"
       }
     ]
   },
   {
     "id": "66149475",
     "title": "[ADI2] Anglais S3\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A2\nJ102_COURS\n13:30 - 16:30",
-    "start": "2025-11-10T13:30:00+0100",
-    "end": "2025-11-10T16:30:00+0100",
+    "start": "2026-03-02T13:30:00+0100",
+    "end": "2026-03-02T16:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -734,7 +734,7 @@
       },
       {
         "lastName": "BOUCKAERT",
-        "firstName": "Rémi"
+        "firstName": "RÃ©mi"
       },
       {
         "lastName": "BRUNET",
@@ -742,7 +742,7 @@
       },
       {
         "lastName": "COSTES",
-        "firstName": "Clément"
+        "firstName": "ClÃ©ment"
       },
       {
         "lastName": "DAVID",
@@ -773,7 +773,7 @@
         "firstName": "Jules"
       },
       {
-        "lastName": "HARLÉ",
+        "lastName": "HARLÃ‰",
         "firstName": "Thomas"
       },
       {
@@ -818,7 +818,7 @@
       },
       {
         "lastName": "ROCH",
-        "firstName": "Mattéo"
+        "firstName": "MattÃ©o"
       }
     ],
     "lecturers": [
@@ -836,22 +836,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2",
-        "label": "Promotion Adimaker Bordeaux 2ème année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2_FHL3_ANGLAIS",
         "course": "[ADI2] Anglais S3",
-        "module": "Unité d'enseignement Humanités 3"
+        "module": "UnitÃ© d'enseignement HumanitÃ©s 3"
       }
     ]
   },
   {
     "id": "68060622",
     "title": "DevSecOPS\nCOURS_TD\n2526_ISEN_BORDEAUX_AP5\nJ205_COURS\n13:30 - 17:30",
-    "start": "2025-11-10T13:30:00+0100",
-    "end": "2025-11-10T17:30:00+0100",
+    "start": "2026-03-02T13:30:00+0100",
+    "end": "2026-03-02T17:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -861,16 +861,16 @@
         "firstName": "Elvin"
       },
       {
-        "lastName": "ARGAÑO",
-        "firstName": "Maëna"
+        "lastName": "ARGAÃ‘O",
+        "firstName": "MaÃ«na"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
+        "lastName": "BARRÃ‰-BEYLOT",
+        "firstName": "GaÃ«l"
       },
       {
-        "lastName": "BÉGUÉ--HOUET",
-        "firstName": "Théo"
+        "lastName": "BÃ‰GUÃ‰--HOUET",
+        "firstName": "ThÃ©o"
       },
       {
         "lastName": "BENEDETTO",
@@ -906,7 +906,7 @@
       },
       {
         "lastName": "LE BLANC",
-        "firstName": "Eloïse"
+        "firstName": "EloÃ¯se"
       },
       {
         "lastName": "LOZANO",
@@ -926,7 +926,7 @@
       },
       {
         "lastName": "STROTZ",
-        "firstName": "Naëla"
+        "firstName": "NaÃ«la"
       }
     ],
     "lecturers": [
@@ -944,22 +944,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5_DEVSECOPS",
         "course": "DevSecOPS",
-        "module": "Unité d'Enseignement SI et développement responsable"
+        "module": "UnitÃ© d'Enseignement SI et dÃ©veloppement responsable"
       }
     ]
   },
   {
     "id": "66794390",
-    "title": "[ADI1] C Microcontrôleur et Algorithmie 1\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A1\nJ104_COURS\n13:30 - 15:30",
-    "start": "2025-11-10T13:30:00+0100",
-    "end": "2025-11-10T15:30:00+0100",
+    "title": "[ADI1] C MicrocontrÃ´leur et Algorithmie 1\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A1\nJ104_COURS\n13:30 - 15:30",
+    "start": "2026-03-02T13:30:00+0100",
+    "end": "2026-03-02T15:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -974,7 +974,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -1009,8 +1009,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -1022,7 +1022,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MALLIER",
@@ -1054,7 +1054,7 @@
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -1062,7 +1062,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -1084,22 +1084,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_INFO1_CMICROALGO",
-        "course": "[ADI1] C Microcontrôleur et Algorithmie 1",
-        "module": "Unité d'enseignement Informatique 1"
+        "course": "[ADI1] C MicrocontrÃ´leur et Algorithmie 1",
+        "module": "UnitÃ© d'enseignement Informatique 1"
       }
     ]
   },
   {
     "id": "66144506",
     "title": "[ADI1] Web 1\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A1\nJ104_COURS\n15:30 - 16:30",
-    "start": "2025-11-10T15:30:00+0100",
-    "end": "2025-11-10T16:30:00+0100",
+    "start": "2026-03-02T15:30:00+0100",
+    "end": "2026-03-02T16:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -1114,7 +1114,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -1149,8 +1149,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -1162,7 +1162,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MALLIER",
@@ -1194,7 +1194,7 @@
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -1202,7 +1202,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -1224,22 +1224,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_INFO1_WEB",
         "course": "[ADI1] Web 1",
-        "module": "Unité d'enseignement Informatique 1"
+        "module": "UnitÃ© d'enseignement Informatique 1"
       }
     ]
   },
   {
     "id": "70148254",
-    "title": "[ADI1] Electronique numérique 1\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A1\nJ102_COURS\n08:00 - 12:00",
-    "start": "2025-11-12T08:00:00+0100",
-    "end": "2025-11-12T12:00:00+0100",
+    "title": "[ADI1] Electronique numÃ©rique 1\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A1\nJ102_COURS\n08:00 - 12:00",
+    "start": "2026-03-04T08:00:00+0100",
+    "end": "2026-03-04T12:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -1254,7 +1254,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -1289,8 +1289,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -1302,7 +1302,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MALLIER",
@@ -1334,7 +1334,7 @@
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -1342,7 +1342,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -1364,22 +1364,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_SCI1_ELECNUM",
-        "course": "[ADI1] Electronique numérique 1",
-        "module": "Unité d'enseignement Sciences de l'Ingénieur 1"
+        "course": "[ADI1] Electronique numÃ©rique 1",
+        "module": "UnitÃ© d'enseignement Sciences de l'IngÃ©nieur 1"
       }
     ]
   },
   {
     "id": "66362622",
-    "title": "Electromagnétisme\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ203_COURS\n08:00 - 10:00",
-    "start": "2025-11-12T08:00:00+0100",
-    "end": "2025-11-12T10:00:00+0100",
+    "title": "ElectromagnÃ©tisme\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ203_COURS\n08:00 - 10:00",
+    "start": "2026-03-04T08:00:00+0100",
+    "end": "2026-03-04T10:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -1390,11 +1390,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "DENIS",
@@ -1417,7 +1417,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -1430,7 +1430,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "SABADIE",
@@ -1446,7 +1446,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -1472,22 +1472,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2_S3_ELECMAG",
-        "course": "Electromagnétisme",
-        "module": "Unité d'Enseignement : Physique, Electronique S3"
+        "course": "ElectromagnÃ©tisme",
+        "module": "UnitÃ© d'Enseignement : Physique, Electronique S3"
       }
     ]
   },
   {
     "id": "67565968",
     "title": "Business Intelligence\nCOURS_TD\n2526_ISEN_BORDEAUX_AP5\nJ205_COURS\n08:30 - 12:30",
-    "start": "2025-11-12T08:30:00+0100",
-    "end": "2025-11-12T12:30:00+0100",
+    "start": "2026-03-04T08:30:00+0100",
+    "end": "2026-03-04T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -1497,16 +1497,16 @@
         "firstName": "Elvin"
       },
       {
-        "lastName": "ARGAÑO",
-        "firstName": "Maëna"
+        "lastName": "ARGAÃ‘O",
+        "firstName": "MaÃ«na"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
+        "lastName": "BARRÃ‰-BEYLOT",
+        "firstName": "GaÃ«l"
       },
       {
-        "lastName": "BÉGUÉ--HOUET",
-        "firstName": "Théo"
+        "lastName": "BÃ‰GUÃ‰--HOUET",
+        "firstName": "ThÃ©o"
       },
       {
         "lastName": "BENEDETTO",
@@ -1542,7 +1542,7 @@
       },
       {
         "lastName": "LE BLANC",
-        "firstName": "Eloïse"
+        "firstName": "EloÃ¯se"
       },
       {
         "lastName": "LOZANO",
@@ -1562,13 +1562,13 @@
       },
       {
         "lastName": "STROTZ",
-        "firstName": "Naëla"
+        "firstName": "NaÃ«la"
       }
     ],
     "lecturers": [
       {
-        "lastName": "SMYRNOFF BODIN",
-        "firstName": "Loïc"
+        "lastName": "SMYRNOFFÂ BODIN",
+        "firstName": "LoÃ¯c"
       }
     ],
     "resources": [
@@ -1580,22 +1580,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5_BI",
         "course": "Business Intelligence",
-        "module": "Unité d'Enseignement IA et protection des données"
+        "module": "UnitÃ© d'Enseignement IA et protection des donnÃ©es"
       }
     ]
   },
   {
     "id": "67492495",
-    "title": "Electronique Numérique - FPGA\nTP\n2526_ISEN_BORDEAUX_CSI3\nJ106_TP HYBRIDE\n08:30 - 12:30",
-    "start": "2025-11-12T08:30:00+0100",
-    "end": "2025-11-12T12:30:00+0100",
+    "title": "Electronique NumÃ©rique - FPGA\nTP\n2526_ISEN_BORDEAUX_CSI3\nJ106_TP HYBRIDE\n08:30 - 12:30",
+    "start": "2026-03-04T08:30:00+0100",
+    "end": "2026-03-04T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "TP",
@@ -1605,11 +1605,11 @@
         "firstName": "Rayan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Joan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Xan"
       },
       {
@@ -1626,14 +1626,14 @@
       },
       {
         "lastName": "PHAN",
-        "firstName": "Thanh-Tùng"
+        "firstName": "Thanh-TÃ¹ng"
       },
       {
         "lastName": "PRADEL DAVAULT",
         "firstName": "Pierre-Adrien"
       },
       {
-        "lastName": "RÉMY",
+        "lastName": "RÃ‰MY",
         "firstName": "Killian"
       }
     ],
@@ -1652,22 +1652,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3",
-        "label": "Promotion 1ère année de Cycle Ingénieur (CSI3) 2025-2026"
+        "label": "Promotion 1Ã¨re annÃ©e de Cycle IngÃ©nieur (CSI3) 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3_S5_ELEC_NUM1_FPGA",
-        "course": "Electronique Numérique - FPGA",
-        "module": "Unité d'Enseignement : Physique, Electronique"
+        "course": "Electronique NumÃ©rique - FPGA",
+        "module": "UnitÃ© d'Enseignement : Physique, Electronique"
       }
     ]
   },
   {
     "id": "66322492",
-    "title": "Mathématiques 2 : Analyse\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n08:30 - 12:30",
-    "start": "2025-11-12T08:30:00+0100",
-    "end": "2025-11-12T12:30:00+0100",
+    "title": "MathÃ©matiques 2 : Analyse\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n08:30 - 12:30",
+    "start": "2026-03-04T08:30:00+0100",
+    "end": "2026-03-04T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -1729,12 +1729,12 @@
         "firstName": "Alexandre"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "VERRON",
@@ -1756,22 +1756,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1_S1_MATH2",
-        "course": "Mathématiques 2 : Analyse",
-        "module": "Unité d'enseignement : Mathématiques S1"
+        "course": "MathÃ©matiques 2 : Analyse",
+        "module": "UnitÃ© d'enseignement : MathÃ©matiques S1"
       }
     ]
   },
   {
     "id": "72030713",
     "title": "\nSOUTENANCE\n\nJ111_CUISINE PEDAGOGIQUE\n09:00 - 11:00",
-    "start": "2025-11-12T09:00:00+0100",
-    "end": "2025-11-12T11:00:00+0100",
+    "start": "2026-03-04T09:00:00+0100",
+    "end": "2026-03-04T11:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "SOUTENANCE",
@@ -1789,8 +1789,8 @@
   {
     "id": "66151218",
     "title": "[ADI2] Programmation et IA S3\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A2\nJ102_COURS\n13:00 - 17:00",
-    "start": "2025-11-12T13:00:00+0100",
-    "end": "2025-11-12T17:00:00+0100",
+    "start": "2026-03-04T13:00:00+0100",
+    "end": "2026-03-04T17:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -1813,7 +1813,7 @@
       },
       {
         "lastName": "BOUCKAERT",
-        "firstName": "Rémi"
+        "firstName": "RÃ©mi"
       },
       {
         "lastName": "BRUNET",
@@ -1821,7 +1821,7 @@
       },
       {
         "lastName": "COSTES",
-        "firstName": "Clément"
+        "firstName": "ClÃ©ment"
       },
       {
         "lastName": "DAVID",
@@ -1852,7 +1852,7 @@
         "firstName": "Jules"
       },
       {
-        "lastName": "HARLÉ",
+        "lastName": "HARLÃ‰",
         "firstName": "Thomas"
       },
       {
@@ -1897,7 +1897,7 @@
       },
       {
         "lastName": "ROCH",
-        "firstName": "Mattéo"
+        "firstName": "MattÃ©o"
       }
     ],
     "lecturers": [
@@ -1915,22 +1915,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2",
-        "label": "Promotion Adimaker Bordeaux 2ème année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2_INFO3_IA",
         "course": "[ADI2] Programmation et IA S3",
-        "module": "Unité d'enseignement Informatique 3"
+        "module": "UnitÃ© d'enseignement Informatique 3"
       }
     ]
   },
   {
     "id": "66127007",
     "title": "[ADI1] Suites et Fonctions usuelles\nCOURS_TD\n2526_ADIMAKER_BORDEAUX_A1\nJ104_COURS\n13:30 - 16:30",
-    "start": "2025-11-12T13:30:00+0100",
-    "end": "2025-11-12T16:30:00+0100",
+    "start": "2026-03-04T13:30:00+0100",
+    "end": "2026-03-04T16:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -1945,7 +1945,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -1980,8 +1980,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -1993,7 +1993,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MALLIER",
@@ -2025,7 +2025,7 @@
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -2033,7 +2033,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -2055,22 +2055,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_MATHS02",
         "course": "[ADI1] Suites et Fonctions usuelles",
-        "module": "Unité d'enseignement Mathématiques 1"
+        "module": "UnitÃ© d'enseignement MathÃ©matiques 1"
       }
     ]
   },
   {
     "id": "68876442",
-    "title": "Sécurité des SI\nCOURS_TD\n2526_ISEN_BORDEAUX_AP5\nJ003_SALLE COURS INFORMATIQUE\n13:30 - 17:00",
-    "start": "2025-11-12T13:30:00+0100",
-    "end": "2025-11-12T17:00:00+0100",
+    "title": "SÃ©curitÃ© des SI\nCOURS_TD\n2526_ISEN_BORDEAUX_AP5\nJ003_SALLE COURS INFORMATIQUE\n13:30 - 17:00",
+    "start": "2026-03-04T13:30:00+0100",
+    "end": "2026-03-04T17:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -2080,16 +2080,16 @@
         "firstName": "Elvin"
       },
       {
-        "lastName": "ARGAÑO",
-        "firstName": "Maëna"
+        "lastName": "ARGAÃ‘O",
+        "firstName": "MaÃ«na"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
+        "lastName": "BARRÃ‰-BEYLOT",
+        "firstName": "GaÃ«l"
       },
       {
-        "lastName": "BÉGUÉ--HOUET",
-        "firstName": "Théo"
+        "lastName": "BÃ‰GUÃ‰--HOUET",
+        "firstName": "ThÃ©o"
       },
       {
         "lastName": "BENEDETTO",
@@ -2125,7 +2125,7 @@
       },
       {
         "lastName": "LE BLANC",
-        "firstName": "Eloïse"
+        "firstName": "EloÃ¯se"
       },
       {
         "lastName": "LOZANO",
@@ -2145,7 +2145,7 @@
       },
       {
         "lastName": "STROTZ",
-        "firstName": "Naëla"
+        "firstName": "NaÃ«la"
       }
     ],
     "lecturers": [
@@ -2163,22 +2163,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5_SECURITE_SI",
-        "course": "Sécurité des SI",
-        "module": "Unité d'Enseignement SI et développement responsable"
+        "course": "SÃ©curitÃ© des SI",
+        "module": "UnitÃ© d'Enseignement SI et dÃ©veloppement responsable"
       }
     ]
   },
   {
     "id": "66363711",
-    "title": "Mathématiques 6 : Analyse avancée\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ206_COURS\n13:30 - 17:30",
-    "start": "2025-11-12T13:30:00+0100",
-    "end": "2025-11-12T17:30:00+0100",
+    "title": "MathÃ©matiques 6 : Analyse avancÃ©e\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ206_COURS\n13:30 - 17:30",
+    "start": "2026-03-04T13:30:00+0100",
+    "end": "2026-03-04T17:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -2189,11 +2189,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "DENIS",
@@ -2216,7 +2216,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -2229,7 +2229,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "SABADIE",
@@ -2245,7 +2245,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -2271,22 +2271,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2_S3_MATH6",
-        "course": "Mathématiques 6 : Analyse avancée",
-        "module": "Unité d'Enseignement : Mathématiques S3"
+        "course": "MathÃ©matiques 6 : Analyse avancÃ©e",
+        "module": "UnitÃ© d'Enseignement : MathÃ©matiques S3"
       }
     ]
   },
   {
     "id": "68937981",
-    "title": "Enjeu du Développement durable\nAUTO_APPR\n2526_ISEN_BORDEAUX_CSI3\nJ101_COURS\n13:30 - 16:30",
-    "start": "2025-11-12T13:30:00+0100",
-    "end": "2025-11-12T16:30:00+0100",
+    "title": "Enjeu du DÃ©veloppement durable\nAUTO_APPR\n2526_ISEN_BORDEAUX_CSI3\nJ101_COURS\n13:30 - 16:30",
+    "start": "2026-03-04T13:30:00+0100",
+    "end": "2026-03-04T16:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "AUTO_APPR",
@@ -2296,11 +2296,11 @@
         "firstName": "Rayan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Joan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Xan"
       },
       {
@@ -2317,14 +2317,14 @@
       },
       {
         "lastName": "PHAN",
-        "firstName": "Thanh-Tùng"
+        "firstName": "Thanh-TÃ¹ng"
       },
       {
         "lastName": "PRADEL DAVAULT",
         "firstName": "Pierre-Adrien"
       },
       {
-        "lastName": "RÉMY",
+        "lastName": "RÃ‰MY",
         "firstName": "Killian"
       }
     ],
@@ -2343,22 +2343,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3",
-        "label": "Promotion 1ère année de Cycle Ingénieur (CSI3) 2025-2026"
+        "label": "Promotion 1Ã¨re annÃ©e de Cycle IngÃ©nieur (CSI3) 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3_S5_EDD",
-        "course": "Enjeu du Développement durable",
-        "module": "Unité d'Enseignement : Responsabilité sociale et environnementale"
+        "course": "Enjeu du DÃ©veloppement durable",
+        "module": "UnitÃ© d'Enseignement : ResponsabilitÃ© sociale et environnementale"
       }
     ]
   },
   {
     "id": "66319125",
-    "title": "Développement Web statique\nPROJET\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n13:30 - 16:30",
-    "start": "2025-11-12T13:30:00+0100",
-    "end": "2025-11-12T16:30:00+0100",
+    "title": "DÃ©veloppement Web statique\nPROJET\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n13:30 - 16:30",
+    "start": "2026-03-04T13:30:00+0100",
+    "end": "2026-03-04T16:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "PROJET",
@@ -2420,12 +2420,12 @@
         "firstName": "Alexandre"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "VERRON",
@@ -2434,7 +2434,7 @@
     ],
     "lecturers": [
       {
-        "lastName": "DE CONTO",
+        "lastName": "DEÂ CONTO",
         "firstName": "Antoine"
       }
     ],
@@ -2447,29 +2447,29 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1_S1_WEB",
-        "course": "Développement Web statique",
-        "module": "Unité d'enseignement : Informatique S1"
+        "course": "DÃ©veloppement Web statique",
+        "module": "UnitÃ© d'enseignement : Informatique S1"
       }
     ]
   },
   {
     "id": "68060867",
     "title": "Pentesting\nTP\n2526_ISEN_BORDEAUX_AP5 / 2526_ISEN_BORDEAUX_AP5_CYBER\nJ107_TP INFORMATIQUE\n08:30 - 12:30",
-    "start": "2025-11-13T08:30:00+0100",
-    "end": "2025-11-13T12:30:00+0100",
+    "start": "2026-03-05T08:30:00+0100",
+    "end": "2026-03-05T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "TP",
     "students": [
       {
-        "lastName": "BÉGUÉ--HOUET",
-        "firstName": "Théo"
+        "lastName": "BÃ‰GUÃ‰--HOUET",
+        "firstName": "ThÃ©o"
       },
       {
         "lastName": "COSTREL DE CORAINVILLE",
@@ -2503,26 +2503,26 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       },
       {
         "code": "2526_ISEN_BORDEAUX_AP5_CYBER",
-        "label": "AP5 Bdx Option Cybersécurité"
+        "label": "AP5 Bdx Option CybersÃ©curitÃ©"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5_PENTESTING",
         "course": "Pentesting",
-        "module": "Unité d'Enseignement Cybersécurité"
+        "module": "UnitÃ© d'Enseignement CybersÃ©curitÃ©"
       }
     ]
   },
   {
     "id": "68872756",
     "title": "\nAUTO_APPR\n2526_ISEN_BORDEAUX_AP5 / 2526_ISEN_BORDEAUX_AP5_DEV\nJ204_COURS\n08:30 - 12:30",
-    "start": "2025-11-13T08:30:00+0100",
-    "end": "2025-11-13T12:30:00+0100",
+    "start": "2026-03-05T08:30:00+0100",
+    "end": "2026-03-05T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "AUTO_APPR",
@@ -2532,12 +2532,12 @@
         "firstName": "Elvin"
       },
       {
-        "lastName": "ARGAÑO",
-        "firstName": "Maëna"
+        "lastName": "ARGAÃ‘O",
+        "firstName": "MaÃ«na"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
+        "lastName": "BARRÃ‰-BEYLOT",
+        "firstName": "GaÃ«l"
       },
       {
         "lastName": "BENEDETTO",
@@ -2569,7 +2569,7 @@
       },
       {
         "lastName": "LE BLANC",
-        "firstName": "Eloïse"
+        "firstName": "EloÃ¯se"
       },
       {
         "lastName": "PACAU",
@@ -2581,7 +2581,7 @@
       },
       {
         "lastName": "STROTZ",
-        "firstName": "Naëla"
+        "firstName": "NaÃ«la"
       }
     ],
     "lecturers": [
@@ -2603,20 +2603,20 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       },
       {
         "code": "2526_ISEN_BORDEAUX_AP5_DEV",
-        "label": "AP5 Bdx Option Développement Logiciel"
+        "label": "AP5 Bdx Option DÃ©veloppement Logiciel"
       }
     ],
     "courses": []
   },
   {
     "id": "68936081",
-    "title": "Electronique Numérique - Microcontrôleur\nTP\n2526_ISEN_BORDEAUX_CSI3\nJ106_TP HYBRIDE\n08:30 - 12:30",
-    "start": "2025-11-13T08:30:00+0100",
-    "end": "2025-11-13T12:30:00+0100",
+    "title": "Electronique NumÃ©rique - MicrocontrÃ´leur\nTP\n2526_ISEN_BORDEAUX_CSI3\nJ106_TP HYBRIDE\n08:30 - 12:30",
+    "start": "2026-03-05T08:30:00+0100",
+    "end": "2026-03-05T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "TP",
@@ -2626,11 +2626,11 @@
         "firstName": "Rayan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Joan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Xan"
       },
       {
@@ -2647,14 +2647,14 @@
       },
       {
         "lastName": "PHAN",
-        "firstName": "Thanh-Tùng"
+        "firstName": "Thanh-TÃ¹ng"
       },
       {
         "lastName": "PRADEL DAVAULT",
         "firstName": "Pierre-Adrien"
       },
       {
-        "lastName": "RÉMY",
+        "lastName": "RÃ‰MY",
         "firstName": "Killian"
       }
     ],
@@ -2673,22 +2673,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3",
-        "label": "Promotion 1ère année de Cycle Ingénieur (CSI3) 2025-2026"
+        "label": "Promotion 1Ã¨re annÃ©e de Cycle IngÃ©nieur (CSI3) 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3_S5_ELEC_NUM2_MICROC",
-        "course": "Electronique Numérique - Microcontrôleur",
-        "module": "Unité d'Enseignement : Physique, Electronique"
+        "course": "Electronique NumÃ©rique - MicrocontrÃ´leur",
+        "module": "UnitÃ© d'Enseignement : Physique, Electronique"
       }
     ]
   },
   {
     "id": "66319766",
     "title": "Communication interpersonnelle - Bases\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n08:30 - 12:30",
-    "start": "2025-11-13T08:30:00+0100",
-    "end": "2025-11-13T12:30:00+0100",
+    "start": "2026-03-05T08:30:00+0100",
+    "end": "2026-03-05T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -2750,12 +2750,12 @@
         "firstName": "Alexandre"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "VERRON",
@@ -2765,7 +2765,7 @@
     "lecturers": [
       {
         "lastName": "CUISINAUD",
-        "firstName": "Laëtitia"
+        "firstName": "LaÃ«titia"
       }
     ],
     "resources": [
@@ -2777,22 +2777,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1_S1_COM",
         "course": "Communication interpersonnelle - Bases",
-        "module": "Unité d'enseignement : Humanités, Langues"
+        "module": "UnitÃ© d'enseignement : HumanitÃ©s, Langues"
       }
     ]
   },
   {
     "id": "66363438",
     "title": "Anglais S1\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n08:30 - 11:30",
-    "start": "2025-11-13T08:30:00+0100",
-    "end": "2025-11-13T11:30:00+0100",
+    "start": "2026-03-05T08:30:00+0100",
+    "end": "2026-03-05T11:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -2803,11 +2803,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "DENIS",
@@ -2830,7 +2830,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -2843,7 +2843,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "SABADIE",
@@ -2859,7 +2859,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -2885,22 +2885,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2_S3_ANGLAIS",
         "course": "Anglais S1",
-        "module": "Unité d'Enseignement : Humanités, Langues S3"
+        "module": "UnitÃ© d'Enseignement : HumanitÃ©s, Langues S3"
       }
     ]
   },
   {
     "id": "66133095",
     "title": "[ADI1] Projet de Semestre 1\nPROJET\n2526_ADIMAKER_BORDEAUX_A1 / 2526_ADIMAKER_BORDEAUX_A2\nJ001_FABLAB\n09:00 - 12:30",
-    "start": "2025-11-13T09:00:00+0100",
-    "end": "2025-11-13T12:30:00+0100",
+    "start": "2026-03-05T09:00:00+0100",
+    "end": "2026-03-05T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "PROJET",
@@ -2931,7 +2931,7 @@
       },
       {
         "lastName": "BOUCKAERT",
-        "firstName": "Rémi"
+        "firstName": "RÃ©mi"
       },
       {
         "lastName": "BRUNET",
@@ -2939,7 +2939,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -2951,7 +2951,7 @@
       },
       {
         "lastName": "COSTES",
-        "firstName": "Clément"
+        "firstName": "ClÃ©ment"
       },
       {
         "lastName": "COSTREL DE CORAINVILLE",
@@ -3002,7 +3002,7 @@
         "firstName": "Jules"
       },
       {
-        "lastName": "HARLÉ",
+        "lastName": "HARLÃ‰",
         "firstName": "Thomas"
       },
       {
@@ -3014,8 +3014,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -3031,7 +3031,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MACHENAUD",
@@ -3095,11 +3095,11 @@
       },
       {
         "lastName": "ROCH",
-        "firstName": "Mattéo"
+        "firstName": "MattÃ©o"
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -3107,7 +3107,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -3141,31 +3141,31 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       },
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2",
-        "label": "Promotion Adimaker Bordeaux 2ème année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_PROJET1_BETA",
         "course": "[ADI1] Projet de Semestre 1",
-        "module": "Unité d'enseignement Projet 1"
+        "module": "UnitÃ© d'enseignement Projet 1"
       },
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2_PROJET3_BETA",
         "course": "[ADI2] Projet de Semestre 3",
-        "module": "Unité d'enseignement Projets 3"
+        "module": "UnitÃ© d'enseignement Projets 3"
       }
     ]
   },
   {
     "id": "71166178",
     "title": "\nCONF\n2526_ISEN_BORDEAUX_CIR1\nJ203_COURS\n13:30 - 14:30",
-    "start": "2025-11-13T13:30:00+0100",
-    "end": "2025-11-13T14:30:00+0100",
+    "start": "2026-03-05T13:30:00+0100",
+    "end": "2026-03-05T14:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "CONF",
@@ -3227,12 +3227,12 @@
         "firstName": "Alexandre"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "VERRON",
@@ -3258,16 +3258,16 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": []
   },
   {
     "id": "68922427",
-    "title": "[ADI2] Electronique Appliquée S3\nDS_SURV\n2526_ADIMAKER_BORDEAUX_A2\nJ103_COURS\n13:30 - 14:30",
-    "start": "2025-11-13T13:30:00+0100",
-    "end": "2025-11-13T14:30:00+0100",
+    "title": "[ADI2] Electronique AppliquÃ©e S3\nDS_SURV\n2526_ADIMAKER_BORDEAUX_A2\nJ103_COURS\n13:30 - 14:30",
+    "start": "2026-03-05T13:30:00+0100",
+    "end": "2026-03-05T14:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "est-epreuve",
@@ -3290,7 +3290,7 @@
       },
       {
         "lastName": "BOUCKAERT",
-        "firstName": "Rémi"
+        "firstName": "RÃ©mi"
       },
       {
         "lastName": "BRUNET",
@@ -3298,7 +3298,7 @@
       },
       {
         "lastName": "COSTES",
-        "firstName": "Clément"
+        "firstName": "ClÃ©ment"
       },
       {
         "lastName": "DAVID",
@@ -3329,7 +3329,7 @@
         "firstName": "Jules"
       },
       {
-        "lastName": "HARLÉ",
+        "lastName": "HARLÃ‰",
         "firstName": "Thomas"
       },
       {
@@ -3374,7 +3374,7 @@
       },
       {
         "lastName": "ROCH",
-        "firstName": "Mattéo"
+        "firstName": "MattÃ©o"
       }
     ],
     "lecturers": [
@@ -3400,22 +3400,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2",
-        "label": "Promotion Adimaker Bordeaux 2ème année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2_SCI3_ELECAPP",
-        "course": "[ADI2] Electronique Appliquée S3",
-        "module": "Unité d'enseignement Sciences de l'Ingénieur 3"
+        "course": "[ADI2] Electronique AppliquÃ©e S3",
+        "module": "UnitÃ© d'enseignement Sciences de l'IngÃ©nieur 3"
       }
     ]
   },
   {
     "id": "68915727",
     "title": "[ADI1] Suites et Fonctions usuelles\nDS_SURV\n2526_ADIMAKER_BORDEAUX_A1\nJ104_COURS\n13:30 - 14:30",
-    "start": "2025-11-13T13:30:00+0100",
-    "end": "2025-11-13T14:30:00+0100",
+    "start": "2026-03-05T13:30:00+0100",
+    "end": "2026-03-05T14:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "est-epreuve",
@@ -3430,7 +3430,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -3465,8 +3465,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -3478,7 +3478,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MALLIER",
@@ -3510,7 +3510,7 @@
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -3518,7 +3518,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -3548,22 +3548,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_MATHS02",
         "course": "[ADI1] Suites et Fonctions usuelles",
-        "module": "Unité d'enseignement Mathématiques 1"
+        "module": "UnitÃ© d'enseignement MathÃ©matiques 1"
       }
     ]
   },
   {
     "id": "66363657",
-    "title": "Mathématiques Pratiques S1\nTP\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n13:30 - 15:30",
-    "start": "2025-11-13T13:30:00+0100",
-    "end": "2025-11-13T15:30:00+0100",
+    "title": "MathÃ©matiques Pratiques S1\nTP\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n13:30 - 15:30",
+    "start": "2026-03-05T13:30:00+0100",
+    "end": "2026-03-05T15:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "TP",
@@ -3574,11 +3574,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "DENIS",
@@ -3601,7 +3601,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -3614,7 +3614,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "SABADIE",
@@ -3630,7 +3630,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -3656,29 +3656,29 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2_S3_MATH_TP",
-        "course": "Mathématiques Pratiques S1",
-        "module": "Unité d'Enseignement : Mathématiques S3"
+        "course": "MathÃ©matiques Pratiques S1",
+        "module": "UnitÃ© d'Enseignement : MathÃ©matiques S3"
       }
     ]
   },
   {
     "id": "68060850",
     "title": "Pentesting\nTP\n2526_ISEN_BORDEAUX_AP5 / 2526_ISEN_BORDEAUX_AP5_CYBER\nJ107_TP INFORMATIQUE\n13:30 - 17:30",
-    "start": "2025-11-13T13:30:00+0100",
-    "end": "2025-11-13T17:30:00+0100",
+    "start": "2026-03-05T13:30:00+0100",
+    "end": "2026-03-05T17:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "TP",
     "students": [
       {
-        "lastName": "BÉGUÉ--HOUET",
-        "firstName": "Théo"
+        "lastName": "BÃ‰GUÃ‰--HOUET",
+        "firstName": "ThÃ©o"
       },
       {
         "lastName": "COSTREL DE CORAINVILLE",
@@ -3712,26 +3712,26 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       },
       {
         "code": "2526_ISEN_BORDEAUX_AP5_CYBER",
-        "label": "AP5 Bdx Option Cybersécurité"
+        "label": "AP5 Bdx Option CybersÃ©curitÃ©"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5_PENTESTING",
         "course": "Pentesting",
-        "module": "Unité d'Enseignement Cybersécurité"
+        "module": "UnitÃ© d'Enseignement CybersÃ©curitÃ©"
       }
     ]
   },
   {
     "id": "71168252",
     "title": "\nCONF\n2526_ISEN_BORDEAUX_CSI3\nJ203_COURS\n14:30 - 15:30",
-    "start": "2025-11-13T14:30:00+0100",
-    "end": "2025-11-13T15:30:00+0100",
+    "start": "2026-03-05T14:30:00+0100",
+    "end": "2026-03-05T15:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "CONF",
@@ -3741,11 +3741,11 @@
         "firstName": "Rayan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Joan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Xan"
       },
       {
@@ -3762,14 +3762,14 @@
       },
       {
         "lastName": "PHAN",
-        "firstName": "Thanh-Tùng"
+        "firstName": "Thanh-TÃ¹ng"
       },
       {
         "lastName": "PRADEL DAVAULT",
         "firstName": "Pierre-Adrien"
       },
       {
-        "lastName": "RÉMY",
+        "lastName": "RÃ‰MY",
         "firstName": "Killian"
       }
     ],
@@ -3788,7 +3788,7 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3",
-        "label": "Promotion 1ère année de Cycle Ingénieur (CSI3) 2025-2026"
+        "label": "Promotion 1Ã¨re annÃ©e de Cycle IngÃ©nieur (CSI3) 2025-2026"
       }
     ],
     "courses": []
@@ -3796,8 +3796,8 @@
   {
     "id": "71170163",
     "title": "\nCONF\n2526_ISEN_BORDEAUX_CIR2\nJ104_COURS\n18:00 - 19:00",
-    "start": "2025-11-13T18:00:00+0100",
-    "end": "2025-11-13T19:00:00+0100",
+    "start": "2026-03-05T18:00:00+0100",
+    "end": "2026-03-05T19:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "CONF",
@@ -3808,11 +3808,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "DENIS",
@@ -3835,7 +3835,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -3848,7 +3848,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "SABADIE",
@@ -3864,7 +3864,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -3894,16 +3894,16 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": []
   },
   {
     "id": "66322504",
-    "title": "Mathématiques 2 : Analyse\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n08:00 - 12:00",
-    "start": "2025-11-14T08:00:00+0100",
-    "end": "2025-11-14T12:00:00+0100",
+    "title": "MathÃ©matiques 2 : Analyse\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR1\nJ103_COURS\n08:00 - 12:00",
+    "start": "2026-03-06T08:00:00+0100",
+    "end": "2026-03-06T12:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -3965,12 +3965,12 @@
         "firstName": "Alexandre"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "VERRON",
@@ -3992,22 +3992,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1_S1_MATH2",
-        "course": "Mathématiques 2 : Analyse",
-        "module": "Unité d'enseignement : Mathématiques S1"
+        "course": "MathÃ©matiques 2 : Analyse",
+        "module": "UnitÃ© d'enseignement : MathÃ©matiques S1"
       }
     ]
   },
   {
     "id": "68060611",
     "title": "DevSecOPS\nCOURS_TD\n2526_ISEN_BORDEAUX_AP5\nJ205_COURS\n08:30 - 12:30",
-    "start": "2025-11-14T08:30:00+0100",
-    "end": "2025-11-14T12:30:00+0100",
+    "start": "2026-03-06T08:30:00+0100",
+    "end": "2026-03-06T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -4017,16 +4017,16 @@
         "firstName": "Elvin"
       },
       {
-        "lastName": "ARGAÑO",
-        "firstName": "Maëna"
+        "lastName": "ARGAÃ‘O",
+        "firstName": "MaÃ«na"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
+        "lastName": "BARRÃ‰-BEYLOT",
+        "firstName": "GaÃ«l"
       },
       {
-        "lastName": "BÉGUÉ--HOUET",
-        "firstName": "Théo"
+        "lastName": "BÃ‰GUÃ‰--HOUET",
+        "firstName": "ThÃ©o"
       },
       {
         "lastName": "BENEDETTO",
@@ -4062,7 +4062,7 @@
       },
       {
         "lastName": "LE BLANC",
-        "firstName": "Eloïse"
+        "firstName": "EloÃ¯se"
       },
       {
         "lastName": "LOZANO",
@@ -4082,7 +4082,7 @@
       },
       {
         "lastName": "STROTZ",
-        "firstName": "Naëla"
+        "firstName": "NaÃ«la"
       }
     ],
     "lecturers": [
@@ -4100,22 +4100,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_AP5_DEVSECOPS",
         "course": "DevSecOPS",
-        "module": "Unité d'Enseignement SI et développement responsable"
+        "module": "UnitÃ© d'Enseignement SI et dÃ©veloppement responsable"
       }
     ]
   },
   {
     "id": "66144080",
     "title": "[ADI1] Projets Techniques S1\nPROJET\n2526_ADIMAKER_BORDEAUX_A1 / 2526_ADIMAKER_BORDEAUX_A2\nJ004_COURS_PROTOTYPAGE\n08:30 - 12:00",
-    "start": "2025-11-14T08:30:00+0100",
-    "end": "2025-11-14T12:00:00+0100",
+    "start": "2026-03-06T08:30:00+0100",
+    "end": "2026-03-06T12:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "PROJET",
@@ -4138,7 +4138,7 @@
       },
       {
         "lastName": "BOUCKAERT",
-        "firstName": "Rémi"
+        "firstName": "RÃ©mi"
       },
       {
         "lastName": "BRUNET",
@@ -4146,7 +4146,7 @@
       },
       {
         "lastName": "COSTES",
-        "firstName": "Clément"
+        "firstName": "ClÃ©ment"
       },
       {
         "lastName": "DAVID",
@@ -4177,7 +4177,7 @@
         "firstName": "Jules"
       },
       {
-        "lastName": "HARLÉ",
+        "lastName": "HARLÃ‰",
         "firstName": "Thomas"
       },
       {
@@ -4222,7 +4222,7 @@
       },
       {
         "lastName": "ROCH",
-        "firstName": "Mattéo"
+        "firstName": "MattÃ©o"
       }
     ],
     "lecturers": [
@@ -4244,31 +4244,31 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       },
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2",
-        "label": "Promotion Adimaker Bordeaux 2ème année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_PROJET1_ALPHA",
         "course": "[ADI1] Projets Techniques S1",
-        "module": "Unité d'enseignement Projet 1"
+        "module": "UnitÃ© d'enseignement Projet 1"
       },
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2_PROJET3_ALPHA",
         "course": "[ADI2] Projets Techniques S3",
-        "module": "Unité d'enseignement Projets 3"
+        "module": "UnitÃ© d'enseignement Projets 3"
       }
     ]
   },
   {
     "id": "66145103",
     "title": "[ADI1] Machines Outils 1\nTP\n2526_ADIMAKER_BORDEAUX_A1\nJ001_FABLAB\n08:30 - 12:00",
-    "start": "2025-11-14T08:30:00+0100",
-    "end": "2025-11-14T12:00:00+0100",
+    "start": "2026-03-06T08:30:00+0100",
+    "end": "2026-03-06T12:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "TP",
@@ -4283,7 +4283,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -4318,8 +4318,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -4331,7 +4331,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MALLIER",
@@ -4363,7 +4363,7 @@
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -4371,7 +4371,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -4393,22 +4393,22 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_SCI1_MACHINESOUTILS",
         "course": "[ADI1] Machines Outils 1",
-        "module": "Unité d'enseignement Sciences de l'Ingénieur 1"
+        "module": "UnitÃ© d'enseignement Sciences de l'IngÃ©nieur 1"
       }
     ]
   },
   {
     "id": "67492159",
-    "title": "Transformations Intégrales\nCOURS_TD\n2526_ISEN_BORDEAUX_CSI3\nJ104_COURS\n08:30 - 12:30",
-    "start": "2025-11-14T08:30:00+0100",
-    "end": "2025-11-14T12:30:00+0100",
+    "title": "Transformations IntÃ©grales\nCOURS_TD\n2526_ISEN_BORDEAUX_CSI3\nJ104_COURS\n08:30 - 12:30",
+    "start": "2026-03-06T08:30:00+0100",
+    "end": "2026-03-06T12:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -4418,11 +4418,11 @@
         "firstName": "Rayan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Joan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Xan"
       },
       {
@@ -4439,14 +4439,14 @@
       },
       {
         "lastName": "PHAN",
-        "firstName": "Thanh-Tùng"
+        "firstName": "Thanh-TÃ¹ng"
       },
       {
         "lastName": "PRADEL DAVAULT",
         "firstName": "Pierre-Adrien"
       },
       {
-        "lastName": "RÉMY",
+        "lastName": "RÃ‰MY",
         "firstName": "Killian"
       }
     ],
@@ -4465,22 +4465,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3",
-        "label": "Promotion 1ère année de Cycle Ingénieur (CSI3) 2025-2026"
+        "label": "Promotion 1Ã¨re annÃ©e de Cycle IngÃ©nieur (CSI3) 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3_S5_TRANSFO",
-        "course": "Transformations Intégrales",
-        "module": "Unité d'Enseignement : Signaux et Systèmes"
+        "course": "Transformations IntÃ©grales",
+        "module": "UnitÃ© d'Enseignement : Signaux et SystÃ¨mes"
       }
     ]
   },
   {
     "id": "66362518",
-    "title": "Electromagnétisme\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n09:00 - 12:00",
-    "start": "2025-11-14T09:00:00+0100",
-    "end": "2025-11-14T12:00:00+0100",
+    "title": "ElectromagnÃ©tisme\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n09:00 - 12:00",
+    "start": "2026-03-06T09:00:00+0100",
+    "end": "2026-03-06T12:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -4491,11 +4491,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "DENIS",
@@ -4518,7 +4518,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -4531,7 +4531,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "SABADIE",
@@ -4547,7 +4547,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -4573,22 +4573,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2_S3_ELECMAG",
-        "course": "Electromagnétisme",
-        "module": "Unité d'Enseignement : Physique, Electronique S3"
+        "course": "ElectromagnÃ©tisme",
+        "module": "UnitÃ© d'Enseignement : Physique, Electronique S3"
       }
     ]
   },
   {
     "id": "66921036",
     "title": "[ADI1] Projet Professionnel et Personnel 1\nREUNION\n2526_ADIMAKER_BORDEAUX_A1 / 2526_ISEN_BORDEAUX_CIR1\nJ109_CLASSLAB\n13:00 - 14:00",
-    "start": "2025-11-14T13:00:00+0100",
-    "end": "2025-11-14T14:00:00+0100",
+    "start": "2026-03-06T13:00:00+0100",
+    "end": "2026-03-06T14:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "REUNION",
@@ -4623,7 +4623,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COELHO",
@@ -4678,8 +4678,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -4691,7 +4691,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MACAIGNE",
@@ -4738,16 +4738,16 @@
         "firstName": "Yann"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -4755,7 +4755,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "VERRON",
@@ -4785,26 +4785,26 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       },
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_FHL1_PPP",
         "course": "[ADI1] Projet Professionnel et Personnel 1",
-        "module": "Unité d'enseignement Humanités 1"
+        "module": "UnitÃ© d'enseignement HumanitÃ©s 1"
       }
     ]
   },
   {
     "id": "66920918",
     "title": "[ADI2] Projet Professionnel et Personnel S3\nREUNION\n2526_ADIMAKER_BORDEAUX_A2 / 2526_ISEN_BORDEAUX_CIR2\nJ103_COURS\n13:00 - 14:00",
-    "start": "2025-11-14T13:00:00+0100",
-    "end": "2025-11-14T14:00:00+0100",
+    "start": "2026-03-06T13:00:00+0100",
+    "end": "2026-03-06T14:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "REUNION",
@@ -4819,11 +4819,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "BALARD",
@@ -4839,7 +4839,7 @@
       },
       {
         "lastName": "BOUCKAERT",
-        "firstName": "Rémi"
+        "firstName": "RÃ©mi"
       },
       {
         "lastName": "BRUNET",
@@ -4847,7 +4847,7 @@
       },
       {
         "lastName": "COSTES",
-        "firstName": "Clément"
+        "firstName": "ClÃ©ment"
       },
       {
         "lastName": "DAVID",
@@ -4890,7 +4890,7 @@
         "firstName": "Jules"
       },
       {
-        "lastName": "HARLÉ",
+        "lastName": "HARLÃ‰",
         "firstName": "Thomas"
       },
       {
@@ -4930,7 +4930,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -4947,7 +4947,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "RAMIREZ",
@@ -4959,7 +4959,7 @@
       },
       {
         "lastName": "ROCH",
-        "firstName": "Mattéo"
+        "firstName": "MattÃ©o"
       },
       {
         "lastName": "SABADIE",
@@ -4975,7 +4975,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -5005,26 +5005,26 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2",
-        "label": "Promotion Adimaker Bordeaux 2ème année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 2Ã¨me annÃ©e 2025-2026"
       },
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2_FHL3_PPP",
         "course": "[ADI2] Projet Professionnel et Personnel S3",
-        "module": "Unité d'enseignement Humanités 3"
+        "module": "UnitÃ© d'enseignement HumanitÃ©s 3"
       }
     ]
   },
   {
     "id": "68061040",
     "title": "Android\nCOURS_TD_DIST\n2526_ISEN_AP5 / 2526_ISEN_AP5 / 2526_ISEN_BORDEAUX_AP5 / 2526_ISEN_BORDEAUX_AP5 / 2526_ISEN_BORDEAUX_AP5_DEV / 2526_ISEN_BORDEAUX_AP5_DEV\nJ003_SALLE COURS INFORMATIQUE\n13:30 - 17:45",
-    "start": "2025-11-14T13:30:00+0100",
-    "end": "2025-11-14T17:45:00+0100",
+    "start": "2026-03-06T13:30:00+0100",
+    "end": "2026-03-06T17:45:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD_DIST",
@@ -5034,12 +5034,12 @@
         "firstName": "Elvin"
       },
       {
-        "lastName": "ARGAÑO",
-        "firstName": "Maëna"
+        "lastName": "ARGAÃ‘O",
+        "firstName": "MaÃ«na"
       },
       {
-        "lastName": "BARRÉ-BEYLOT",
-        "firstName": "Gaël"
+        "lastName": "BARRÃ‰-BEYLOT",
+        "firstName": "GaÃ«l"
       },
       {
         "lastName": "BENEDETTO",
@@ -5087,7 +5087,7 @@
       },
       {
         "lastName": "LE BLANC",
-        "firstName": "Eloïse"
+        "firstName": "EloÃ¯se"
       },
       {
         "lastName": "LUCAS",
@@ -5095,7 +5095,7 @@
       },
       {
         "lastName": "MAZEAU",
-        "firstName": "Clément"
+        "firstName": "ClÃ©ment"
       },
       {
         "lastName": "MILLOGO",
@@ -5114,7 +5114,7 @@
         "firstName": "Rozenn"
       },
       {
-        "lastName": "ROUSERÉ",
+        "lastName": "ROUSERÃ‰",
         "firstName": "Alexis"
       },
       {
@@ -5127,7 +5127,7 @@
       },
       {
         "lastName": "STROTZ",
-        "firstName": "Naëla"
+        "firstName": "NaÃ«la"
       },
       {
         "lastName": "TELLE",
@@ -5141,7 +5141,7 @@
     "lecturers": [
       {
         "lastName": "FACON",
-        "firstName": "François"
+        "firstName": "FranÃ§ois"
       }
     ],
     "resources": [
@@ -5153,35 +5153,35 @@
     "groups": [
       {
         "code": "2526_ISEN_AP5",
-        "label": "Promotion 5ème année ISEN Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN Apprentissage 2025-2026"
       },
       {
         "code": "2526_ISEN_BORDEAUX_AP5",
-        "label": "Promotion 5ème année ISEN  BORDEAUX Apprentissage 2025-2026"
+        "label": "Promotion 5Ã¨me annÃ©e ISEN  BORDEAUX Apprentissage 2025-2026"
       },
       {
         "code": "2526_ISEN_BORDEAUX_AP5_DEV",
-        "label": "AP5 Bdx Option Développement Logiciel"
+        "label": "AP5 Bdx Option DÃ©veloppement Logiciel"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_AP5_PROG_MOBILE",
         "course": "Android",
-        "module": "Unité d'Enseignement Développement logiciel"
+        "module": "UnitÃ© d'Enseignement DÃ©veloppement logiciel"
       },
       {
         "code": "2526_ISEN_BORDEAUX_AP5_PROG_MOBILE",
         "course": "Android",
-        "module": "Unité d'Enseignement Développement logiciel"
+        "module": "UnitÃ© d'Enseignement DÃ©veloppement logiciel"
       }
     ]
   },
   {
     "id": "67492173",
-    "title": "Transformations Intégrales\nTP\n2526_ISEN_BORDEAUX_CSI3\nJ101_COURS\n13:30 - 17:30",
-    "start": "2025-11-14T13:30:00+0100",
-    "end": "2025-11-14T17:30:00+0100",
+    "title": "Transformations IntÃ©grales\nTP\n2526_ISEN_BORDEAUX_CSI3\nJ101_COURS\n13:30 - 17:30",
+    "start": "2026-03-06T13:30:00+0100",
+    "end": "2026-03-06T17:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "TP",
@@ -5191,11 +5191,11 @@
         "firstName": "Rayan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Joan"
       },
       {
-        "lastName": "DÉLAYAT",
+        "lastName": "DÃ‰LAYAT",
         "firstName": "Xan"
       },
       {
@@ -5212,14 +5212,14 @@
       },
       {
         "lastName": "PHAN",
-        "firstName": "Thanh-Tùng"
+        "firstName": "Thanh-TÃ¹ng"
       },
       {
         "lastName": "PRADEL DAVAULT",
         "firstName": "Pierre-Adrien"
       },
       {
-        "lastName": "RÉMY",
+        "lastName": "RÃ‰MY",
         "firstName": "Killian"
       }
     ],
@@ -5238,22 +5238,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3",
-        "label": "Promotion 1ère année de Cycle Ingénieur (CSI3) 2025-2026"
+        "label": "Promotion 1Ã¨re annÃ©e de Cycle IngÃ©nieur (CSI3) 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CSI3_S5_TRANSFO",
-        "course": "Transformations Intégrales",
-        "module": "Unité d'Enseignement : Signaux et Systèmes"
+        "course": "Transformations IntÃ©grales",
+        "module": "UnitÃ© d'Enseignement : Signaux et SystÃ¨mes"
       }
     ]
   },
   {
     "id": "66133845",
     "title": "[ADI1] Projet de Semestre 1\nPROJET\n2526_ADIMAKER_BORDEAUX_A1 / 2526_ADIMAKER_BORDEAUX_A2\nJ001_FABLAB\n14:00 - 17:30",
-    "start": "2025-11-14T14:00:00+0100",
-    "end": "2025-11-14T17:30:00+0100",
+    "start": "2026-03-06T14:00:00+0100",
+    "end": "2026-03-06T17:30:00+0100",
     "allDay": false,
     "editable": true,
     "className": "PROJET",
@@ -5284,7 +5284,7 @@
       },
       {
         "lastName": "BOUCKAERT",
-        "firstName": "Rémi"
+        "firstName": "RÃ©mi"
       },
       {
         "lastName": "BRUNET",
@@ -5292,7 +5292,7 @@
       },
       {
         "lastName": "BURGER",
-        "firstName": "Inès"
+        "firstName": "InÃ¨s"
       },
       {
         "lastName": "COKOL",
@@ -5304,7 +5304,7 @@
       },
       {
         "lastName": "COSTES",
-        "firstName": "Clément"
+        "firstName": "ClÃ©ment"
       },
       {
         "lastName": "COSTREL DE CORAINVILLE",
@@ -5355,7 +5355,7 @@
         "firstName": "Jules"
       },
       {
-        "lastName": "HARLÉ",
+        "lastName": "HARLÃ‰",
         "firstName": "Thomas"
       },
       {
@@ -5367,8 +5367,8 @@
         "firstName": "Younes"
       },
       {
-        "lastName": "LABÉCOT",
-        "firstName": "Daphné"
+        "lastName": "LABÃ‰COT",
+        "firstName": "DaphnÃ©"
       },
       {
         "lastName": "LAFITTE",
@@ -5384,7 +5384,7 @@
       },
       {
         "lastName": "LOUBIAT",
-        "firstName": "Léo"
+        "firstName": "LÃ©o"
       },
       {
         "lastName": "MACHENAUD",
@@ -5448,11 +5448,11 @@
       },
       {
         "lastName": "ROCH",
-        "firstName": "Mattéo"
+        "firstName": "MattÃ©o"
       },
       {
         "lastName": "TORRES--HAZOUARD",
-        "firstName": "Téo"
+        "firstName": "TÃ©o"
       },
       {
         "lastName": "TRISCOS",
@@ -5460,7 +5460,7 @@
       },
       {
         "lastName": "VALTON",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "ZELLER",
@@ -5494,31 +5494,31 @@
     "groups": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1",
-        "label": "Promotion Adimaker Bordeaux 1ère année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 1Ã¨re annÃ©e 2025-2026"
       },
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2",
-        "label": "Promotion Adimaker Bordeaux 2ème année 2025-2026"
+        "label": "Promotion Adimaker Bordeaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ADIMAKER_BORDEAUX_A1_PROJET1_BETA",
         "course": "[ADI1] Projet de Semestre 1",
-        "module": "Unité d'enseignement Projet 1"
+        "module": "UnitÃ© d'enseignement Projet 1"
       },
       {
         "code": "2526_ADIMAKER_BORDEAUX_A2_PROJET3_BETA",
         "course": "[ADI2] Projet de Semestre 3",
-        "module": "Unité d'enseignement Projets 3"
+        "module": "UnitÃ© d'enseignement Projets 3"
       }
     ]
   },
   {
     "id": "66315182",
     "title": "Electronique analogique\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR1\nJ104_COURS\n14:00 - 17:00",
-    "start": "2025-11-14T14:00:00+0100",
-    "end": "2025-11-14T17:00:00+0100",
+    "start": "2026-03-06T14:00:00+0100",
+    "end": "2026-03-06T17:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -5580,12 +5580,12 @@
         "firstName": "Alexandre"
       },
       {
-        "lastName": "PULLÈS",
+        "lastName": "PULLÃˆS",
         "firstName": "Edgar"
       },
       {
         "lastName": "SOUINI-RENAUDON",
-        "firstName": "Anaëlle"
+        "firstName": "AnaÃ«lle"
       },
       {
         "lastName": "VERRON",
@@ -5607,22 +5607,22 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 1ère année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 1Ã¨re annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR1_S1_ELEC_ANA",
         "course": "Electronique analogique",
-        "module": "Unité d'enseignement : Physique, Electronique S1"
+        "module": "UnitÃ© d'enseignement : Physique, Electronique S1"
       }
     ]
   },
   {
     "id": "66363735",
-    "title": "Mathématiques 6 : Analyse avancée\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n14:00 - 18:00",
-    "start": "2025-11-14T14:00:00+0100",
-    "end": "2025-11-14T18:00:00+0100",
+    "title": "MathÃ©matiques 6 : Analyse avancÃ©e\nCOURS_TD\n2526_ISEN_BORDEAUX_CIR2\nJ102_COURS\n14:00 - 18:00",
+    "start": "2026-03-06T14:00:00+0100",
+    "end": "2026-03-06T18:00:00+0100",
     "allDay": false,
     "editable": true,
     "className": "COURS_TD",
@@ -5633,11 +5633,11 @@
       },
       {
         "lastName": "ANSOULT",
-        "firstName": "Éloïse"
+        "firstName": "Ã‰loÃ¯se"
       },
       {
         "lastName": "ARBONA",
-        "firstName": "Célian"
+        "firstName": "CÃ©lian"
       },
       {
         "lastName": "DENIS",
@@ -5660,7 +5660,7 @@
         "firstName": "Noah"
       },
       {
-        "lastName": "PAILLÉ",
+        "lastName": "PAILLÃ‰",
         "firstName": "Arthur"
       },
       {
@@ -5673,7 +5673,7 @@
       },
       {
         "lastName": "POUX",
-        "firstName": "Timothée"
+        "firstName": "TimothÃ©e"
       },
       {
         "lastName": "SABADIE",
@@ -5689,7 +5689,7 @@
       },
       {
         "lastName": "SOUCHET",
-        "firstName": "Raphaël"
+        "firstName": "RaphaÃ«l"
       },
       {
         "lastName": "TUR",
@@ -5715,14 +5715,14 @@
     "groups": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2",
-        "label": "Promotion Bordeaux Cycle Informatique et Réseaux 2ème année 2025-2026"
+        "label": "Promotion Bordeaux Cycle Informatique et RÃ©seaux 2Ã¨me annÃ©e 2025-2026"
       }
     ],
     "courses": [
       {
         "code": "2526_ISEN_BORDEAUX_CIR2_S3_MATH6",
-        "course": "Mathématiques 6 : Analyse avancée",
-        "module": "Unité d'Enseignement : Mathématiques S3"
+        "course": "MathÃ©matiques 6 : Analyse avancÃ©e",
+        "module": "UnitÃ© d'Enseignement : MathÃ©matiques S3"
       }
     ]
   }

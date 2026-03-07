@@ -166,7 +166,7 @@ export default function Presence() {
         </div>
 
         <div className="presence-card">
-          <h2>Personnel pédagogique</h2>
+          <h2>Equipe Administrative</h2>
           {pedagogicalStatusList.length === 0 ? (
             <p className="presence-empty">Aucune donnée disponible</p>
           ) : (
