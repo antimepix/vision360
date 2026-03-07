@@ -1,7 +1,7 @@
 {
   "rooms": [
     {
-      "id": "salle101",
+      "id": "salle J101",
       "name": "Salle de Cours ",
       "xPercent": 82,
       "yPercent": 25,
@@ -9,7 +9,7 @@
       "heightPercent": 15
     },
     {
-      "id": "salle102",
+      "id": "salle J102",
       "name": "Salle de Cours",
       "xPercent": 82,
       "yPercent": 40,
@@ -17,7 +17,7 @@
       "heightPercent": 12
     },
     {
-      "id": "salle103",
+      "id": "salle J103",
       "name": "Salle de Cours",
       "xPercent": 82,
       "yPercent": 55,
@@ -25,7 +25,7 @@
       "heightPercent": 15
     },
     {
-      "id": "salle104",
+      "id": "salle J104",
       "name": "Salle de Cours",
       "xPercent": 82,
       "yPercent": 70,
@@ -33,7 +33,7 @@
       "heightPercent": 15
     },
     {
-      "id": "salle105",
+      "id": "salle J105",
       "name": "Salle TP Elec",
       "xPercent": 82,
       "yPercent": 85,
@@ -41,7 +41,7 @@
       "heightPercent": 12
     },
     {
-      "id": "salle106",
+      "id": "salle J106",
       "name": "Salle Informatique",
       "xPercent": 60,
       "yPercent": 82,
@@ -49,7 +49,7 @@
       "heightPercent": 18
     },
     {
-      "id": "salle107",
+      "id": "salle J107",
       "name": "Salle Informatique",
       "xPercent": 45,
       "yPercent": 82,
@@ -57,7 +57,7 @@
       "heightPercent": 18
     },
     {
-      "id": "salle109",
+      "id": "salle J109",
       "name": "Salle Classlab",
       "xPercent": 15,
       "yPercent": 80,
@@ -65,7 +65,7 @@
       "heightPercent": 20
     },
     {
-      "id": "salle110",
+      "id": "salle J110",
       "name": "Salle Immersive",
       "xPercent": 15,
       "yPercent": 63,
@@ -73,7 +73,7 @@
       "heightPercent": 12
     },
     {
-      "id": "salle111",
+      "id": "salle J111",
       "name": "Salle de Cuisine Pédagogique",
       "xPercent": 15,
       "yPercent": 48,
@@ -81,7 +81,7 @@
       "heightPercent": 18
     },
     {
-      "id": "salle112",
+      "id": "salle J112",
       "name": "Salle réunion",
       "xPercent": 42,
       "yPercent": 22,
