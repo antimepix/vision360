@@ -79,6 +79,65 @@
     transform: translateY(0);
 }
 
+.role-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.role-button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+}
+
+.role-button:hover {
+    border-color: var(--brand);
+    background: var(--panel2);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(157, 142, 195, 0.1);
+}
+
+.role-icon {
+    font-size: 1.5rem;
+}
+
+.role-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+}
+
+.back-button {
+    flex: 1;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--muted);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.back-button:hover {
+    background: var(--panel2);
+}
+
 .error-message {
     color: #ff4757;
     font-size: 0.9rem;
@@ -93,4 +152,13 @@
 
 [data-theme='dark'] .login-button {
     color: #000;
+}
+
+[data-theme='dark'] .role-button,
+[data-theme='dark'] .back-button {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme='dark'] .role-button:hover {
+    background: rgba(157, 142, 195, 0.1);
 }

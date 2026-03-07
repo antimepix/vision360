@@ -4,26 +4,30 @@ import "./Login.css";
 
 
 export default function Login() {
+    const [step, setStep] = useState("role"); // "role" or "password"
+    const [selectedRole, setSelectedRole] = useState(null);
     const [code, setCode] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
-    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
-    /*const handleSubmit = (e) => {
-        e.preventDefault();
-        const cleanCode = code.trim().toUpperCase();
+    const roles = [
+        { id: "damien", label: "Coordinateur des formations", icon: "👔" },
+        { id: "eleve", label: "Élève", icon: "🎓" },
+        { id: "admin", label: "Administration", icon: "🏢" }
+    ];
 
-        // Special case for "1234" which shouldn't be upper-cased but it's fine
-        const user = ROLE_MAP[code.trim()] || ROLE_MAP[cleanCode];
+    const handleRoleSelect = (role) => {
+        setSelectedRole(role);
+        setStep("password");
+        setError("");
+    };
 
-        if (user) {
-            localStorage.setItem("userRole", user.role);
-            navigate(user.redirect);
-            window.location.reload(); // Force reload to update Navbar and Routes
-        } else {
-            setError("Code incorrect. Veuillez réessayer.");
-        }
-    };*/
+    const handleBack = () => {
+        setStep("role");
+        setSelectedRole(null);
+        setCode("");
+        setError("");
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -33,7 +37,10 @@ export default function Login() {
             const response = await fetch("/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ password: code }),
+                body: JSON.stringify({
+                    password: code,
+                    role: selectedRole.id
+                }),
             });
 
             const contentType = response.headers.get("content-type") || "";
@@ -48,7 +55,7 @@ export default function Login() {
 
             localStorage.setItem("userRole", data.role);
             navigate(data.redirect);
-            window.location.reload(); // si tu en as besoin pour refresh la navbar/routes
+            window.location.reload();
         } catch (err) {
             console.error(err);
             setError("Erreur réseau (API inaccessible)");
@@ -59,28 +66,53 @@ export default function Login() {
         <div className="login-container">
             <div className="login-card">
                 <h1>Vision360</h1>
-                <p>Veuillez entrer votre code d'accès</p>
 
-                <form onSubmit={handleSubmit}>
-                    <div className="input-group">
-                        <input
-                            type="password"
-                            placeholder="Code d'accès"
-                            value={code}
-                            onChange={(e) => {
-                                setCode(e.target.value);
-                                setError("");
-                            }}
-                            autoFocus
-                        />
-                    </div>
+                {step === "role" ? (
+                    <>
+                        <p>Choisissez votre profil</p>
+                        <div className="role-selection">
+                            {roles.map((r) => (
+                                <button
+                                    key={r.id}
+                                    className="role-button"
+                                    onClick={() => handleRoleSelect(r)}
+                                >
+                                    <span className="role-icon">{r.icon}</span>
+                                    <span className="role-label">{r.label}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <p>Connexion en tant que <strong>{selectedRole.label}</strong></p>
+                        <form onSubmit={handleSubmit}>
+                            <div className="input-group">
+                                <input
+                                    type="password"
+                                    placeholder="Mot de passe"
+                                    value={code}
+                                    onChange={(e) => {
+                                        setCode(e.target.value);
+                                        setError("");
+                                    }}
+                                    autoFocus
+                                />
+                            </div>
 
-                    {error && <p className="error-message">{error}</p>}
+                            {error && <p className="error-message">{error}</p>}
 
-                    <button type="submit" className="login-button">
-                        Se connecter
-                    </button>
-                </form>
+                            <div className="button-group">
+                                <button type="button" className="back-button" onClick={handleBack}>
+                                    Retour
+                                </button>
+                                <button type="submit" className="login-button">
+                                    Se connecter
+                                </button>
+                            </div>
+                        </form>
+                    </>
+                )}
             </div>
         </div>
     );

@@ -19,6 +19,7 @@ function normalize(input) {
 router.post("/login", async (req, res) => {
   try {
     const password = normalize(req.body?.password);
+    const role = req.body?.role; // Optional role filter
 
     if (!password) {
       return res.status(400).json({ ok: false, message: "Mot de passe manquant" });
@@ -31,13 +32,19 @@ router.post("/login", async (req, res) => {
       return res.status(500).json({ ok: false, message: "Serveur non configuré (hash manquant)" });
     }
 
-    for (const u of USERS) {
+    const targets = role ? USERS.filter(u => u.role === role) : USERS;
+
+    if (targets.length === 0) {
+      return res.status(400).json({ ok: false, message: "Rôle invalide" });
+    }
+
+    for (const u of targets) {
       const hash = process.env[u.envKey];
       const match = await bcrypt.compare(password, hash);
       if (match) return res.json({ ok: true, role: u.role, redirect: u.redirect });
     }
 
-    return res.status(401).json({ ok: false, message: "Code incorrect" });
+    return res.status(401).json({ ok: false, message: "Mot de passe incorrect" });
   } catch (err) {
     console.error("POST /api/auth/login failed:", err);
     return res.status(500).json({ ok: false, message: "Erreur serveur" });
