@@ -2,30 +2,12 @@ import { useMemo, useState, useEffect } from "react";
 import events from "../data/data.json";
 import pedagogicalStaff from "../data/outlook_calendar.json";
 import "./presence.css";
-
-function pad2(n) {
-  return String(n).padStart(2, "0");
-}
-
-function todayYMD() {
-  const d = new Date();
-  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
-}
-
-function promoShort(code = "", label = "") {
-  const fromCode = String(code).split("_").pop();
-  if (fromCode && fromCode.length <= 8 && fromCode !== "COURS" && fromCode !== "TD" && fromCode !== "TP") return fromCode;
-  const m = String(label).match(/\b([A-Z]{2,4}\d)\b/);
-  if (m?.[1]) return m[1];
-  if (code && code.length <= 8) return code;
-  return "?";
-}
-
-function personName(p) {
-  const first = p?.firstName ? String(p.firstName).trim() : "";
-  const last = p?.lastName ? String(p.lastName).trim() : "";
-  return `${first} ${last}`.trim() || "(inconnu)";
-}
+import { 
+  pad2, 
+  todayYMD, 
+  promoShort, 
+  personName 
+} from "../utils/appUtils";
 
 export default function Presence() {
   const [selectedDay, setSelectedDay] = useState(todayYMD());

@@ -21,103 +21,23 @@ const COLORS = [
   "#95e1d3", // Aqua
 ];
 
-/* -------- helpers -------- */
+import { 
+  todayYMD, 
+  shiftYMD, 
+  startOfWeekMonday, 
+  ymdRangeLabel, 
+  ymdToDMY, 
+  minutesOf, 
+  clamp, 
+  promoShort, 
+  roomShort, 
+  personName, 
+  diffDays, 
+  formatTimeRange, 
+  uniqueSorted 
+} from "../utils/appUtils";
 
-function pad2(n) {
-  return String(n).padStart(2, "0");
-}
-
-function todayYMD() {
-  const d = new Date();
-  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
-}
-
-function shiftYMD(ymd, deltaDays) {
-  const d = new Date(`${ymd}T12:00:00`);
-  d.setDate(d.getDate() + deltaDays);
-  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
-}
-
-function startOfWeekMonday(ymd) {
-  const d = new Date(`${ymd}T12:00:00`);
-  const day = d.getDay(); // 0=dimanche, 1=lundi...
-  const diff = (day + 6) % 7; // nb de jours depuis lundi
-  d.setDate(d.getDate() - diff);
-  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
-}
-
-function ymdRangeLabel(mondayYmd) {
-  const mon = mondayYmd;
-  const sat = shiftYMD(mondayYmd, 5);
-  const [y1, m1, d1] = mon.split("-");
-  const [y2, m2, d2] = sat.split("-");
-  return `Semaine du ${d1}/${m1}/${y1} au ${d2}/${m2}/${y2}`;
-}
-
-function ymdToDMY(ymd) {
-  if (!ymd || typeof ymd !== "string" || ymd.length !== 10) return "";
-  const [y, m, d] = ymd.split("-");
-  return `${d}/${m}/${y}`;
-}
-
-function minutesOf(iso) {
-  if (!iso || typeof iso !== "string" || iso.length < 16) return null;
-  const hh = Number(iso.slice(11, 13));
-  const mm = Number(iso.slice(14, 16));
-  if (Number.isNaN(hh) || Number.isNaN(mm)) return null;
-  return hh * 60 + mm;
-}
-
-function clamp(n, min, max) {
-  return Math.min(max, Math.max(min, n));
-}
-
-function promoShort(code = "", label = "") {
-  const fromCode = String(code).split("_").pop();
-  if (fromCode && fromCode.length <= 8) return fromCode;
-  const m = String(label).match(/\b([A-Z]{2,4}\d)\b/);
-  return m?.[1] ?? "?";
-}
-
-function roomShort(x = "") {
-  const raw = String(x).trim();
-  if (!raw) return "";
-  const parts = raw.split(/[_\s-]+/).filter(Boolean);
-  const strict = parts.find((p) => /^[A-Z]{1,4}\d{2,4}$/i.test(p));
-  if (strict) return strict.toUpperCase();
-  const m = raw.match(/\b([A-Z]{1,4}\d{2,4})\b/i);
-  if (m?.[1]) return m[1].toUpperCase();
-  return (parts[0] ?? raw).toUpperCase();
-}
-
-function personName(p) {
-  const first = p?.firstName ? String(p.firstName).trim() : "";
-  const last = p?.lastName ? String(p.lastName).trim() : "";
-  return `${first} ${last}`.trim() || "(inconnu)";
-}
-
-function diffDays(ymd1, ymd2) {
-  const d1 = new Date(`${ymd1}T00:00:00`);
-  const d2 = new Date(`${ymd2}T00:00:00`);
-  return Math.round((d1 - d2) / 86400000);
-}
-
-function formatTimeRange(start, end) {
-  const s = start?.slice(11, 16) ?? "";
-  const e = end?.slice(11, 16) ?? "";
-  return `${s} – ${e}`;
-}
-
-function uniqueSorted(arr) {
-  return Array.from(new Set(arr))
-    .filter(Boolean)
-    .sort((a, b) =>
-      String(a).localeCompare(String(b), "fr", {
-        sensitivity: "base",
-        numeric: true,
-      })
-    );
-}
+/* -------- helpers (schedule-specific) -------- */
 
 // assombrir une couleur hex pour le dégradé
 function darkenColor(hex, factor = 0.35) {
@@ -217,26 +137,6 @@ function layoutOverlaps(dayEvents) {
   });
 }
 
-/* -------- exports pour les tests -------- */
-export {
-  pad2,
-  todayYMD,
-  shiftYMD,
-  startOfWeekMonday,
-  ymdRangeLabel,
-  ymdToDMY,
-  minutesOf,
-  clamp,
-  promoShort,
-  roomShort,
-  personName,
-  diffDays,
-  formatTimeRange,
-  uniqueSorted,
-  darkenColor,
-  layoutOverlaps,
-};
-
 /* -------- page emploi du temps -------- */
 
 export default function Schedule() {
@@ -259,7 +159,7 @@ export default function Schedule() {
   const [selectedProfs, setSelectedProfs] = useState([]);
   const ALL_DAYS = [0, 1, 2, 3, 4, 5];
   const [selectedDays, setSelectedDays] = useState(ALL_DAYS); // multi-sélection
-  const [searchQuery, setSearchQuery] = useState(""); // Re-ajouté
+  const [searchQuery, setSearchQuery] = useState(""); 
   const [selectedEvent, setSelectedEvent] = useState(null); // État pour la popup
 
   // Dé-doublonnage à la source (le JSON peut contenir des événements strictement identiques).

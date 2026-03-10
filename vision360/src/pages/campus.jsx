@@ -8,6 +8,7 @@ import campus2 from "../data/campus2.json";
 import events from "../data/data.json";
 
 // Utils
+import { todayYMD } from "../utils/appUtils";
 import { loadOverrides, saveOverrides } from "../utils/storage";
 import { buildRoomData } from "../utils/roomUtils";
 
@@ -44,7 +45,12 @@ export default function Campus() {
     const floorConfig = FLOOR_CONFIGS[floorKey];
     const baseRooms = floorConfig?.data?.rooms ?? [];
     const overrides = loadOverrides();
-    return buildRoomData(baseRooms, overrides, events);
+    
+    // Only pass today's events to the room builder
+    const today = todayYMD();
+    const todayEvents = events.filter(e => String(e.start || "").slice(0, 10) === today);
+
+    return buildRoomData(baseRooms, overrides, todayEvents);
   }, []);
 
   useEffect(() => {

@@ -31,6 +31,13 @@
   --stat-card-text: var(--text);
   --stat-card-value: var(--brand);
   --active-text: #000000;
+
+  /* New Teacher Highlighting (Light) */
+  --new-prof-bg: #f0fff4;
+  --new-prof-text: #2f855a;
+  --new-prof-badge-bg: #e6fffa;
+  --new-prof-badge-text: #236c64;
+  --new-prof-badge-border: #b2f5ea;
 }
 
 /* ---------- Thème Nuit (Dark - True Black) ---------- */
@@ -77,6 +84,13 @@
   --stat-card-text: #000000;
   --stat-card-value: #000000;
   --active-text: #ffffff;
+
+  /* New Teacher Highlighting (Dark) */
+  --new-prof-bg: #064e3b; /* deep forest green */
+  --new-prof-text: #34d399; /* bright emerald */
+  --new-prof-badge-bg: #065f46;
+  --new-prof-badge-text: #6ee7b7;
+  --new-prof-badge-border: #059669;
 }
 
 /* ---------- Reset / global ---------- */

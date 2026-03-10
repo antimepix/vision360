@@ -8,7 +8,6 @@ export default function Navbar({ role }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState("dark");
 
-  // ✅ NEW
   const [refreshing, setRefreshing] = useState(false);
 
   const navigate = useNavigate();
