@@ -1,0 +1,57 @@
+services:
+  db:
+    image: postgres:16
+    container_name: scrapperplanning-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: scrapperplanning
+      POSTGRES_USER: scrapper
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U scrapper -d scrapperplanning"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - scrapperplanning_db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  api:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: scrapperplanning-api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__Default: Host=db;Port=5432;Database=scrapperplanning;Username=scrapper;Password=${DB_PASSWORD}
+      ApiAuth__Token: ${API_TOKEN}
+      Aurion__BaseUrl: https://aurion.junia.com
+      Aurion__Username: ${AURION_USERNAME}
+      Aurion__Password: ${AURION_PASSWORD}
+      Aurion__SubmenuId: "3131476"
+      Aurion__MenuId: "0_0"
+      Aurion__PlanningRows: "1000"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "5000:5000"
+
+  cron:
+    build:
+      context: ..
+      dockerfile: deploy/cron/Dockerfile
+    container_name: scrapperplanning-cron
+    restart: unless-stopped
+    environment:
+      PLANNING_SYNC_URL: http://api:5000
+      PLANNING_SYNC_TOKEN: ${API_TOKEN}
+      CRON_SCHEDULE: "0 3 * * 0"
+    depends_on:
+      api:
+        condition: service_started
+
+volumes:
+  scrapperplanning_db:

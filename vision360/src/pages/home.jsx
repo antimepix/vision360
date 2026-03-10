@@ -175,7 +175,7 @@ export default function Home() {
       return d >= range.start && d <= range.end;
     });
 
-    const evals = weekEvents.filter(e => e.className === "Evaluation");
+    const evals = weekEvents.filter(e => e.className === "Evaluation" || e.className === "est-epreuve");
     const promos = new Set();
     evals.forEach(e => {
       (e.groups ?? []).forEach(g => {

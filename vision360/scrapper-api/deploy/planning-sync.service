@@ -1,0 +1,9 @@
+[Unit]
+Description=Planning sync (Aurion -> DB)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/scrapperplanning.env
+ExecStart=/bin/bash /opt/scrapperPlanning/scripts/planning-sync.sh

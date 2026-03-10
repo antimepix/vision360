@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:16
+    container_name: scrapperplanning-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: scrapperplanning
+      POSTGRES_USER: scrapper
+      POSTGRES_PASSWORD: scrapper
+    ports:
+      - "5432:5432"
+    volumes:
+      - scrapperplanning_db:/var/lib/postgresql/data
+
+  api:
+    build: .
+    container_name: scrapperplanning-api
+    ports:
+      - "5000:5000"
+    environment:
+      - ConnectionStrings__Default=Host=db;Port=5432;Database=scrapperplanning;Username=scrapper;Password=scrapper
+      - ApiAuth__Token=Izfz3Sv5vkUFfzRURcFK6p6MjTTDPZyqoQ4Q56D360J48bXkFeMLBwSkKB2ArrEOwmg3C9YYJX8bzlIzmipMQCYemRMQsxB1LgTCkY0aYcYlq9S5s1TQa8UUevW7w0P
+      - Aurion__Username=projet_test_ap5_bordeaux@junia.com
+      - Aurion__Password=ProjetAP5!
+    depends_on:
+      - db
+
+volumes:
+  scrapperplanning_db:

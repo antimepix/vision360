@@ -1,6 +1,7 @@
 import "dotenv/config";
 import app from "./app.js";
 import { pool } from "./src/db.js";
+import { startScheduler } from "./src/scheduler.js";
 
 const PORT = process.env.PORT || 3001;
 
@@ -19,4 +20,6 @@ const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log(`API running on http://localhost:${PORT}`);
+  // Démarrage de la synchronisation automatique toutes les 12h
+  startScheduler();
 });

@@ -1,0 +1,34 @@
+## Build artifacts
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## IDE
+.vscode/
+.idea/
+*.sln.iml
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Logs
+*.log
+
+## Publish outputs
+publish/
+
+## Dotnet tooling
+.dotnet/
+.dotnet_cli_home/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.env
+.env.*
+deploy/.env

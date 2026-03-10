@@ -21,6 +21,8 @@ router.post("/login", async (req, res) => {
     const password = normalize(req.body?.password);
     const role = req.body?.role; // Optional role filter
 
+    console.log(`[AUTH] Login attempt - Role: ${role}, Pwd (norm): ${password}`);
+
     if (!password) {
       return res.status(400).json({ ok: false, message: "Mot de passe manquant" });
     }

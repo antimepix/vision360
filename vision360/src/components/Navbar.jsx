@@ -29,7 +29,7 @@ export default function Navbar({ role }) {
     window.location.reload();
   };
 
-  // ✅ NEW: refresh json depuis la BDD
+  // Refresh: déclenche la sync en arrière-plan puis recharge après 35s
   const handleRefreshJson = async () => {
     try {
       setRefreshing(true);
@@ -37,7 +37,7 @@ export default function Navbar({ role }) {
       const API_BASE =
         import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
 
-      // ✅ On régénère data.json depuis la BDD
+      // Lance la sync (répond immédiatement en 202)
       const res = await fetch(`${API_BASE}/api/export/data?file=data.json`, {
         method: "GET",
       });
@@ -48,7 +48,8 @@ export default function Navbar({ role }) {
         throw new Error(payload.message || payload.error || `HTTP ${res.status}`);
       }
 
-      // ✅ rechargement après succès
+      // Attendre ~35s pour que la sync Aurion se finisse, puis recharger
+      await new Promise((resolve) => setTimeout(resolve, 35000));
       window.location.reload();
     } catch (e) {
       alert(`Erreur refresh JSON: ${e?.message || e}`);
@@ -143,15 +144,14 @@ export default function Navbar({ role }) {
           <span>{theme === "light" ? "Nuit" : "Jour"}</span>
         </button>
 
-        {/* ✅ NEW: bouton refresh entre thème et déconnexion */}
         <button
           className="nav-linkButton"
           onClick={handleRefreshJson}
           disabled={refreshing}
-          title="Régénérer data.json depuis la BDD"
+          title={refreshing ? "Synchronisation en cours (~35s)..." : "Synchroniser les données depuis Aurion"}
           style={{ gap: "8px" }}
         >
-          <span>{refreshing ? "Refresh..." : "Refresh"}</span>
+          <span>{refreshing ? "⏳ Sync..." : "🔄 Refresh"}</span>
         </button>
 
         <button

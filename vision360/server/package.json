@@ -4,19 +4,26 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch index.js",
+    "dev": "nodemon index.js",
     "start": "node index.js",
+    "sync-scraper": "node scripts/sync-scraper.js",
+    "sync-outlook": "node scripts/scrape-outlook.js",
+    "owa-login": "node scripts/owa-login.js",
     "test": "vitest",
     "test:run": "vitest run",
     "test:ui": "vitest --ui",
     "hash": "node scripts/hashPassword.js"
   },
   "dependencies": {
+    "@azure/msal-node": "^5.0.6",
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mysql2": "^3.11.0"
+    "mysql2": "^3.11.0",
+    "puppeteer": "^24.39.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "cross-env": "^10.1.0",
