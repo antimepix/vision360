@@ -112,7 +112,32 @@ public sealed class RelationService
 
         var pairs = students.Select(s => (s.FirstName, s.LastName)).Distinct().ToList();
         var predicate = BuildProfilePredicate(pairs);
-        return await _db.Profiles.Where(predicate).ToListAsync(ct);
+        var existing = await _db.Profiles.Where(predicate).ToListAsync(ct);
+
+        var missing = students.Where(student =>
+                !existing.Any(existingProfile =>
+                    string.Equals(existingProfile.FirstName, student.FirstName, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(existingProfile.LastName, student.LastName, StringComparison.OrdinalIgnoreCase)))
+            .GroupBy(s => new { s.FirstName, s.LastName })
+            .Select(g => g.First())
+            .ToList();
+
+        if (missing.Count == 0)
+        {
+            return existing;
+        }
+
+        var newProfiles = missing.Select(student => new ProfileEntity
+        {
+            UserUuid = Guid.NewGuid(),
+            FirstName = student.FirstName,
+            LastName = student.LastName
+        }).ToList();
+
+        _db.Profiles.AddRange(newProfiles);
+        await _db.SaveChangesAsync(ct);
+        existing.AddRange(newProfiles);
+        return existing;
     }
 
     public async Task<List<LecturerEntity>> GetLecturersAsync(List<LecturerDto> lecturers, CancellationToken ct)

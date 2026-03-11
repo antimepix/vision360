@@ -173,10 +173,14 @@ public static class PlanningDataEndpoints
                 var courseLinks = await db.PlanningEventCourses.AsNoTracking()
                     .Where(l => eventIds.Contains(l.PlanningEventId))
                     .ToListAsync(ct);
+                var userLinks = await db.PlanningEventUsers.AsNoTracking()
+                    .Where(l => eventIds.Contains(l.PlanningEventId))
+                    .ToListAsync(ct);
 
                 var classIds = classLinks.Select(l => l.ClassId).Distinct().ToList();
                 var lecturerIds = lecturerLinks.Select(l => l.LecturerId).Distinct().ToList();
                 var courseIdsList = courseLinks.Select(l => l.CourseId).Distinct().ToList();
+                var studentUuids = userLinks.Select(l => l.UserUuid).Distinct().ToList();
 
                 var rooms = await db.Rooms.AsNoTracking()
                     .ToDictionaryAsync(r => r.Id, ct);
@@ -189,6 +193,9 @@ public static class PlanningDataEndpoints
                 var courses = await db.Courses.AsNoTracking()
                     .Where(c => courseIdsList.Contains(c.Id))
                     .ToDictionaryAsync(c => c.Id, ct);
+                var studentProfiles = await db.Profiles.AsNoTracking()
+                    .Where(p => studentUuids.Contains(p.UserUuid))
+                    .ToDictionaryAsync(p => p.UserUuid, ct);
 
                 // Paris timezone (CET/CEST)
                 var paris = TimeZoneInfo.FindSystemTimeZoneById("Europe/Paris");
@@ -233,6 +240,12 @@ public static class PlanningDataEndpoints
                         .Select(c => new { code = c.AurionCode, course = c.Course ?? "", module = c.Module ?? "" })
                         .ToList();
 
+                    var evtStudentNames = userLinks
+                        .Where(l => l.PlanningEventId == e.Id && studentProfiles.TryGetValue(l.UserUuid, out _))
+                        .Select(l => studentProfiles[l.UserUuid])
+                        .Select(p => new { firstName = p.FirstName, lastName = p.LastName })
+                        .ToList();
+
                     return new
                     {
                         id          = e.IdAurion,
@@ -242,7 +255,7 @@ public static class PlanningDataEndpoints
                         allDay      = false,
                         editable    = true,
                         className   = e.ClassName ?? "",
-                        students    = Array.Empty<object>(),
+                        students    = evtStudentNames,
                         lecturers   = evtLecturerIds,
                         resources   = evtRoomIds,
                         groups      = evtClassIds,
