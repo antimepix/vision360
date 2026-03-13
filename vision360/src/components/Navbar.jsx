@@ -29,34 +29,29 @@ export default function Navbar({ role }) {
   };
 
   // Refresh: déclenche la sync en arrière-plan puis recharge après 35s
-  const handleRefreshJson = async () => {
-    try {
-      setRefreshing(true);
+const handleRefreshJson = async () => {
+  try {
+    setRefreshing(true);
 
-      const API_BASE =
-        import.meta.env.VITE_API_BASE_URL || "http://localhost:3001";
+    const res = await fetch("/api/export/data?file=data.json", {
+      method: "GET",
+    });
 
-      // Lance la sync (répond immédiatement en 202)
-      const res = await fetch(`${API_BASE}/api/export/data?file=data.json`, {
-        method: "GET",
-      });
+    const payload = await res.json().catch(() => ({}));
 
-      const payload = await res.json().catch(() => ({}));
-
-      if (!res.ok || payload.ok !== true) {
-        throw new Error(payload.message || payload.error || `HTTP ${res.status}`);
-      }
-
-      // Attendre ~35s pour que la sync Aurion se finisse, puis recharger
-      await new Promise((resolve) => setTimeout(resolve, 35000));
-      window.location.reload();
-    } catch (e) {
-      alert(`Erreur refresh JSON: ${e?.message || e}`);
-    } finally {
-      setRefreshing(false);
-      setMenuOpen(false);
+    if (!res.ok || payload.ok !== true) {
+      throw new Error(payload.message || payload.error || `HTTP ${res.status}`);
     }
-  };
+
+    await new Promise((resolve) => setTimeout(resolve, 35000));
+    window.location.reload();
+  } catch (e) {
+    alert(`Erreur refresh JSON: ${e?.message || e}`);
+  } finally {
+    setRefreshing(false);
+    setMenuOpen(false);
+  }
+};
 
   return (
     <nav className="navbar">

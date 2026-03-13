@@ -163,18 +163,21 @@
     /* liens cachés par défaut en mobile */
     .nav-links {
         position: absolute;
-        top: var(--navbar-h);
+        top: 100%;
         left: 0;
         right: 0;
         display: none;
         flex-direction: column;
-        padding: 16px;
+        padding: 20px 16px;
         background: var(--panel);
-        gap: 8px;
+        gap: 12px;
         z-index: 40;
         border-bottom: 1px solid var(--border);
         box-shadow: var(--shadow);
+        overflow-y: auto;
+        max-height: calc(100vh - var(--navbar-h));
         order: 1;
+        align-items: stretch;
     }
 
     .nav-links a,

@@ -18,8 +18,7 @@ const PORT = process.env.PORT || 3001;
   }
 })();
 
-app.listen(PORT, () => {
-  console.log(`API running on http://localhost:${PORT}`);
-  // Démarrage de la synchronisation automatique toutes les 12h
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`API running on http://0.0.0.0:${PORT}`);
   startScheduler();
 });
